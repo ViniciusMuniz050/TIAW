@@ -12,7 +12,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 * Lara Rossini Rhis
 * Daniel Rodrigues Bleme
-* Nome completo do aluno 3
+* João Vitor Matias Gonçalves
 * Nome completo do aluno 4
 * Nome completo do aluno 5
 * Nome completo do aluno 6
