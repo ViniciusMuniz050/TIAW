@@ -1,43 +1,26 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+A procrastinação é algo muito comum que afeta jovens e adultos, é o hábito de adiar tarefas importantes, preferindo fazer algo mais prazeroso ou até mesmo nada. O impacto desse comportamento é algo que afeta a vida como um todo, fazendo com que o indivíduo perca oportunidades importantes pessoais e profissionais.
 
 ## Problema
-Aqui, a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.
+A dificuldade de ter algo como foco, ir até o final da tarefa e o adiamento das coisas é algo frequente para um indivíduo
+procastinador, essa dificuldade pode gerar a falta de gerenciamento do tempo o que resulta em baixo desempenho acadêmico, profissional e pessoal. Os procastinadores necessitam de uma ferramenta eficaz para organizar suas
+tarefas, estabelecer metas e ter disciplina para concluir o que é necessário.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-O grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite uma visão completa do problema.
-
-> **Links úteis**:
-> - [Objetivos, problema de pesquisa e justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz certezas, suposições e dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Pode ser utilizado em um projeto de desenvolvimento de uma aplicação ou ferramenta digital voltada para a gestão do tempo e redução da procrastinação. Um exemplo de situação onde esse texto pode ser aplicado é no desenvolvimento de um aplicativo de produtividade ou uma plataforma digital, que tem como objetivo ajudar as pessoas a melhorar seu foco, organizar suas tarefas e aumentar a eficiência.
 
 ## Objetivos
 
-Aqui, você deve descrever os objetivos do trabalho, indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima.
-
-Além disso, apresente alguns (pelo menos 3) objetivos específicos, dependendo de onde você pretende concentrar sua prática investigativa ou como deseja aprofundar seu trabalho.
- 
-> **Links úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Desenvolver uma solução digital que ajude os usuários a gerenciar melhor os afazeres, diminuindo a procrastinação e aumentando a produtividade. O grupo busca melhores técnicas de gerenciamento de tempo, recompensas e meios de ajuda e incentivo. 
+objetivos específicos:
+-Criar uma interface intuitiva e personalizada;
+-Implementar recursos de gamificação e recompensas;
+-Oferecer ferramentas de monitoramento e feedback.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Depois de observar o impacto negativo da procrastinação na vida pessoal e profissional das pessoas, fez com que percebessemos o quão essencial é a criação de um recurso que facilite o planejamento e a execução de tarefas. Com o avanço constante da tecnologia fez com que o trabalho e estudos remoto sejam mais presentes no cotidiano, com isso a autogestão de tempo se tornou ainda mais desafiadora e necessária, com isso buscamos implementar algo que seja usual.
 
 ## Público-alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação, mas sim oferecer uma visão detalhada do perfil de cada grupo de usuários. Isso inclui informações sobre seu nível de conhecimento prévio, familiaridade com tecnologia, e suas relações hierárquicas ou contextos de uso. Dessa forma, será possível entender melhor as necessidades e expectativas dos diferentes tipos de usuários, garantindo uma experiência mais eficiente e adaptada.
-
-> **Links úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público-alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Estudantes, profissionais e qualquer pessoa que tenha dificuldade de gerenciar suas tarefas de forma eficiente.
