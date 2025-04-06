@@ -3,7 +3,18 @@
 
 <span style="color:red">Pré-requisitos: <a href="03-Product-design.md"> Product design</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para abordar o problema. Inclua definições sobre os ambientes de trabalho utilizados pela equipe para desenvolver o projeto. Isso abrange a relação dos ambientes utilizados, a estrutura para a gestão do código-fonte, além da definição do processo e das ferramentas por meio dos quais a equipe se organiza (gestão de equipes).
+O grupo utilizou como base para o desenvolvimento do site entrevistas e pesquisas realizadas ao longo do processo. Para o aprimoramento do projeto e a gestão de tarefas, realizamos reuniões durante as aulas e também por meio da plataforma de chamadas Discord. O protótipo do site foi desenvolvido utilizando o Figma, que também serviu de ferramenta para a criação das wireframes presentes na apresentação e na documentação interna.
+
+As imagens foram geradas com o auxílio da inteligência artificial do Microsoft Edge, enquanto os ícones foram obtidos por meio do site Flaticon.
+
+Para uma melhor organização e eficiência, a equipe foi dividida em funções específicas:
+
+-Daniel, João e Victor ficaram responsáveis pelo desenvolvimento no Figma;
+
+-Marcus e Vinícius atuaram na criação dos slides da apresentação;
+
+-Lara ficou encarregada da coordenação geral e da elaboração das documentações.
+
 
 ## Relação de ambientes de trabalho
 
