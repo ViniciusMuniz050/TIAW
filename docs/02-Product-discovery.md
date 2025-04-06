@@ -6,33 +6,30 @@
 
 ## Etapa de entendimento
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesta etapa, é necessário aplicar a metodologia de Design Thinking para compreender de forma mais profunda o problema a ser abordado. Durante esse processo, devem ser elaborados os seguintes elementos:
->
-> * **Matriz CSD**:  também conhecida como Matriz de Alinhamento, trata-se de uma ferramenta utilizada no Design Thinking para organizar informações, facilitando a tomada de decisões e a solução de problemas;
-> * **Mapa de stakeholders**: ferramenta que permite identificar e entender o grupo de pessoas e entidades que devem ser analisados e consultados para obter uma visão mais ampla do problema;
-> * **Entrevistas qualitativas**: uma série de entrevistas qualitativas a fim de validar suposições e esclarecer dúvidas junto aos principais envolvidos;
-> * **Highlights de pesquisa**: um compilado das informações levantadas durante as entrevistas realizadas.
+> Matriz CSD e Mapa de Stakeholders
+> ![Matriz CSD](https://github.com/user-attachments/assets/cbd7fcc3-d104-46fa-9cbc-a0ee1a3c3afd)
 
-> **Links úteis**:
-> - [Mapa de stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
+> ![Mapa de Stakeholders](https://github.com/user-attachments/assets/498b6f86-97f2-4a04-9586-685a1fd13d9b)
+
+> Entrevistas qualitativas e Highlights de pesquisa
+> ![Entrevistas Qualitativas](https://github.com/user-attachments/assets/bd4a9b43-3853-42a6-a920-9df5fd470d79)
+> ![Highlights](https://github.com/user-attachments/assets/cee67b80-73ef-4321-be94-c32387e011f3)
+
+
 
 ## Etapa de definição
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
+![Persona 1](https://github.com/user-attachments/assets/f4481327-631a-42c9-a465-18d4c9c4fc9c)
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Deve-se relacionar as personas identificadas no projeto, juntamente com os respectivos mapas de empatia. É importante enumerar e descrever de maneira precisa e personalizada todos os principais envolvidos na solução pretendida.
+![Persona 2](https://github.com/user-attachments/assets/33f2712e-b9d8-4faa-bb3f-48ca52592d06)
+
+![Persona 3](https://github.com/user-attachments/assets/cea46a91-038d-4f4a-afb8-db92e9aebdd3)
 
 
-![Exemplo de persona](images/exemplo-persona.png)
-
+> 
 
 > **Links úteis**:
 > - [Rock Content](https://rockcontent.com/blog/personas/)
