@@ -18,7 +18,13 @@ Para uma melhor organização e eficiência, a equipe foi dividida em funções 
 
 ## Relação de ambientes de trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. A relação dos ambientes com seus respectivos propósitos deverá ser apresentada em uma tabela que especifique e detalhe Ambiente, Plataforma e Link de Acesso. Defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+| Ambiente         | Plataforma        | Link de Acesso |
+|------------------|-------------------|----------------|
+| Prototipagem     | Figma             | [Figma](https://www.figma.com/) |
+| Comunicação      | Discord e WhatsApp| Acesso restrito |
+| Apresentação     | Canva e Adobe     | Acesso restrito |
+| Repositório de Código | GitHub       | Acesso restrito |
+
 
 ## Controle de versão
 
