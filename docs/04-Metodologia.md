@@ -17,15 +17,18 @@ Para uma melhor organização e eficiência, a equipe foi dividida em funções 
 
 
 ## Relação de ambientes de trabalho
+### 📁 Artefatos do Projeto – Ambientes, Plataformas e Links
 
-| Ambiente              | Plataforma              | Link de Acesso                                                                                                                                     |
-|-----------------------|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Prototipagem          | Figma                    | [Acessar Figma](https://www.figma.com/board/2tmkT9fVC38qIzAfGyp0mu/procastina%C3%A7%C3%A3o?node-id=0-1&p=f&t=tDanAbsaeRpcc3sg-0)                  |
-| Desenvolvimento       | Figma                    | [Acessar Figma](https://www.figma.com/board/2tmkT9fVC38qIzAfGyp0mu/procastina%C3%A7%C3%A3o?node-id=0-1&p=f&t=tDanAbsaeRpcc3sg-0)                  |
-| Documentação          | Entrevistas e Pesquisas  | Acesso restrito                                                                                                                                    |
-| Comunicação           | Discord e WhatsApp       | Acesso restrito                                                                                                                                    |
-| Apresentação          | Canva e Adobe            | Acesso restrito                                                                                                                                    |
-| Repositório de Código | GitHub                   | Acesso restrito                                                                                                                                    |
+| Ambiente              | Plataforma               | Link de Acesso                                                                                                                                     |
+|-----------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Prototipagem          | Figma                     | [Acessar Figma](https://www.figma.com/board/2tmkT9fVC38qIzAfGyp0mu/procastina%C3%A7%C3%A3o?node-id=0-1&p=f&t=tDanAbsaeRpcc3sg-0)                  |
+| Desenvolvimento       | Figma                     | [Acessar Figma](https://www.figma.com/board/2tmkT9fVC38qIzAfGyp0mu/procastina%C3%A7%C3%A3o?node-id=0-1&p=f&t=tDanAbsaeRpcc3sg-0)                  |
+| Documentação          | Miro e Pesquisas          | Acesso restrito                                                                                                                                    |
+| Comunicação           | Discord e WhatsApp        | Acesso restrito                                                                                                                                    |
+| Entrevistas           | WhatsApp                  | Acesso restrito                                                                                                                                    |
+| Apresentação          | Canva e Adobe             | Acesso restrito                                                                                                                                    |
+| Repositório de Código | GitHub                    | Acesso restrito                                                                                                                                    |
+
 
 
 ## Controle de versão
