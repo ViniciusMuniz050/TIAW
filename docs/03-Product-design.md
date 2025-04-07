@@ -22,6 +22,7 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 Apresente aqui as histórias de usuários que são relevantes para o projeto da sua solução. As histórias de usuários consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuários por contexto, para facilitar consultas recorrentes a esta parte do documento.
 
 > **Links úteis**:
+
 > - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
 > - [Como escrever boas histórias de usuário (user stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 > - [User stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
@@ -35,13 +36,15 @@ Apresente aqui as histórias de usuários que são relevantes para o projeto da 
 
 ##### Proposta para a persona Arthur Morgan 
 
-![Exemplo de proposta de valor](images/Arthur.pdf)
+![Exemplo de proposta de valor](https://github.com/user-attachments/files/19624427/Mapa.da.Proposta.de.Valor-.Arthur.pdf)
+
 ##### Proposta para a persona Cláudia Diniz 
 
-![Exemplo de proposta de valor](images/Cláudia.pdf)
+![Exemplo de proposta de valor](https://github.com/user-attachments/files/19624421/Mapa.da.Proposta.de.Valor-.Claudia.pdf)
+)
 ##### Proposta para a persona Lucas Henrique 
 
-![Exemplo de proposta de valor](images/Lucas.pdf)
+![Exemplo de proposta de valor](https://github.com/user-attachments/files/19624418/Mapa.da.Proposta.de.Valor-Lucas.pdf)
 
 > **Links úteis**:
 > - [O que é o canvas da proposta de valor e como usar?](https://www.youtube.com/watch?v=Iqb-8Q_eiiA)
