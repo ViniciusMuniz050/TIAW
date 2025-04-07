@@ -36,15 +36,15 @@ Apresente aqui as histórias de usuários que são relevantes para o projeto da 
 
 ##### Proposta para a persona Arthur Morgan 
 
-![Exemplo de proposta de valor](https://github.com/user-attachments/files/19624427/Mapa.da.Proposta.de.Valor-.Arthur.pdf)
+![Exemplo de proposta de valor](images/Arthur_page-0001.jpg)
 
 ##### Proposta para a persona Cláudia Diniz 
 
-![Exemplo de proposta de valor](https://github.com/user-attachments/files/19624421/Mapa.da.Proposta.de.Valor-.Claudia.pdf)
+![Exemplo de proposta de valor](images/Cláudia_page-0001.jpg)
 )
 ##### Proposta para a persona Lucas Henrique 
 
-![Exemplo de proposta de valor](https://github.com/user-attachments/files/19624418/Mapa.da.Proposta.de.Valor-Lucas.pdf)
+![Exemplo de proposta de valor](images/Lucas_page-0001.jpg)
 
 > **Links úteis**:
 > - [O que é o canvas da proposta de valor e como usar?](https://www.youtube.com/watch?v=Iqb-8Q_eiiA)
