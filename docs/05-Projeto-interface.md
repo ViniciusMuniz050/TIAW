@@ -9,7 +9,7 @@
 A tela inicial apresenta uma navegação direta e objetiva, com acesso rápido às principais seções da plataforma. Foram priorizados elementos visuais leves e uma estrutura limpa, garantindo boa usabilidade.
 
 #### 2. *Tela de Login/Cadastro*
-A tela de autenticação foi criada com foco na simplicidade e segurança. Foram implementadas boas práticas de UX para facilitar a entrada de novos usuários e a autenticação de usuários recorrentes.
+A tela de autenticação foi criada com foco na simplicidade e segurança. 
 
 #### 3. *Dashboard / Área do Usuário*
 Essa interface reúne todas as funcionalidades essenciais em um único lugar. Foi pensada para ser intuitiva, com informações organizadas em blocos visuais e ícones de fácil compreensão.
