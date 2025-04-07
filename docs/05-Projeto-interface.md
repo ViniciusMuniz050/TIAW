@@ -9,9 +9,6 @@
 
  ## User flow
 
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
-
 **✳️✳️✳️ COLOQUE AQUI O USER FLOW ✳️✳️✳️**
 
 ![Exemplo de fluxo de telas](docs/images/procastinação.png)
