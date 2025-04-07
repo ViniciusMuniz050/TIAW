@@ -9,8 +9,6 @@
 
  ## User flow
 
-**✳️✳️✳️ COLOQUE AQUI O USER FLOW ✳️✳️✳️**
-
 ![Exemplo de fluxo de telas](docs/images/procastinação.png)
 
 > **Links úteis**:
@@ -21,17 +19,7 @@
 
 ## Wireframes
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
-
-São protótipos usados no design de interface para sugerir a estrutura de um site web e seu relacionamento entre suas páginas. Um wireframe web é uma ilustração que mostra o layout dos elementos fundamentais na interface.
-
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
-
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
-
-Descrição para a tela XPTO
-
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+![Exemplo de wireframe](docs/images/Frames.jpeg)
 
  
 > **Links úteis**:
@@ -44,7 +32,5 @@ Descrição para a tela XPTO
 
 
 ### Protótipo Interativo
-
-**✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
 
 ✅ [Protótipo interativo](https://www.figma.com/proto/kBXYou2bxlPFA4IgAZoxtn/Procastina%C3%A7%C3%A3o?node-id=129-649&t=C0yAS6AaCgyIx21P-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=129%3A649&show-proto-sidebar=1)  
