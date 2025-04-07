@@ -5,9 +5,7 @@
 
 ## Slides
 
-Coloque aqui o conjunto de slides.
-
-> O arquivo deve estar no formato PDF e conter a apresentação completa do projeto, abordando todos os itens trabalhados nos demais artefatos. 
+[TIAW_apresentação.pdf](https://github.com/user-attachments/files/19624541/TIAW_apresentacao.pdf)
 
 > **Links úteis**:
 > - [10 dicas de design para slides](https://rockcontent.com/blog/design-para-slides/)
