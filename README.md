@@ -12,7 +12,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 * Lara Rossini Rhis
 * Daniel Rodrigues Bleme
-* João Vitor Matias Gonçalves
+* João Vitor Matias Gonçalves.
 * Marcus Vinicius Lima Pereira
 * Vinicius Muniz Costa
 * Nome completo do aluno 6
