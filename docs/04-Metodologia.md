@@ -33,8 +33,6 @@ Para uma melhor organização e eficiência, a equipe foi dividida em funções 
 
 ## Controle de versão
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
-
 A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-scm.com/), sendo que o [GitHub](https://github.com) foi utilizado para hospedagem do repositório.
 
 O projeto segue a seguinte convenção para o nome de branches:
@@ -51,17 +49,6 @@ Quanto à gerência de issues, o projeto adota a seguinte convenção para etiqu
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gestão de tags, merges, commits e branches é realizada. Discuta também como a gestão de issues foi feita.
-
-> **Links úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e GitHub](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
-
-## Planejamento do projeto
-
 ###  Divisão de papéis
 
 - Scrum Master: Lara;
@@ -71,34 +58,40 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Processo
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
+O projeto foi desenvolvido com base na abordagem de **Design Thinking**, aliada à utilização do framework ágil **Scrum**, com o objetivo de garantir uma solução centrada no usuário e um processo iterativo e colaborativo.
 
-Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, o GitHub Projects, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução. 
+### Etapas do Design Thinking aplicadas:
 
-Coloque uma imagem da estrutura da ferramenta de controle de tarefas (Kanban) e o link do GitHub Projects.
- 
-> **Links úteis**:
-> - [GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-> - [Planejamento e gestão ágil de projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Como criar backlogs no GitHub](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial slack](https://slack.com/intl/en-br/)
+- **Imersão**: Levantamento de dados por meio de entrevistas e pesquisas com usuários reais.
+- **Definição**: Análise das informações coletadas para identificar os principais problemas enfrentados e definir os focos de solução.
+- **Ideação**: Sessões em grupo para gerar ideias e definir as principais funcionalidades e o fluxo da aplicação.
+- **Prototipação**: Criação de wireframes e protótipos interativos no Figma.
 
-### Ferramentas
+### Metodologia Scrum
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
+Durante o desenvolvimento, o grupo utilizou os principais elementos do Scrum:
 
-Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) editor de código, (2) ferramentas de comunicação, (3) ferramentas de diagramação, (4) plataformas de hospedagem, entre outras.
+- **Sprints semanais**
+- **Reuniões de planejamento e revisão** durante os encontros em aula e online via Discord
+- **Backlog do produto** mantido no **GitHub Projects**.
 
-⚠️ EXEMPLO ⚠️ os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+Essa estrutura possibilitou a divisão clara de responsabilidades, acompanhamento do progresso e interação constante sobre o produto.
 
-| Ambiente                            | Plataforma                         | Link de acesso                       |
-|-------------------------------------|------------------------------------|--------------------------------------|
-| Processo de Design Thinking         | Miro                               | https://....   ⚠️ EXEMPLO ⚠️        |
-| Repositório de código fonte         | GitHub                             | https://....   ⚠️ EXEMPLO ⚠️        |
-| Documentos do projeto               | GitHub                             | http://....    ⚠️ EXEMPLO ⚠️        |
-| Gerenciamento do projeto            | GitHub Projects                    | http://....    ⚠️ EXEMPLO ⚠️        |
-| Projeto de interface                | Figma                              | http://....    ⚠️ EXEMPLO ⚠️        |
-| Hospedagem                          | Vercel                             | http://....    ⚠️ EXEMPLO ⚠️        |
- 
+### GitHub Projects – Gerenciamento Ágil
+
+A equipe utilizou o recurso **GitHub Projects** para planejar, organizar e monitorar as tarefas do projeto. 
+
+## 🛠️ Ferramentas Utilizadas
+
+A seguir, listamos as principais ferramentas empregadas no desenvolvimento do projeto, juntamente com a justificativa de suas escolhas:
+
+| Ambiente                    | Plataforma           | Link de Acesso                                                                 |
+|-----------------------------|----------------------|--------------------------------------------------------------------------------|
+| Processo de Design Thinking | Miro                 | [Acessar Miro](COLE_O_LINK_AQUI)                                              |
+| Repositório de Código       | GitHub               | [Acessar GitHub](COLE_O_LINK_AQUI)                                            |
+| Documentos do Projeto       | GitHub               | Acesso restrito                                                                |
+| Gerenciamento do Projeto    | GitHub Projects      | [Acessar GitHub Projects](COLE_O_LINK_AQUI)                                   |
+| Projeto de Interface        | Figma                | [Acessar Figma](https://www.figma.com/board/2tmkT9fVC38qIzAfGyp0mu/procastina%C3%A7%C3%A3o?node-id=0-1) |
+| Comunicação                 | Discord e WhatsApp   | Acesso restrito                                                                |
+| Apresentação                | Canva e Adobe        | Acesso restrito                                                                |
+| Hospedagem (versão futura)  | Vercel (planejado)   | A definir                                                                      |
