@@ -22,14 +22,18 @@
 
                 <span>Data </span><input type="date" name="" id="EntradaData">
 
-                <input type="radio" id="imp-baixa" name="importancia" value="Baixa">
-                <label for="imp-baixa">Baixa Importância</label>
+                <div class="inputs-importancia">
+                                    
+                    <input type="radio" id="imp-baixa" name="importancia" value="Baixa">
+                    <label for="imp-baixa">Baixa Importância</label>
         
-                <input type="radio" id="imp-media" name="importancia" value="Media">
-                <label for="imp-media">Média Importância</label>
+                    <input type="radio" id="imp-media" name="importancia" value="Media">
+                    <label for="imp-media">Média Importância</label>
         
-                <input type="radio" id="imp-alta" name="importancia" value="Alta">
-                <label for="imp-alta">Alta Importância</label>
+                    <input type="radio" id="imp-alta" name="importancia" value="Alta">
+                    <label for="imp-alta">Alta Importância</label>
+
+                </div>
 
                 <input type="submit" value="Adicionar">
             </form>
@@ -42,7 +46,27 @@
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', () => {})
+        document.addEventListener('DOMContentLoaded', () => {
+
+            let nivelImportanciaSelecionado = null;
+
+            const inputsContainer = document.querySelector('.inputs-importancia');
+
+            inputsContainer.addEventListener('change', (event) => {
+
+                if (event.target.tagName === 'INPUT' && event.target.type === 'radio' && event.target.checked) {
+
+                    nivelImportancia = event.target.value;
+
+
+                }
+
+
+
+            })
+
+
+        })
         
         document.getElementById('AddTarefas').addEventListener('submit', (event) => {
             //event.preventDefault();
@@ -50,15 +74,23 @@
             const Tarefa = document.getElementById('Entrada').value
             const Data = document.getElementById('EntradaData').value
 
-            const JSONdados = {
-                "TarefasListada": Tarefa,
-                "DataListada": Data,
-                "ImportanciaListada": ""
+             const JSONdados = {
 
+                "tarefas": [
+                    {
+                    "DataListada": Data,
+                    "itens": [
+                        {
+                        "TarefasListada": Tarefa,
+                       "Importancia": nivelImportancia,
+                        }
+                    ],
+                    },
+                ]
 
             }
 
-            alert(Tarefa +' '+ Data);
+            alert(Tarefa +' '+ Data +' '+ nivelImportancia);
 
 
         })
