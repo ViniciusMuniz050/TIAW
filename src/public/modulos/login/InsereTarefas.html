@@ -13,11 +13,25 @@
         <div class="topo">
             <button>Cancelar</button>
             <h2>Nos diga o que você precisa fazer</h2>
+            
         </div>
 
         <div>
-            <form action="InsereTarefas.html">
+            <form action="InsereTarefas.html" id="AddTarefas">
                 <input type="text" id="Entrada" placeholder="Insira sua tarefa">
+
+                <span>Data </span><input type="date" name="" id="EntradaData">
+
+                <input type="radio" id="imp-baixa" name="importancia" value="Baixa">
+                <label for="imp-baixa">Baixa Importância</label>
+        
+                <input type="radio" id="imp-media" name="importancia" value="Media">
+                <label for="imp-media">Média Importância</label>
+        
+                <input type="radio" id="imp-alta" name="importancia" value="Alta">
+                <label for="imp-alta">Alta Importância</label>
+
+                <input type="submit" value="Adicionar">
             </form>
         </div>
 
@@ -26,7 +40,32 @@
     </div>
     
 
+    <script>
 
+        document.addEventListener('DOMContentLoaded', () => {})
+        
+        document.getElementById('AddTarefas').addEventListener('submit', (event) => {
+            //event.preventDefault();
+
+            const Tarefa = document.getElementById('Entrada').value
+            const Data = document.getElementById('EntradaData').value
+
+            const JSONdados = {
+                "TarefasListada": Tarefa,
+                "DataListada": Data,
+                "ImportanciaListada": ""
+
+
+            }
+
+            alert(Tarefa +' '+ Data);
+
+
+        })
+
+
+
+    </script>
 
 
 
