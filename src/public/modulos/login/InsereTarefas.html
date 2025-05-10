@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrada de Tarefas</title>
+    <link rel="stylesheet" href="../../assets/css/InsereTarefas.css">
 </head>
 <body>
 
@@ -11,17 +12,17 @@
     <div id="Centro">
 
         <div class="topo">
-            <button>Cancelar</button>
+            <button type="button" id="btnCancelar">Cancelar</button>
             <h2>Nos diga o que você precisa fazer</h2>
-            
         </div>
 
-        <div>
+        <div class="EntradaTudo">
             <form action="InsereTarefas.html" id="AddTarefas">
                 <input type="text" id="Entrada" placeholder="Insira sua tarefa">
-
-                <span>Data </span><input type="date" name="" id="EntradaData">
-
+                <br>
+                <label for="EntradaData">Data</label>
+                <input type="date" id="EntradaData" />
+                 <br>
                 <div class="inputs-importancia">
                                     
                     <input type="radio" id="imp-baixa" name="importancia" value="Baixa">
@@ -29,13 +30,13 @@
         
                     <input type="radio" id="imp-media" name="importancia" value="Media">
                     <label for="imp-media">Média Importância</label>
-        
+                    <br>
                     <input type="radio" id="imp-alta" name="importancia" value="Alta">
                     <label for="imp-alta">Alta Importância</label>
 
                 </div>
 
-                <input type="submit" value="Adicionar">
+                <input type="submit" value="Adicionar" class="Adicionar">
             </form>
         </div>
 
@@ -69,7 +70,7 @@
         })
         
         document.getElementById('AddTarefas').addEventListener('submit', (event) => {
-            //event.preventDefault();
+            event.preventDefault();
 
             const Tarefa = document.getElementById('Entrada').value
             const Data = document.getElementById('EntradaData').value
@@ -94,6 +95,13 @@
 
 
         })
+
+
+        document.getElementById('btnCancelar').addEventListener('click', function () {
+            if (confirm('Tem certeza de que deseja cancelar? Todos os dados inseridos serão perdidos.')){
+                document.getElementById('AddTarefas').reset();
+            }
+        });
 
 
 
