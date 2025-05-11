@@ -6,6 +6,21 @@ body {
     margin: 0;
     background-color: #caf094; 
 }
+.ACTION-MODE{
+    position: relative;
+    display: block;
+    top: -46%;
+    right: -30%;
+    font-size: 50px;
+    font-style: oblique;
+    font-weight: bolder;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-stroke: 1px #000000;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+}
+
 #Centro{
     justify-content: center;
     align-items: center;
@@ -22,6 +37,7 @@ body {
 /*TOPO SELETOR*/
 .Preguica{
     position: relative;
+    right: 200px;
 
 }
 .topo{
@@ -258,9 +274,26 @@ body {
 /*FIM CARROSSEL DE TAREFAS PARA SE PODER EXCLUIR E VISUALIZAR*/
 
 
+@media (max-width: 1510px){
+    .topo2 {
+        left: 480px;
+    }
+    .ACTION-MODE{
+        display: none;
+    }
+}
 
+@media (max-width: 1440px){
+    .topo2 {
+        left: 440px;
+    }
+    .Preguica{
+        right: 130px;
+    }
+}
 
 @media (max-width: 1024px) {
+
     body{
         background-image: url("../../assets/images/Imagem preguiça 2.png");
         background-size: cover;
@@ -278,6 +311,7 @@ body {
         display: none;
     }
 }
+
 
 @media (max-width: 768px) {
     .EntradaTudo {
@@ -327,4 +361,12 @@ body {
     #anterior, #proximo {
         display: none;
     }
+
+    .topo2 {
+        left: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    
 }
