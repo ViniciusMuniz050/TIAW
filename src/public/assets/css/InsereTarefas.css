@@ -365,8 +365,18 @@ body {
     .topo2 {
         left: 320px;
     }
+    
+    body{
+        background-image: none;
+    }
 }
 
-@media (max-width: 480px) {
-    
+@media (max-width: 358px) {
+    .topo2 {
+        left: 180px;
+    }
+    body{
+        background-image: none;
+    }
 }
+
