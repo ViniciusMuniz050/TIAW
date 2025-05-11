@@ -11,7 +11,7 @@
 
 
     <img src="../../assets/images/Imagem preguiça 2.png" alt="" class="Preguica">
-
+    
     
     <div id="Centro">
 
@@ -53,18 +53,28 @@
             </form>
         </div>
 
-
+            <div class="carrossel-wrapper">
+                <button id="anterior">‹</button>
+                <div class="carrossel" id="criaCard"></div>
+                <button id="proximo">›</button>
+            </div>
+          
 
     </div>
+
+
 
     
 
     <script>
 
+        //COLETA DE DADOS INSERIDOS
+
+        let nivelImportanciaSelecionado = null;
+
         document.addEventListener('DOMContentLoaded', () => {
 
-            let nivelImportanciaSelecionado = null;
-
+            window.onload = exibirTarefas;
             const inputsContainer = document.querySelector('.inputs-importancia');
 
             inputsContainer.addEventListener('change', (event) => {
@@ -94,35 +104,145 @@
                 return;
             }
 
-             const JSONdados = {
+            const novaTarefaItem = {
+                "TarefasListada": Tarefa,
+                "Importancia": nivelImportancia
+            };
 
-                "tarefas": [
-                    {
-                    "DataListada": Data,
-                    "itens": [
-                        {
-                        "TarefasListada": Tarefa,
-                        "Importancia": nivelImportancia,
-                        }
-                    ],
-                    },
-                ]
+            let dadosSalvos = localStorage.getItem('calendarioDeTarefas');
+            let calendarioTarefas;
 
-            }
+            if (dadosSalvos) {
+                    calendarioTarefas = JSON.parse(dadosSalvos);
+                } else {
+                    calendarioTarefas = { "tarefas": [] };
+                }
+
+                let diaExist = calendarioTarefas.tarefas.find(d => d.DataListada === Data);
+
+                if (diaExist) {
+                    diaExist.itens.push(novaTarefaItem);
+                } else {
+                    calendarioTarefas.tarefas.push({
+                        "DataListada": Data,
+                        "itens": [novaTarefaItem]
+                    });
+                }
+
+                localStorage.setItem('calendarioDeTarefas', JSON.stringify(calendarioTarefas));
+                exibirTarefas();
 
             alert(Tarefa +' '+ Data +' '+ nivelImportancia);
 
 
         })
+        //FIM COLETA DE DADOS INSERIDOS
 
 
+
+        //CRIA CARDS
+
+        function exibirTarefas() {
+            const container = document.getElementById('criaCard');
+            container.innerHTML = ''; 
+
+            let dadosSalvos = localStorage.getItem('calendarioDeTarefas');
+            if (!dadosSalvos) return;
+
+            let calendarioDeTarefas = JSON.parse(dadosSalvos);
+
+            for (let i = 0; i < calendarioDeTarefas.tarefas.length; i++) {
+                let dia = calendarioDeTarefas.tarefas[i];
+                let itens = dia.itens;
+            
+                for (let j = 0; j < itens.length; j++) {
+                    let tarefa = itens[j];
+                
+                    const card = document.createElement('div');
+                    card.classList.add('card-tarefa'); 
+                
+                    card.innerHTML = `
+                        <div class="CardCarrosel">
+                            <h3>${tarefa.TarefasListada}</h3>
+                            <p>Data: ${dia.DataListada}</p>
+                            <p>Importância: ${tarefa.Importancia}</p>
+                            <button class="btn-deletar" data-dia="${dia.DataListada}" data-index="${j}">Deletar</button>
+                        </div>
+                            `;
+                
+                    container.appendChild(card);
+                }
+            }
+
+            document.getElementById('anterior').addEventListener('click', () => {
+            document.getElementById('criaCard').scrollBy({ left: -270, behavior: 'smooth' });
+            });
+
+            document.getElementById('proximo').addEventListener('click', () => {
+            document.getElementById('criaCard').scrollBy({ left: 270, behavior: 'smooth' });
+            });
+
+            const botoesDeletar = document.querySelectorAll('.btn-deletar');
+            for (let i = 0; i < botoesDeletar.length; i++) {
+                botoesDeletar[i].addEventListener('click', function () {
+                    const data = this.getAttribute('data-dia');
+                    const index = parseInt(this.getAttribute('data-index'));
+                
+                    let dados = localStorage.getItem('calendarioDeTarefas');
+                    let calendario = JSON.parse(dados);
+                
+                    let dia = calendario.tarefas.find(d => d.DataListada === data);
+                    if (dia) {
+                        dia.itens.splice(index, 1);
+                        if (dia.itens.length === 0) {
+                            calendario.tarefas = calendario.tarefas.filter(d => d.DataListada !== data);
+                        }
+                    }
+                
+                    localStorage.setItem('calendarioDeTarefas', JSON.stringify(calendario));
+                    exibirTarefas();
+                });
+            }
+        }
+
+
+
+
+        // DELETAR CARD
+        for (let i = 0; i < botoesDeletar.length; i++) {
+            botoesDeletar[i].addEventListener('click', function () {
+                const data = this.getAttribute('data-dia');
+                const index = parseInt(this.getAttribute('data-index'));
+            
+                let dadosSalvos = localStorage.getItem('calendarioDeTarefas');
+                let calendario = JSON.parse(dadosSalvos);
+            
+                let dia = calendario.tarefas.find(d => d.DataListada === data);
+                if (dia) {
+                    dia.itens.splice(index, 1); 
+                    if (dia.itens.length === 0) {
+                        calendario.tarefas = calendario.tarefas.filter(d => d.DataListada !== data);
+                    }
+                }
+            
+                localStorage.setItem('calendarioDeTarefas', JSON.stringify(calendario));
+                exibirTarefas();
+            });
+        }
+        //FIM DELETAR CARD
+        //FIM CRIA CARDS
+
+
+
+        //BOTÃO PARA LIMPAR ENTRADA DE DADOS
         document.getElementById('btnCancelar').addEventListener('click', function () {
 
-                document.getElementById('AddTarefas').reset();
-                nivelImportancia = null;
-                document.querySelectorAll('.inputs-importancia input[type="radio"]').forEach(radio => radio.checked = false);
+            document.getElementById('AddTarefas').reset();
+            nivelImportancia = null;
+            document.querySelectorAll('.inputs-importancia input[type="radio"]').forEach(radio => radio.checked = false);
             
         });
+        //FIM BOTÃO PARA LIPAR ENTRADA DE DADOS
 
 
 

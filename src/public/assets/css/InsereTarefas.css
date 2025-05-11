@@ -72,6 +72,14 @@ body {
     color: #000000;
     font-size: 14px;
 }
+#btnVoltar:hover{
+    transform: scale(1.04);
+    transition: 0.5s;
+}
+#btnVoltar:active{
+    background: linear-gradient(60deg, #77fc66 0%, rgb(180, 253, 180) 100%);
+
+}
 .topo2{
     position: absolute;
     top: 10px; 
@@ -188,3 +196,135 @@ body {
     color: #ffffff; 
 }
 /*FIM BOTÕES DE DEFINIR IMPORTANCIA*/
+
+/*CARROSSEL DE TAREFAS PARA SE PODER EXCLUIR E VISUALIZAR*/
+.card-tarefa {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.carrossel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px; 
+    
+    
+}
+ 
+  
+.carrossel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 4px;
+    scrollbar-width: none; 
+    border: none;
+}
+  
+  
+.card-tarefa {
+    min-width: 250px;
+    max-width: 250px;
+    flex: 0 0 auto;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    background: linear-gradient(60deg, #39bd28 0%, #00ff22 100%);
+}
+
+#anterior, #proximo {
+    background: linear-gradient(60deg, #96fa89 0%, #0ee22b 100%);
+    border: none;
+    padding: 13px;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10%;
+    z-index: 10;
+}
+
+.CardCarrosel{
+    background: linear-gradient(60deg, #39bd28 0%, #00ff22 100%);
+
+}
+/*FIM CARROSSEL DE TAREFAS PARA SE PODER EXCLUIR E VISUALIZAR*/
+
+
+
+
+@media (max-width: 1024px) {
+    body{
+        background-image: url("../../assets/images/Imagem preguiça 2.png");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        background-position-x: -100px;
+    }
+    #Centro {
+        right: 0;
+    }
+    .topo2 {
+        left: 450px;
+    }
+    .Preguica{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .EntradaTudo {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #Entrada{
+        padding: 12px 3px;
+    }
+    #EntradaData{
+        padding: 12px 3px;
+    }
+
+    .inputs-importancia {
+        align-items: center;
+    }
+
+    .carrossel-wrapper {
+        align-items: center;
+    }
+
+    #anterior, #proximo {
+        margin: 10px;
+    }
+
+    .card-tarefa {
+        min-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Ndp2 {
+        font-size: 140%;
+        text-align: center;
+    }
+
+    #Entrada, #EntradaData {
+        font-size: 14px;
+        padding: 10px 0px;
+    }
+
+    .Adicionar {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    #anterior, #proximo {
+        display: none;
+    }
+}
