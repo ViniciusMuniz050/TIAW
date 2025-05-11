@@ -9,7 +9,7 @@
 <body>
 
 
-    <h2 class="Ndp">Nos diga o que você precisa fazer</h2>
+
     <img src="../../assets/images/Imagem preguiça 2.png" alt="" class="Preguica">
 
     
@@ -18,15 +18,18 @@
         <div class="topo">
             <button id="btnCancelar">Limpar</button>
         </div>
+        <h2 class="Ndp2">Nos diga o que você precisa fazer</h2>
         <div class="topo2">
             <a id="btnVoltar" href="index.html">Voltar</a>
         </div>
 
         <div class="EntradaTudo">
             <form action="InsereTarefas.html" id="AddTarefas">
+
+                <label for="EntradaInfo" class="InserirParagrafo">Entrada de Tarefa</label>
                 <input type="text" id="Entrada" placeholder="Insira sua tarefa">
                 <br>
-                <label for="EntradaData" class="DataParagrafo">Data</label>
+                <label for="EntradaData" class="DataParagrafo">Entrada de Data</label>
                 <input type="date" id="EntradaData"/>
                 <br>
                 <div class="inputs-importancia">
@@ -53,6 +56,7 @@
 
 
     </div>
+
     
 
     <script>
@@ -84,6 +88,11 @@
 
             const Tarefa = document.getElementById('Entrada').value
             const Data = document.getElementById('EntradaData').value
+
+            if (!Tarefa || !Data || !nivelImportancia) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
 
              const JSONdados = {
 

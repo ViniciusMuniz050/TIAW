@@ -7,18 +7,15 @@ body {
     background-color: #caf094; 
 }
 #Centro{
-    /*Centralizando itens*/
     justify-content: center;
     align-items: center;
-    padding: 5% 3% 4% ;
+    padding: 2% 2% 2% ;
     background-color: #2eb33e;
     border-left-width: 5px;
     border-left-style: solid;
     border-left-color: rgb(2, 121, 2);
     position: relative;
     right: 15%;
-
-    /*dando forma*/
     border-radius: 15px;
 }
 
@@ -34,10 +31,18 @@ body {
 }
 .Ndp{
     position: absolute;
-    top: 150px;
+    top: 240px;
     left: 50%;
     transform: translateX(-50%); 
-    font-size: 200%;
+    font-size: 180%;
+    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 1px #000000;
+    color: #ffffff;
+}
+
+.Ndp2{
+    font-size: 180%;
     font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     -webkit-text-stroke: 1px #000000;
@@ -70,7 +75,7 @@ body {
 .topo2{
     position: absolute;
     top: 10px; 
-    left: 470px; 
+    left: 500px; 
 }
 /*FIM TOPO SELETOR*/
 
@@ -115,7 +120,7 @@ body {
     width: 100%;    
 }
 #Entrada::placeholder{
-    color: #fff;
+    color: white;
 }
 
 #EntradaData{
@@ -130,6 +135,15 @@ body {
 
 #AddTarefas span{
     font-weight: bolder;
+}
+
+.InserirParagrafo{
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+.DataParagrafo{
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
 }
 /*FIM FUNÇÕES DE ENTRADA DE TAREFAS*/
 
