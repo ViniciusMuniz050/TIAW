@@ -8,34 +8,45 @@
 </head>
 <body>
 
+
     <h2 class="Ndp">Nos diga o que você precisa fazer</h2>
+    <img src="../../assets/images/Imagem preguiça 2.png" alt="" class="Preguica">
+
+    
     <div id="Centro">
 
         <div class="topo">
-            <button id="btnCancelar">Cancelar</button>
+            <button id="btnCancelar">Limpar</button>
+        </div>
+        <div class="topo2">
+            <a id="btnVoltar" href="index.html">Voltar</a>
         </div>
 
         <div class="EntradaTudo">
             <form action="InsereTarefas.html" id="AddTarefas">
                 <input type="text" id="Entrada" placeholder="Insira sua tarefa">
                 <br>
-                <label for="EntradaData">Data</label>
+                <label for="EntradaData" class="DataParagrafo">Data</label>
                 <input type="date" id="EntradaData"/>
-                 <br>
+                <br>
                 <div class="inputs-importancia">
-                                    
-                    <input type="radio" id="imp-baixa" name="importancia" value="Baixa">
-                    <label for="imp-baixa">Baixa Importância</label>
-        
-                    <input type="radio" id="imp-media" name="importancia" value="Media">
-                    <label for="imp-media">Média Importância</label>
-                    <br>
-                    <input type="radio" id="imp-alta" name="importancia" value="Alta">
-                    <label for="imp-alta">Alta Importância</label>
-
+                     <div class="Importancia-Input">
+                        <input type="radio" id="imp-baixa" name="importancia" value="Baixa">
+                        <label for="imp-baixa">Baixa Importância</label>
+                    </div>
+                    <div class="Importancia-Input">
+                        <input type="radio" id="imp-media" name="importancia" value="Media">
+                        <label for="imp-media">Média Importância</label>
+                    </div>
+                    <div class="Importancia-Input">
+                        <input type="radio" id="imp-alta" name="importancia" value="Alta">
+                        <label for="imp-alta">Alta Importância</label>
+                    </div>
                 </div>
 
+                <div class="Add">
                 <input type="submit" value="Adicionar" class="Adicionar">
+                </div>
             </form>
         </div>
 
@@ -82,7 +93,7 @@
                     "itens": [
                         {
                         "TarefasListada": Tarefa,
-                       "Importancia": nivelImportancia,
+                        "Importancia": nivelImportancia,
                         }
                     ],
                     },
@@ -97,9 +108,11 @@
 
 
         document.getElementById('btnCancelar').addEventListener('click', function () {
-            if (confirm('Tem certeza de que deseja cancelar? Todos os dados inseridos serão perdidos.')){
+
                 document.getElementById('AddTarefas').reset();
-            }
+                nivelImportancia = null;
+                document.querySelectorAll('.inputs-importancia input[type="radio"]').forEach(radio => radio.checked = false);
+            
         });
 
 
