@@ -15,7 +15,6 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 * João Vitor Matias Gonçalves
 * Marcus Vinicius Lima Pereira
 * Vinicius Muniz Costa
-* Nome completo do aluno 6
 
 ## Professor
 
@@ -30,6 +29,12 @@ Não deixe de informar o link onde a aplicação estará disponível para acesso
 Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
 
 O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+
+# Descrição
+
+Este projeto tem como objetivo o desenvolvimento de uma aplicação voltada para auxiliar pessoas no combate à procrastinação. A ferramenta oferece funcionalidades como organização de tarefas, cronômetro Pomodoro, relatórios de produtividade e alertas inteligentes.
+
+O desenvolvimento deste projeto visa aplicar conceitos de desenvolvimento ágil, versionamento de código e documentação, utilizando ferramentas como Git, GitHub e Markdown.
 
 # Documentação
 
