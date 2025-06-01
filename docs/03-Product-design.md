@@ -59,25 +59,33 @@ Lucas quer se sentir mais produtivo, avançar mais no seu estudos para conseguir
 
 ## Requisitos
 
-As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade dos requisitos, aplique uma técnica de priorização e detalhe como essa técnica foi aplicada.
+As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
-### Requisitos funcionais
+## Requisitos Funcionais
 
-| ID     | Descrição do Requisito                                   | Prioridade |
-| ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas  | MÈDIA      |
-| RF-002 | Medidor de progresso através de desafios e conquistas. | ALTA     |
-| RF-003 | Entrada somente depois de realizar o login com senha. | ALTA     |
-| RF-004 | Entrada de novos afazeres pessoais pelo usuário para melhor planejamento. | MÈDIA     |
+| ID     | Descrição do Requisito                                                                          | Prioridade (MoSCoW) |
+| ------ | ------------------------------------------------------------------------------------------------ | -------------------- |
+| RF-001 | Permitir que o usuário cadastre, edite e exclua tarefas.                                         | Must have (M)        |
+| RF-002 | Implementar um medidor de progresso através de desafios, conquistas e gamificação.              | Should have (S)      |
+| RF-003 | Permitir entrada apenas após realizar login com senha.                                           | Must have (M)        |
+| RF-004 | Permitir entrada de novos afazeres pessoais para auxiliar no planejamento diário do usuário.    | Must have (M)        |
+| RF-005 | Disponibilizar um cronômetro no modelo Pomodoro para gerenciamento do tempo.                     | Should have (S)      |
+| RF-006 | Gerar relatórios de produtividade com base nas tarefas realizadas e no tempo focado.            | Could have (C)       |
+| RF-007 | Enviar notificações de lembretes sobre tarefas e sessões de foco.                               | Should have (S)      |
 
-### Requisitos não funcionais
+---
 
-| ID      | Descrição do Requisito                                                              | Prioridade |
-| ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em dispositivos móveis| MÉDIA     |
-| RNF-002 | Site disponível 24 horas por dia, 7 dias por semana.        | ALTA     |
-| RNF-003 | Sistema de notificação integrado com o calendário do usuário.        | ALTA     |
+## Requisitos Não Funcionais
 
+| ID      | Descrição do Requisito                                                                        | Prioridade (MoSCoW) |
+| ------- | --------------------------------------------------------------------------------------------- | -------------------- |
+| RNF-001 | O sistema deve ser responsivo e funcionar em dispositivos móveis, tablets e desktops.         | Must have (M)        |
+| RNF-002 | O site deve estar disponível 24 horas por dia, 7 dias por semana, com alta disponibilidade.    | Must have (M)        |
+| RNF-003 | O sistema deve oferecer integração com o calendário do usuário para envio de notificações.     | Should have (S)      |
+| RNF-004 | O tempo de resposta das páginas não deve exceder 2 segundos.                                   | Should have (S)      |
+| RNF-005 | O sistema deve ser desenvolvido com tecnologias web padrão: HTML, CSS e JavaScript.           | Must have (M)        |
+
+---
 
 ## Restrições
 
