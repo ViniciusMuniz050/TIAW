@@ -34,7 +34,11 @@ A navegação foi projetada para ser intuitiva tanto em desktop quanto em dispos
 
 ## Wireframes
 
-![Exemplo de wireframe](images/Frames.jpeg)
+images/missoes.jpeg
+
+images/comentarios.jpeg
+
+images/.jpeg
 
 
 ### Protótipo Interativo
