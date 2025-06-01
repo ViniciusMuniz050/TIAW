@@ -5,7 +5,7 @@ const mensagem = document.getElementById('mensagem');
 
 let nota = 0;
 
-// Função para selecionar estrelas
+// Selecionar estrelas
 estrelas.forEach((estrela) => {
     estrela.addEventListener('click', () => {
         nota = parseInt(estrela.getAttribute('data-value'));
