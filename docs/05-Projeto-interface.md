@@ -27,11 +27,23 @@ A navegação foi projetada para ser intuitiva tanto em desktop quanto em dispos
 
 ## Wireframes
 
+#### Wireframe aba de Entrada ao Site
+
+![Wireframes](images/abaEntradaSite.jpeg)
+
+
+#### Wireframe aba de Entrada de Tarefas
+Planejar é o primeiro passo para o sucesso! Utilize a aba Inserir Tarefas para adicionar de forma rápida e intuitiva todas as suas atividades e compromissos. Comece a construir seu caminho de missões e prepare-se para conquistá-los no ACTION MODE.
+
+![Wireframes](images/entradaTarefas.png)
+
+
 #### Wireframe aba de Missões
 A aba de Missões foi cuidadosamente projetada para transformar a organização diária em uma experiência visualmente intuitiva e altamente engajadora.
 Com um layout que facilita a navegação, você poderá visualizar e acompanhar suas tarefas mensais de forma clara e agradável, impulsionando sua jornada rumo à produtividade.
 
 ![Wireframes](images/missoes1.png)
+
 
 #### Wireframe aba de Avaliações
 A aba de Avaliações foi desenvolvida para ser um espaço transparente e colaborativo. Aqui, todos os usuários do ACTION MODE podem consultar as opiniões e experiências de outros membros da comunidade.
@@ -39,18 +51,20 @@ Essas avaliações são cruciais para que possamos, enquanto equipe do ACTION MO
 
 ![Wireframes](images/comentarios.jpeg)
 
+
 #### Wireframe aba de Entrada de Avaliação do Site
 Nós do ACTION MODE prezamos muito pela opnião de nossos usuários para que possamos estar sempre evoluindo e melhorando nosso site, tornando a experiencia agradavel para o máximo de pessoas possivel. 
 Pensando nisso, fizemos a aba para entrada de Avaliações do site.
+
 ![Wireframes](images/avaliarSite.png)
 
+
 #### Wireframe aba de Editar Perfil
+A seção Editar Perfil é o seu centro de comando pessoal. Aqui, você pode gerenciar e atualizar todas as suas informações com segurança, além de ajustar as configurações para otimizar sua interação com o ACTION MODE.
 
 ![Wireframes](images/editar%20perfi.jpeg)
 
-#### Wireframe aba de Entrada de Tarefas
 
-![Wireframes](images/entradaTarefas.png)
 
 
 
