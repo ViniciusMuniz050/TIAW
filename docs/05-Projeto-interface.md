@@ -8,11 +8,7 @@ A tela inicial apresenta uma navegação direta e objetiva, com acesso rápido �
 A tela inicial apresenta uma navegação direta e objetiva, com acesso rápido às principais seções da plataforma. Foram priorizados elementos visuais leves e uma estrutura limpa, garantindo boa usabilidade.
 
 #### 2. Tela de Login/Cadastro
-A tela de autenticação foi criada com foco na simplicidade e segurança. 
-
-=======
-#### 2. Tela de Login/Cadastro
-A tela de autenticação foi criada com foco na simplicidade e segurança. 
+A tela de autenticação foi criada com foco na simplicidade e segurança.  
 
 #### 3. Dashboard / Área do Usuário
 Essa interface reúne todas as funcionalidades essenciais em um único lugar. Foi pensada para ser intuitiva, com informações organizadas em blocos visuais e ícones de fácil compreensão.
@@ -23,9 +19,6 @@ Esta é a interface central da plataforma, que permite ao usuário interagir dir
 #### 5. Menu de Navegação e Responsividade
 A navegação foi projetada para ser intuitiva tanto em desktop quanto em dispositivos móveis. O menu lateral ou superior permite acesso rápido e direto a todas as áreas da plataforma.
 
-#### 6. Aba de missões
-A aba de missões é projetada para deixar a apresentação de dias mais intuitiva e agradavel pro usuario, deixando mais fácil visualizar as tarefas que se tem a fazer durante o mês.
-
 
  ## User flow
 
@@ -34,15 +27,37 @@ A aba de missões é projetada para deixar a apresentação de dias mais intuiti
 
 ## Wireframes
 
+#### Wireframe aba de Missões
+A aba de Missões foi cuidadosamente projetada para transformar a organização diária em uma experiência visualmente intuitiva e altamente engajadora.
+Com um layout que facilita a navegação, você poderá visualizar e acompanhar suas tarefas mensais de forma clara e agradável, impulsionando sua jornada rumo à produtividade.
+
 ![Wireframes](images/missoes1.png)
+
+#### Wireframe aba de Avaliações
+A aba de Avaliações foi desenvolvida para ser um espaço transparente e colaborativo. Aqui, todos os usuários do ACTION MODE podem consultar as opiniões e experiências de outros membros da comunidade.
+Essas avaliações são cruciais para que possamos, enquanto equipe do ACTION MODE, identificar pontos de melhoria contínua e aprimorar cada vez mais a sua jornada no site.
 
 ![Wireframes](images/comentarios.jpeg)
 
+#### Wireframe aba de Entrada de Avaliação do Site
+Nós do ACTION MODE prezamos muito pela opnião de nossos usuários para que possamos estar sempre evoluindo e melhorando nosso site, tornando a experiencia agradavel para o máximo de pessoas possivel. 
+Pensando nisso, fizemos a aba para entrada de Avaliações do site.
+![Wireframes](images/avaliarSite.png)
+
+#### Wireframe aba de Editar Perfil
+
 ![Wireframes](images/editar%20perfi.jpeg)
+
+#### Wireframe aba de Entrada de Tarefas
 
 ![Wireframes](images/entradaTarefas.png)
 
 
+
+
 ### Protótipo Interativo
+
+Aqui, apresentamos uma breve experiência de como será a navegação em nosso site. O projeto ACTION MODE busca proporcionar uma jornada agradável e satisfatória para o usuário, por meio de uma abordagem de gamificação.
+Nessa experiência, as tarefas são tratadas como missões a serem cumpridas, e você será recompensado(a) com o ganho de pontos a cada conquista.
 
 ✅ [Protótipo interativo](https://www.figma.com/proto/kBXYou2bxlPFA4IgAZoxtn/Procastina%C3%A7%C3%A3o?node-id=129-649&t=C0yAS6AaCgyIx21P-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=129%3A649&show-proto-sidebar=1)  
