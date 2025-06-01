@@ -1,11 +1,11 @@
 # Template padrão da aplicação
 
 ![Imagem do Template padrão](images/Template_padrao.png)
-Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
-> **Links úteis**:
->
-> - [CSS website layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website page layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect liquid layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and why icons improve your web design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+O layout foi pensado para pessoas que têm problemas com procrastinação. Por isso, montamos a interface com o objetivo de otimizar ao máximo o uso, utilizando, por exemplo, botões de acesso rápido na barra lateral, que permitem navegar com agilidade pelas funções do site.
+
+Uma das decisões visuais foi o uso de uma preguiça como logotipo, pois ela representa bem o sentimento de quem procrastina. A cor verde também foi escolhida com base na logo e em pesquisas que apontam seus efeitos positivos no cérebro. Estudos mostram que o verde (assim como o azul) ativa o córtex pré-frontal, responsável pela memória de trabalho — que acessa informações adquiridas e mantém o foco na atividade em execução.
+
+“O azul e o verde ativam o córtex pré-frontal. Este é responsável pela memória de trabalho, que acessa a memória adquirida e retém a memória da atividade que está sendo executada.”
+Disponível em: https://rhpravoce.com.br/colab/neurociencia-das-cores-pode-estimular-produtividade
+Acesso em: 01/05/2025.
