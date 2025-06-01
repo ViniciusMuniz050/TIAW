@@ -92,9 +92,6 @@
 
             fetch(`http://localhost:3000/dados/${idData}`) 
                 .then(res => {
-                    if (!res.ok) {
-                        throw new Error(`Erro ao buscar dados do dia para deletar: ${res.status}`);
-                    }
                     return res.json();
                 })
                 .then(diaParaAtualizar => {
@@ -119,25 +116,14 @@
                     exibirTarefas(); 
                     alert('Tarefa deletada com sucesso!');
                 })
-                .catch(error => {
-                    console.error('Erro ao deletar tarefa:', error);
-                    alert('Ocorreu um erro ao deletar a tarefa: ' + error.message);
-                });
         }
 
         function exibirTarefas() {
             const container = document.getElementById('criaCard');
-            if (!container) { 
-                console.error("Elemento '#criaCard' não encontrado.");
-                return; 
-            }
             container.innerHTML = ''; 
 
             fetch("http://localhost:3000/dados") 
                 .then(res => {
-                    if (!res.ok) {
-                        throw new Error(`Erro ao carregar dados do servidor: ${res.status}`);
-                    }
                     return res.json();
                 })
                 .then(dadosDoServidor => {
@@ -145,11 +131,6 @@
 
                     dadosDoServidor.forEach(dia => { 
                         let itens = dia.itens;
-                        
-                        if (!Array.isArray(itens)) { 
-                            console.warn(`'itens' não é um array para a data ${dia.DataListada}. Pulando.`);
-                            return; 
-                        }
 
                         itens.forEach((tarefa, indexTarefa) => { 
                             const card = document.createElement('div');
@@ -198,8 +179,7 @@
 
                 })
                 .catch(error => {
-                    console.error('Erro ao exibir tarefas:', error);
-                    alert('Não foi possível carregar as tarefas do servidor. Verifique a conexão ou o servidor.');
+                    alert('dê npm start.');
                 });
         }
 
@@ -232,7 +212,8 @@
                         DataListada: data,
                         itens:[{
                             TarefasListada: tarefa,
-                            nivelImportancia: nivelImportancia 
+                            nivelImportancia: nivelImportancia, 
+                            concluida: false
                         }]
                     };
 
@@ -244,17 +225,9 @@
                         body: JSON.stringify(dadosParaEnviar)
                     })
                     .then(response => {
-                        if (!response.ok) {
-                            return response.json().then(errorData => {
-                                throw new Error(errorData.message || `Erro do servidor: ${response.status}`);
-                            }).catch(() => {
-                                throw new Error(`Erro na requisição com status: ${response.status}`);
-                            });
-                        }
                         return response.json();
                     })
                     .then(data => {
-                        console.log('Tarefa cadastrada com sucesso no servidor:', data);
                         alert('Tarefa adicionada com sucesso!');
                         this.reset(); 
                         nivelImportancia = null; 

@@ -29,7 +29,8 @@
       "itens": [
         {
           "TarefasListada": "assasll",
-          "nivelImportancia": "Alta"
+          "nivelImportancia": "Alta",
+          "concluida": false
         }
       ]
     },
@@ -39,7 +40,8 @@
       "itens": [
         {
           "TarefasListada": "logo",
-          "nivelImportancia": "Baixa"
+          "nivelImportancia": "Baixa",
+          "concluida": false
         }
       ]
     },
@@ -49,7 +51,19 @@
       "itens": [
         {
           "TarefasListada": "loy",
-          "nivelImportancia": "Media"
+          "nivelImportancia": "Media",
+          "concluida": false
+        }
+      ]
+    },
+    {
+      "id": "054b",
+      "DataListada": "2025-06-09",
+      "itens": [
+        {
+          "TarefasListada": "Fazer tarefas",
+          "nivelImportancia": "Alta",
+          "concluida": false
         }
       ]
     }
