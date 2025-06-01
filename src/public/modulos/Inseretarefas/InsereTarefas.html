@@ -75,8 +75,6 @@
         let nivelImportanciaSelecionado = null;
 
         document.addEventListener('DOMContentLoaded', () => {
-
-            window.onload = exibirTarefas;
             const inputsContainer = document.querySelector('.inputs-importancia');
 
             inputsContainer.addEventListener('change', (event) => {
@@ -84,60 +82,45 @@
                 if (event.target.tagName === 'INPUT' && event.target.type === 'radio' && event.target.checked) {
 
                     nivelImportancia = event.target.value;
-
-
                 }
-
-
-
             })
 
 
         })
-        
-        document.getElementById('AddTarefas').addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            const Tarefa = document.getElementById('Entrada').value
-            const Data = document.getElementById('EntradaData').value
-
-            if (!Tarefa || !Data || !nivelImportancia) {
-                alert('Por favor, preencha todos os campos.');
-                return;
-            }
-
-            const novaTarefaItem = {
-                "TarefasListada": Tarefa,
-                "Importancia": nivelImportancia
-            };
-
-            let dadosSalvos = localStorage.getItem('calendarioDeTarefas');
-            let calendarioTarefas;
-
-            if (dadosSalvos) {
-                    calendarioTarefas = JSON.parse(dadosSalvos);
-                } else {
-                    calendarioTarefas = { "tarefas": [] };
-                }
-
-                let diaExist = calendarioTarefas.tarefas.find(d => d.DataListada === Data);
-
-                if (diaExist) {
-                    diaExist.itens.push(novaTarefaItem);
-                } else {
-                    calendarioTarefas.tarefas.push({
-                        "DataListada": Data,
-                        "itens": [novaTarefaItem]
-                    });
-                }
-
-                localStorage.setItem('calendarioDeTarefas', JSON.stringify(calendarioTarefas));
-                exibirTarefas();
-
-            alert(Tarefa +' '+ Data +' '+ nivelImportancia);
 
 
-        })
+        document.getElementById('AddTarefas').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        //  const dados = Object.fromEntries(formData.entries());
+        const dados = {
+            DataListada: document.getElementById("EntradaData").value,
+            itens:[{
+                TarefasListada: document.getElementById("Entrada").value,
+                nivelImportancia: nivelImportancia
+            }],
+
+        };
+
+         fetch('http://localhost:3000/dados', {
+           method: 'POST',
+           headers: {
+             'Content-Type': 'application/json'
+           },
+           body: JSON.stringify(dados)
+         })
+         .then(response => response.json())
+         .then(data => {
+           console.log('Jogo cadastrado com sucesso:', data);
+         })
+        });
+
+        document.getElementById('btnLimpar').addEventListener('click', function(){
+
+            document.getElementById('AddTarefas').reset();
+        });
+
         //FIM COLETA DE DADOS INSERIDOS
 
 
@@ -145,74 +128,72 @@
         //CRIA CARDS
 
         function exibirTarefas() {
-            const container = document.getElementById('criaCard');
-            container.innerHTML = ''; 
+            fetch("http://localhost:3000/dados")
+            .then(res => res.json())
+            .then(dadosDoServidor => {
+                dadosDoServidor.sort((a, b) => new Date(a.DataListada) - new Date(b.DataListada));
 
-            let dadosSalvos = localStorage.getItem('calendarioDeTarefas');
-            if (!dadosSalvos) return;
+                dadosDoServidor.forEach(dia => { 
+                    let itens = dia.itens;
 
-            let calendarioDeTarefas = JSON.parse(dadosSalvos);
 
-            for (let i = 0; i < calendarioDeTarefas.tarefas.length; i++) {
-                let dia = calendarioDeTarefas.tarefas[i];
-                let itens = dia.itens;
-            
-                for (let j = 0; j < itens.length; j++) {
-                    let tarefa = itens[j];
                 
-                    const card = document.createElement('div');
-                    card.classList.add('card-tarefa'); 
-                
-                    card.innerHTML = `
-                        <div class="CardCarrosel">
-                            <h3>${tarefa.TarefasListada}</h3>
-                            <p>Data: ${dia.DataListada}</p>
-                            <p>Importância: ${tarefa.Importancia}</p>
-                            <button class="btn-deletar" data-dia="${dia.DataListada}" data-index="${j}">Deletar</button>
-                        </div>
-                            `;
-                
-                    container.appendChild(card);
-                }
-            }
-
-            document.getElementById('anterior').addEventListener('click', () => {
-            document.getElementById('criaCard').scrollBy({ left: -270, behavior: 'smooth' });
-            });
-
-            document.getElementById('proximo').addEventListener('click', () => {
-            document.getElementById('criaCard').scrollBy({ left: 270, behavior: 'smooth' });
-            });
-
-            const botoesDeletar = document.querySelectorAll('.btn-deletar');
-            for (let i = 0; i < botoesDeletar.length; i++) {
-                botoesDeletar[i].addEventListener('click', function () {
-                    const data = this.getAttribute('data-dia');
-                    const index = parseInt(this.getAttribute('data-index'));
-                
-                    let dados = localStorage.getItem('calendarioDeTarefas');
-                    let calendario = JSON.parse(dados);
-                
-                    let dia = calendario.tarefas.find(d => d.DataListada === data);
-                    if (dia) {
-                        dia.itens.splice(index, 1);
-                        if (dia.itens.length === 0) {
-                            calendario.tarefas = calendario.tarefas.filter(d => d.DataListada !== data);
+                    itens.forEach((tarefa, indexTarefa) => {
+                        const card = document.createElement('div');
+                        card.classList.add('card-tarefa'); 
+                    
+                        if (tarefa.nivelImportancia == 'Alta') {
+                            card.classList.add('imp-alta');
+                        } else if (tarefa.nivelImportancia == 'Media') {
+                            card.classList.add('imp-media');
+                        } else if (tarefa.nivelImportancia == 'Baixa') {
+                            card.classList.add('imp-baixa');
                         }
-                    }
-                
-                    localStorage.setItem('calendarioDeTarefas', JSON.stringify(calendario));
-                    exibirTarefas();
+                    
+                        card.innerHTML = `
+                            <div class="CardCarrossel">
+                                <h3>${tarefa.TarefasListada}</h3>
+                                <p>Data: ${dataFormatada}</p>
+                                <p>Importância: ${tarefa.nivelImportancia}</p> 
+                                <button class="btn-deletar" data-id-data="${dia.id}" data-index-tarefa="${indexTarefa}">Deletar</button>
+                            </div>
+                        `;
+                        
+                        container.appendChild(card);
+                    });
                 });
-            }
-        }
+                
 
+                document.getElementById('anterior').addEventListener('click', () => {
+                document.getElementById('criaCard').scrollBy({ left: -270, behavior: 'smooth' });
+                });
 
+                document.getElementById('proximo').addEventListener('click', () => {
+                document.getElementById('criaCard').scrollBy({ left: 270, behavior: 'smooth' });
+                });
+                const botoesDeletar = document.querySelectorAll('.btn-deletar');
+                for (let i = 0; i < botoesDeletar.length; i++) {
+                    botoesDeletar[i].addEventListener('click', function () {
+                        const data = this.getAttribute('data-dia');
+                        const index = parseInt(this.getAttribute('data-index'));
+                    
+                        let dados = localStorage.getItem('calendarioDeTarefas');
+                        let calendario = JSON.parse(dados);
+                    
+                        let dia = calendario.tarefas.find(d => d.DataListada === data);
+                        if (dia) {
+                            dia.itens.splice(index, 1);
+                            if (dia.itens.length === 0) {
+                                calendario.tarefas = calendario.tarefas.filter(d => d.DataListada !== data);
+                            }
+                        }
+                    
+                        localStorage.setItem('calendarioDeTarefas', JSON.stringify(calendario));
+                    });
+                }
 
-
-        // DELETAR CARD
-        for (let i = 0; i < botoesDeletar.length; i++) {
-            botoesDeletar[i].addEventListener('click', function () {
+                for (let i = 0; i < botoesDeletar.length; i++) {
+                botoesDeletar[i].addEventListener('click', function () {
                 const data = this.getAttribute('data-dia');
                 const index = parseInt(this.getAttribute('data-index'));
             
@@ -228,9 +209,16 @@
                 }
             
                 localStorage.setItem('calendarioDeTarefas', JSON.stringify(calendario));
-                exibirTarefas();
             });
         }
+            })
+        }
+
+
+
+
+        // DELETAR CARD
+
         //FIM DELETAR CARD
         //FIM CRIA CARDS
 
