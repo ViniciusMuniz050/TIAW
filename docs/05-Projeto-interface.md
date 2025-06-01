@@ -34,7 +34,7 @@ A aba de missões é projetada para deixar a apresentação de dias mais intuiti
 
 ## Wireframes
 
-![Wireframes](images/missoes.png)
+![Wireframes](images/missoes1.png)
 
 ![Wireframes](images/comentarios.jpeg)
 
