@@ -8,6 +8,62 @@
 </head>
 <body>
 
+    <!-- Barra Lateral -->
+    <div class="sidebar">
+        <img src="usuario.png" alt="Usuário" class="user-icon">
+        <nav>
+            <a href="#"><img src="casa.png" alt="Início"></a>
+            <a href="#"><img src="alvo.png" alt="Alvo"></a>
+            <a href="#"><img src="meta.png" alt="Meta"></a>
+            <a href="#"><img src="perfil.png" alt="Perfil"></a>
+            <a href="#"><img src="sair.png" alt="Sair"></a>
+        </nav>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main">
+
+        <!-- Barra Superior -->
+        <div class="topbar">
+            <img src="preguica.png" alt="Logo" class="logo">
+            <div class="defensiva">
+                🔥 5 dias de defensiva
+            </div>
+        </div>
+
+        <!-- Área de Feedback -->
+        <div class="container">
+            <h1>Deixe seu Feedback</h1>
+
+            <div class="stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+
+            <textarea id="comentario" placeholder="Deixe seu comentário..."></textarea>
+
+            <button id="enviar">Enviar Feedback</button>
+
+            <div id="mensagem"></div>
+        </div>
+    </div>
+
+    <script src="feedback.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
     <div class="container">
         <h1>Deixe seu Feedback</h1>
         
