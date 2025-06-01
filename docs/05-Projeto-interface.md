@@ -30,6 +30,7 @@ No ACTION MODE, cada interação é parte da sua jornada de conquistas. Siga o f
 ## Wireframes
 
 #### Wireframe aba de Entrada ao Site
+A página de entrada comunica imediatamente o objetivo do ACTION MODE: ser um meio interativo para a proatividade e combater a procrastinação.
 
 ![Wireframes](images/abaEntradaSite.jpeg)
 
