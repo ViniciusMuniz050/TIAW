@@ -8,12 +8,10 @@ authors:
     given-names: Vinicius 
   - family-names: Vinicius 
     given-names: Marcus
-  - family-names: Sobrenome do aluno 4
-    given-names: Nome do aluno 4 
-  - family-names: Sobrenome do aluno 5
-    given-names: Nome do aluno 5 
-  - family-names: Sobrenome do aluno 6
-    given-names: Nome do aluno 6 
+  - family-names: Vitor
+    given-names: João 
+  - family-names: Rodrigues 
+    given-names: Daniel  
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Vasconcelos 
@@ -21,10 +19,10 @@ authors:
   - name-suffix: Professora
     affiliation: PUC Minas    
 keywords:
-    - coloque aqui a palavra-chave 1
-    - coloque aqui a palavra-chave 2
-    - coloque aqui a palavra-chave 3
+    - Procrastinação 
+    - Atraso
+    - Distrações 
 repository-code: coloque o link do seu repositório
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2024-09-01
+date-released: 2025-06-01
