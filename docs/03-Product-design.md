@@ -87,6 +87,17 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 
 ---
 
+### Significado das Prioridades
+
+| **Letra** | **Significado** | **Descrição** |
+|------------|-----------------|----------------|
+| **M** – Must have | **Deve ter** | É obrigatório. Sem isso, o projeto não funciona. Faz parte do mínimo viável (MVP). |
+| **S** – Should have | **Deveria ter** | É muito importante, mas se não der tempo, ainda assim o projeto funciona. Pode ser entregue depois do MVP. |
+| **C** – Could have | **Poderia ter** | É desejável, algo que deixa o projeto melhor, mais completo, mas é opcional. Se sobrar tempo, será feito. |
+| **W** – Won’t have (for now) | **Não terá (por enquanto)** | Está fora do escopo atual. Não será feito nessa entrega, talvez numa próxima versão. |
+
+---
+
 ## Restrições
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
