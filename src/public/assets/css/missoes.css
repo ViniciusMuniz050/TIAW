@@ -5,7 +5,9 @@
   
   body{
     line-height: 1.6;
-    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   
@@ -54,18 +56,21 @@
     height: 35px;
     border-radius: 50%;
   }
+
+
   
   .sidebar {
     position: fixed;
-    top: 70px;
+    top: 80px;
     left: 0;
     width: 80px;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 80px);
     background-color: #2e7d32;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 99;
   }
   
   .sidebar nav ul {
@@ -83,8 +88,242 @@
 
   #conteudos{
     background-image: url("../../assets/images/florest1.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 1000px;
-    opacity: initial;
+
+    margin-top: 80px;
+    margin-left: 80px;
+    opacity: 1;
+
+    box-sizing: border-box;
+    padding: 20px;
   }
+
+  .Insere-tarefa a{
+    background-color: #388e3c;
+    padding: 10px 20px;
+    height: 45px;
+    border-radius: 10px;
+
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    line-height: 25px;
+  }
+
+  .Insere-tarefa {
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+  #semana-tarefas {
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .circulo-tarefa {
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .circulo-tarefa.com-tarefas {
+    background-color: #e6ffe6; 
+    border-color: #8fbc8f;
+    color: #006400;
+  }
+  
+  .circulo-tarefa:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+
+
+  .calendario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calendario-header h2 {
+    color: #333;
+}
+
+.calendario-header button {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+.calendario-header button:hover {
+    background-color: #2e7d32;
+}
+
+#missao-caminho-container {
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: center;
+    gap: 30px; 
+    padding: 20px 0; 
+}
+
+#missao-caminho {
+    position: relative; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 50px; 
+    padding: 20px 0; 
+}
+
+.linha-caminho {
+    position: absolute;
+    width: 6px; 
+    background-color: #8fbc8f; 
+    z-index: 1; 
+}
+
+.circulo-dia-wrapper {
+    position: relative;
+    z-index: 2; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    margin-bottom: 0; 
+}
+
+
+.circulo-dia {
+    min-width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    border: 3px solid #ccc; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circulo-dia .dia-semana-label {
+    font-size: 0.8em; 
+    opacity: 0.7;
+}
+
+.circulo-dia .dia-numero-label {
+    font-size: 1.5em; 
+}
+
+.circulo-dia.com-tarefas {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+    box-shadow: 2px 2px 10px rgba(40, 167, 69, 0.6);
+}
+
+.circulo-dia.dia-atual {
+    border-color: #007bff;
+    background-color: #e0f2ff;
+    color: #004085;
+    box-shadow: 2px 2px 10px rgba(0, 123, 255, 0.6);
+    transform: scale(1.1); 
+}
+
+.circulo-dia.dia-atual.com-tarefas {
+    background-color: #c3e6cb;
+    border-color: #218838;
+    color: #155724;
+    box-shadow: 2px 2px 10px rgba(33, 136, 56, 0.8);
+}
+
+.circulo-dia:hover {
+    transform: scale(1.15); 
+    opacity: 1;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+#detalhes-tarefas-dia {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none; 
+    min-width: 300px; 
+    max-width: 400px; 
+    position: sticky; 
+    top: 100px; 
+    align-self: flex-start; 
+    max-height: calc(100vh - 120px); 
+    overflow-y: auto; 
+}
+
+#detalhes-tarefas-dia h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#lista-tarefas-dia {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-tarefas-dia li {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#lista-tarefas-dia li::before {
+    content: '•';
+    color: #388e3c; 
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+#lista-tarefas-dia li.imp-alta {
+    border-left: 6px solid #dc3545; 
+}
+#lista-tarefas-dia li.imp-media {
+    border-left: 6px solid #ffc107; 
+}
+#lista-tarefas-dia li.imp-baixa {
+    border-left: 6px solid #28a745; 
+}
