@@ -46,15 +46,15 @@ Lucas quer se sentir mais produtivo, avançar mais no seu estudos para conseguir
 
 ##### Proposta para a persona Arthur Morgan 
 
-![Exemplo de proposta de valor](images/Arthur_page-0001.jpg)
+![Exemplo de proposta de valor](images/Mapa%20da%20Proposta%20de%20Valor-%20Completo-1.jpg)
 
 ##### Proposta para a persona Cláudia Diniz 
 
-![Exemplo de proposta de valor](images/Cláudia_page-0001.jpg)
+![Exemplo de proposta de valor](images/Mapa%20da%20Proposta%20de%20Valor-%20Completo-2.jpg)
 
 ##### Proposta para a persona Lucas Henrique 
 
-![Exemplo de proposta de valor](images/Lucas_page-0001.jpg)
+![Exemplo de proposta de valor](images/Mapa%20da%20Proposta%20de%20Valor-%20Completo-3.jpg)
 
 
 ## Requisitos
