@@ -37,7 +37,6 @@ botaoEnviar.addEventListener('click', () => {
         return;
     }
 
-    // Simula o envio dos dados
     console.log('Nota:', nota);
     console.log('Comentário:', comentario);
 
