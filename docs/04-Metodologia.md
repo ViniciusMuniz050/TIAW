@@ -71,17 +71,3 @@ Essa estrutura possibilitou a divisão clara de responsabilidades, acompanhament
 
 A equipe utilizou o recurso **GitHub Projects** para planejar, organizar e monitorar as tarefas do projeto. 
 
-## 🛠️ Ferramentas Utilizadas
-
-A seguir, listamos as principais ferramentas empregadas no desenvolvimento do projeto, juntamente com a justificativa de suas escolhas:
-
-| Ambiente                    | Plataforma           | Link de Acesso                                                                 |
-|-----------------------------|----------------------|--------------------------------------------------------------------------------|
-| Processo de Design Thinking | Miro                 | [Acessar Miro](COLE_O_LINK_AQUI)                                              |
-| Repositório de Código       | GitHub               | [Acessar GitHub](COLE_O_LINK_AQUI)                                            |
-| Documentos do Projeto       | GitHub               | Acesso restrito                                                                |
-| Gerenciamento do Projeto    | GitHub Projects      | [Acessar GitHub Projects](COLE_O_LINK_AQUI)                                   |
-| Projeto de Interface        | Figma                | [Acessar Figma](https://www.figma.com/board/2tmkT9fVC38qIzAfGyp0mu/procastina%C3%A7%C3%A3o?node-id=0-1) |
-| Comunicação                 | Discord e WhatsApp   | Acesso restrito                                                                |
-| Apresentação                | Canva e Adobe        | Acesso restrito                                                                |
-| Hospedagem (versão futura)  | Vercel (planejado)   | A definir                                                                      |
