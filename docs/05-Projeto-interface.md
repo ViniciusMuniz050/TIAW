@@ -34,11 +34,11 @@ A navegação foi projetada para ser intuitiva tanto em desktop quanto em dispos
 
 ## Wireframes
 
-images/missoes.jpeg
+![Wireframes](images/missoes.png)
 
-images/comentarios.jpeg
+![Wireframes](images/comentarios.jpeg)
 
-images/.jpeg
+![Wireframes](images/editar%20perfi.jpeg)
 
 
 ### Protótipo Interativo
