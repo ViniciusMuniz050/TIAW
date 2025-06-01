@@ -22,6 +22,8 @@ A navegação foi projetada para ser intuitiva tanto em desktop quanto em dispos
 
  ## User flow
 
+No ACTION MODE, cada interação é parte da sua jornada de conquistas. Siga o fluxo para transformar a sua produtividade em um jogo envolvente:
+
 ![Exemplo de fluxo de telas](images/procastinação.png)
 
 
