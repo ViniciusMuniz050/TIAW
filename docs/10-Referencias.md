@@ -1,21 +1,49 @@
-# Referências
+## Referências Científicas Sobre Procrastinação
 
-Inclua todas as referências (livros, artigos, sites, etc.) utilizadas no desenvolvimento do trabalho.
+### Artigos Acadêmicos
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
+1. **Steel, P. (2007).**  
+*The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure.*  
+**Psychological Bulletin, 133(1), 65–94.**  
+DOI: [https://doi.org/10.1037/0033-2909.133.1.65](https://doi.org/10.1037/0033-2909.133.1.65)  
 
-⚠️ EXEMPLO ⚠️
+2. **Sirois, F. M., & Pychyl, T. A. (2013).**  
+*Procrastination and the priority of short-term mood regulation: Consequences for future self.*  
+**Social and Personality Psychology Compass, 7(2), 115–127.**  
+DOI: [https://doi.org/10.1111/spc3.12011](https://doi.org/10.1111/spc3.12011)  
 
-- BENYON, David. **Interação humano-computador**. 2. ed. São Paulo: Pearson Prentice Hall, 2011.
+3. **Pychyl, T. A., & Sirois, F. M. (2016).**  
+*Procrastination, emotion regulation, and well-being.*  
+**In S. L. Robinson (Ed.), The Wiley Blackwell Handbook of the Psychology of Positivity and Strengths-Based Approaches at Work.**  
 
-- CORMEN, Thomas H et al. **Algoritmos:** teoria e prática. 4. ed. Rio de Janeiro: GEN LTC, 2024.
- 
-- ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019.
+4. **Rozental, A., & Carlbring, P. (2014).**  
+*Understanding and treating procrastination: A review of a common self-regulatory failure.*  
+**Psychology, 5(13), 1488-1502.**  
+DOI: [https://doi.org/10.4236/psych.2014.513160](https://doi.org/10.4236/psych.2014.513160)  
 
-- RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial:** uma abordagem moderna. 4. ed. Rio de Janeiro, RJ: LTC, 2022.
+---
 
-- SUTHERLAND, Jeffrey Victor; SUTHERLAND, J. J. **Scrum:** a arte de fazer o dobro do trabalho na metade do tempo. Rio de Janeiro, RJ: Sextante, 2019. 254 p.
+### Livros Relevantes
 
-> **Links úteis**:
-> - [Padrão PUC Minas de normalização ABNT](http://portal.pucminas.br/biblioteca/documentos/GUIA-COMPLETO-ABNT-Elaborar-formatar-trabalho-cientificoNOVO.pdf)
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/)
+1. **Pychyl, T. A. (2013).**  
+*Solving the Procrastination Puzzle: A Concise Guide to Strategies for Change.*  
+New York: TarcherPerigee.  
+
+2. **Ferrari, J. R. (2010).**  
+*Still Procrastinating? The No Regrets Guide to Getting It Done.*  
+Hoboken, NJ: John Wiley & Sons.  
+
+3. **Steel, P. (2011).**  
+*The Procrastination Equation: How to Stop Putting Things Off and Start Getting Things Done.*  
+New York: Harper.  
+
+---
+
+### Autores Relevantes
+
+- **Piers Steel** – Especialista em procrastinação, autor de diversos estudos sobre o tema.  
+- **Timothy A. Pychyl** – Psicólogo focado na procrastinação e regulação emocional.  
+- **Fuschia M. Sirois** – Pesquisadora da relação entre procrastinação, estresse e bem-estar.  
+- **Joseph R. Ferrari** – Especialista em procrastinação crônica.  
+
+---
