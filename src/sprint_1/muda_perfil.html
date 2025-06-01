@@ -14,7 +14,7 @@
     </div>
     <div class="perfil-area">
       <span class="pontos">🔥 120</span>
-      <img src="img/usuario.png" alt="Usuário" class="perfil-icon">
+      <a href="#"><img src="img/usuario.png" alt="Foto de Perfil" id="fotoPerfilHeader" /></a></li>
     </div>
   </header>
 
@@ -33,22 +33,24 @@
 
   <main class="conteudo">
 
-  <div style="text-align: center;">
-    <img src="assets\img\preguica.png" alt="Foto de Perfil" id="fotoPerfil" />
+  <div class= "imagemMain" style="text-align: center;">
+    <img src="img/usuario.png" alt="Foto de Perfil" id="fotoPerfilMain" />
     <br />
     <button onclick="editarFoto()">Edite sua foto</button>
     <input type="file" id="inputFoto" accept="image/*" style="display: none;" />
   </div>
 
-  <form id="formPerfil">
-    <label>Nome:</label>
-    <input type="text" id="nome" />
-    <label>Email:</label>
-    <input type="email" id="email" />
-    <label>Senha:</label>
-    <input type="password" id="senha" />
-    <button type="button" onclick="salvarPerfil()">Salvar</button>
-  </form>
+  <div class="blockEntrada">
+   <form id="formPerfil">
+      <label>Nome:</label>
+      <input type="text" id="nome" />
+      <label>Email:</label>
+     <input type="email" id="email" />
+      <label>Senha:</label>
+      <input type="password" id="senha" />
+      <button type="button" onclick="salvarPerfil()">Salvar</button>
+    </form>
+  </div>
     
   </main>
   <script src="muda_perfil.js"></script>
