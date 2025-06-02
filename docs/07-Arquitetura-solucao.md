@@ -25,11 +25,11 @@ Permite a entrada, retirada e edição de tarefas do usuário
 
 ### Estruturas de dados
 
-Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info.
+Para a solução de um site de lista de tarefas gamificado como o ACTION MODE, a estrutura de dados centralizada no db.json precisa ser capaz de armazenar as tarefas diárias e seus atributos, incluindo o estado de conclusão.
+
+A estrutura de dados principal é uma coleção de "dias", onde cada dia contém uma lista de "itens" (tarefas).
 
 ##### Estrutura de dados - Tarefas
-
-Contatos da aplicação
 
 ```json
 {
