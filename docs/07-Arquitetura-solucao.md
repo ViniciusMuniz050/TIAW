@@ -99,6 +99,20 @@ const dados = {
         {id: 2, login: "Lucas", email: "lucas556@gmail,com", senha: "123456"}
     ]
 }
+
+##### Estrutura de dados - Onboarding
+
+Estrutura localizada na parte de onboarding do usuário, onde é informado sua idade, a quantidade de tarefas desejadas por dia, seu perfil, seu objetivo com o uso do nosso projeto e se sofre com distrações na realização de suas tarefas. 
+
+```json
+const onboarding = {  
+    idade: idade,
+    qnttarefas: qnttarefas,
+    perfil: perfil.value,
+    objetivo: objetivo.value,
+    distracao: distracao.value
+};
+```
 ```
 
 ### Módulos e APIs
