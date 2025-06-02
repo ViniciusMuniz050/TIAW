@@ -43,8 +43,8 @@ Quanto à gerência de issues, o projeto adota a seguinte convenção para etiqu
 
 - Scrum Master: Lara;
 - Product Owner: João;
-- Equipe de Desenvolvimento:Lara, João, Vinicius, Marcus, Daniel, Victor;
-- Equipe de Design: Lara.
+- Equipe de Desenvolvimento:Lara, João, Vinicius, Marcus, Daniel;
+- Equipe de Design: Lara, João e Daniel.
 
 ### Processo
 
