@@ -50,19 +50,42 @@ A estrutura de dados principal é uma coleção de "dias", onde cada dia contém
   
 ```
 
-##### Estrutura de dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de dados - Tarefas cadastradas
 
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema.
+Estrutura que armazena a quantidade de pontos e semanas concluídas do usuário, além da quantidade e detalhes das tarefas pendentes ou concluídas.
 
 ```json
-  {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
-  }
+  const informacoes = [
+    {
+        pontos: 500,
+        semanas: 3,
+        tarefas: [
+            {
+                id: 20,
+                tipo:'concluídas',
+                itens: [
+                    {"id": 1, "tarefa": "Arrumar o carro"},
+                    {"id": 2, "tarefa": "Lavar vasilhas"},
+                    {"id": 3, "tarefa": "Estudar DIW"},
+                    {"id": 4, "tarefa": "Consertar geladeira"},
+                    {"id": 5, "tarefa": "Ir para a academia"}
+                ]
+            },
+            {
+                id: 30,
+                tipo:'pendentes',
+                itens: [
+                    {"id": 6, "tarefa": "Lavar o banheiro"},
+                    {"id": 7, "tarefa": "Enviar relatório mensal"},
+                    {"id": 8, "tarefa": "Comprar ingredientes"},
+                    {"id": 9, "tarefa": "Organizar gavetas"},
+                    {"id": 10, "tarefa": "Remarcar consulta"}           
+
+                ]
+            }
+        ]
+    }
+]
 ```
 
 > ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
