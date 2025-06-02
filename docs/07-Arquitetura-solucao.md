@@ -33,7 +33,7 @@ Questionário que permite ao usuário informar sua idade, a quantidade desejada 
 * **Instruções de acesso:**
   * Abra o site e efetue o login;
   * Em seu primeiro login, a aba do questionário será exibida ao usuário, para o mesmo responder as perguntas.
-  * 
+    
  **Tela da funcionalidade**:
 
 ![Onboarding](https://github.com/user-attachments/assets/adec34bb-2dfa-45d2-a227-01400f188bcd)
