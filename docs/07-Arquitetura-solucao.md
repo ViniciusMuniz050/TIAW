@@ -10,43 +10,43 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 Esta seção apresenta as funcionalidades da solução.
 
-##### Funcionalidade 1 - Cadastro de contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 1 - Cadastro de Tarefas
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite a entrada, retirada e edição de tarefas do usuário
 
-* **Estrutura de dados:** [Contatos](#estrutura-de-dados---contatos)
+* **Estrutura de dados:** [Contatos](#estrutura-de-dados---tarefas)
 * **Instruções de acesso:**
   * Abra o site e efetue o login;
-  * Acesse o menu principal e escolha a opção "Cadastros";
-  * Em seguida, escolha a opção "Contatos".
+  * Acesse a aba de Metas e vá em Inserir Tarefas;
+  * Faça cadastro das tarefas a serem feitas.
 * **Tela da funcionalidade**:
 
-![Tela de funcionalidade](images/exemplo-funcionalidade.png)
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários, quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) títulos e descrição da funcionalidade; (2) estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+![Tela de funcionalidade](images/Captura%20de%20tela%20de%202025-05-11%2018-46-57.png)
 
 ### Estruturas de dados
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info.
 
-##### Estrutura de dados - Contatos
+##### Estrutura de dados - Tarefas
 
 Contatos da aplicação
 
 ```json
-  {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
-  }
+{
+  "dados": [
+    {
+      "id": "3d65",
+      "DataListada": "2025-05-22",
+      "itens": [
+        {
+          "TarefasListada": "assasll",
+          "nivelImportancia": "Alta",
+          "concluida": false
+        }
+      ]
+    }
+  ]
+}
   
 ```
 
