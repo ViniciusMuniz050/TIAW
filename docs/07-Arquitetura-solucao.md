@@ -14,7 +14,7 @@ Esta seção apresenta as funcionalidades da solução.
 
 Permite a entrada, retirada e edição de tarefas do usuário
 
-* **Estrutura de dados:** [Contatos](#estrutura-de-dados---tarefas)
+* **Estrutura de dados:** [Tarefas](#estrutura-de-dados---tarefas)
 * **Instruções de acesso:**
   * Abra o site e efetue o login;
   * Acesse a aba de Metas e vá em Inserir Tarefas;
