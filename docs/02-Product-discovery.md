@@ -2,7 +2,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="01-Contexto.md"> Documentação de contexto</a></span>
 
-✅ [Documentação de Design Thinking (MIRO)](files/processo-dt.pdf)
+✅ [Documentação de Design Thinking (MIRO)](https://miro.com/welcomeonboard/bzYxRGxLd21SWm1tWVcrdWZNd2V1RDV4SlF3SHhtVXhaKzh3V2ZuTk9jeFYzQlFvTEFqSE81RzFvRWJMVlFtN3MxbFNmYkRLSVVTVEtXbXI4UUVQZzRqVWs1aGRNUzJsM0dLRHlyblcyejNveUlJeGg4YytQNnVqZHhlZy9Zbkp3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=964072475829))
 
 ## Etapa de entendimento
 
@@ -33,11 +33,3 @@
 ![Persona 3](https://github.com/user-attachments/assets/cea46a91-038d-4f4a-afb8-db92e9aebdd3)
 
 
-> 
-
-> **Links úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
