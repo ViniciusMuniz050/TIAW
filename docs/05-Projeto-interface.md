@@ -2,23 +2,28 @@
 # Projeto de interface
 
 #### 1. Tela Inicial (Home)
-A tela inicial apresenta uma navegação direta e objetiva, com acesso rápido às principais seções da plataforma. Foram priorizados elementos visuais leves e uma estrutura limpa, garantindo boa usabilidade.
-
-#### 1. Tela Inicial (Home)
-A tela inicial apresenta uma navegação direta e objetiva, com acesso rápido às principais seções da plataforma. Foram priorizados elementos visuais leves e uma estrutura limpa, garantindo boa usabilidade.
+A tela inicial apresenta uma navegação direta e objetiva, com acesso rápido às principais seções da plataforma. Foram priorizados elementos visuais leves e uma estrutura limpa, garantindo boa usabilidade, contendo um carrossel com as páginas disponíveis.
 
 #### 2. Tela de Login/Cadastro
-A tela de autenticação foi criada com foco na simplicidade e segurança.  
+A tela de autenticação foi criada com foco na simplicidade e segurança, contendo poucos dados obrigatórios.  
 
 #### 3. Dashboard / Área do Usuário
 Essa interface reúne todas as funcionalidades essenciais em um único lugar. Foi pensada para ser intuitiva, com informações organizadas em blocos visuais e ícones de fácil compreensão.
 
 #### 4. Tela de Tarefas/Funcionalidade Principal
-Esta é a interface central da plataforma, que permite ao usuário interagir diretamente com a função principal do projeto (ex: organizar tarefas, enviar conteúdo, consultar informações, etc.).
+Esta é a interface central da plataforma, que permite ao usuário interagir diretamente com a função principal do projeto (ex: organizar tarefas, enviar conteúdo, consultar informações, etc.), por meio de tarefas dinamicas gamificadas. 
 
 #### 5. Menu de Navegação e Responsividade
 A navegação foi projetada para ser intuitiva tanto em desktop quanto em dispositivos móveis. O menu lateral ou superior permite acesso rápido e direto a todas as áreas da plataforma.
 
+#### 5. Calendario
+O calendario foi projetado visando uma melhor organização das tarefas pendentes e já realizadas, além de funcionar como um marcador, podendo servir para agendamento ou lembrete de alguma tarefa.
+
+#### 6. Aréa de progresso
+Essa aréa é ultilizada para visualizar a progressão do usuário dentro do site, contendo seu histórico de realização das tarefas propostas com margens gráficas de evolução.
+
+#### 7. Página de Saiba Mais
+Uma página contendo informações, Fontes, e curiosidades sobre o site, contendo referências sobre a procastinação.
 
  ## User flow
 
