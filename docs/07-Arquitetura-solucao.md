@@ -88,16 +88,18 @@ Estrutura que armazena a quantidade de pontos e semanas concluídas do usuário,
 ]
 ```
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação, quanto outras estruturas que foram criadas para algum tipo de configuração.
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+##### Estrutura de dados - Dados de Cadastro
+
+O cadastro é de importância fundamental para o ACTION MODE, servindo como a espinha dorsal para a personalização e a experiência gamificada do usuário.
+
+```json
+const dados = {
+    usuarios: [
+        {id: 1, login: "Daniel", email: "danielzin007@gmail,com", senha: "123456"},
+        {id: 2, login: "Lucas", email: "lucas556@gmail,com", senha: "123456"}
+    ]
+}
+```
 
 ### Módulos e APIs
 
