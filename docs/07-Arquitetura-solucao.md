@@ -23,14 +23,17 @@ Permite a entrada, retirada e edição de tarefas do usuário
 
 ![Tela de funcionalidade](images/Captura%20de%20tela%20de%202025-05-11%2018-46-57.png)
 
+
 ##### Funcionalidade 2 - Onboarding do usuário
 
 Questionário que permite ao usuário informar sua idade, a quantidade desejada de tarefas por dia, seu perfil, seu objetivo e se o mesmo sofre com distrações em suas atividades diárias.
+
 * **Estrutura de dados:** [Tarefas](#estrutura-de-dados---tarefas)
   
 * **Instruções de acesso:**
   * Abra o site e efetue o login;
   * Em seu primeiro login, a aba do questionário será exibida ao usuário, para o mesmo responder as perguntas.
+  * 
  **Tela da funcionalidade**:
 
 ![Onboarding](https://github.com/user-attachments/assets/adec34bb-2dfa-45d2-a227-01400f188bcd)
