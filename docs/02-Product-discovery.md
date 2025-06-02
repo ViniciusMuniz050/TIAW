@@ -2,7 +2,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="01-Contexto.md"> Documentação de contexto</a></span>
 
-✅ [Documentação de Design Thinking (MIRO)]([files/processo-dt.pdf](https://miro.com/welcomeonboard/bzYxRGxLd21SWm1tWVcrdWZNd2V1RDV4SlF3SHhtVXhaKzh3V2ZuTk9jeFYzQlFvTEFqSE81RzFvRWJMVlFtN3MxbFNmYkRLSVVTVEtXbXI4UUVQZzRqVWs1aGRNUzJsM0dLRHlyblcyejNveUlJeGg4YytQNnVqZHhlZy9Zbkp3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=964072475829))
+✅ [Documentação de Design Thinking (MIRO)](https://miro.com/welcomeonboard/bzYxRGxLd21SWm1tWVcrdWZNd2V1RDV4SlF3SHhtVXhaKzh3V2ZuTk9jeFYzQlFvTEFqSE81RzFvRWJMVlFtN3MxbFNmYkRLSVVTVEtXbXI4UUVQZzRqVWs1aGRNUzJsM0dLRHlyblcyejNveUlJeGg4YytQNnVqZHhlZy9Zbkp3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=964072475829))
 
 ## Etapa de entendimento
 
