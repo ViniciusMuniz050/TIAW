@@ -108,9 +108,16 @@
 
         const tarefasPorData = {};
         dadosServidorCache.forEach(itemDia => {
+            // const dataChave = itemDia.DataListada;
+            // if (itemDia.itens && itemDia.itens.length > 0) {
+            //     tarefasPorData[dataChave] = itemDia.itens;
+            // }
             const dataChave = itemDia.DataListada;
             if (itemDia.itens && itemDia.itens.length > 0) {
-                tarefasPorData[dataChave] = itemDia.itens;
+                if(tarefasPorData[dataChave] == null)
+                  tarefasPorData[dataChave] = itemDia.itens;
+                else
+                  tarefasPorData[dataChave].push(...itemDia.itens); //concatenar listas
             }
         });
 
