@@ -22,50 +22,5 @@
       "id": "3"
     }
   ],
-  "dados": [
-    {
-      "id": "3d65",
-      "DataListada": "2025-05-22",
-      "itens": [
-        {
-          "TarefasListada": "assasll",
-          "nivelImportancia": "Alta",
-          "concluida": false
-        }
-      ]
-    },
-    {
-      "id": "b9de",
-      "DataListada": "2025-06-02",
-      "itens": [
-        {
-          "TarefasListada": "logo",
-          "nivelImportancia": "Baixa",
-          "concluida": false
-        }
-      ]
-    },
-    {
-      "id": "52af",
-      "DataListada": "2025-06-03",
-      "itens": [
-        {
-          "TarefasListada": "loy",
-          "nivelImportancia": "Media",
-          "concluida": false
-        }
-      ]
-    },
-    {
-      "id": "054b",
-      "DataListada": "2025-06-09",
-      "itens": [
-        {
-          "TarefasListada": "Fazer tarefas",
-          "nivelImportancia": "Alta",
-          "concluida": false
-        }
-      ]
-    }
-  ]
+  "dados": []
 }
