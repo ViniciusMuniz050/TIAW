@@ -1,0 +1,58 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "login": "Daniel",
+      "email": "danielzin007@gmail,com",
+      "senha": "123456"
+    },
+    {
+      "id": "2",
+      "login": "Lucas",
+      "email": "lucas556@gmail,com",
+      "senha": "Lucas123"
+    },
+    {
+      "id": "3",
+      "login": "Maria",
+      "email": "maria789@gmail,com",
+      "senha": "Maria@123"
+    },
+    {
+      "id": "4",
+      "login": "João",
+      "email": "joao321@gmail,com",
+      "senha": "Joao321"
+    },
+    {
+      "id": "5",
+      "login": "Ana",
+      "email": "ana456@gmail,com",
+      "senha": "Ana456"
+    },
+    {
+      "id": "6",
+      "login": "Rodrigo",
+      "email": "Rodrigo11@gmail.com",
+      "senha": "1234567"
+    },
+    {
+      "id": "7",
+      "login": "Samuel",
+      "email": "Samuel919@gmail",
+      "senha": "123456"
+    },
+    {
+      "id": "8",
+      "login": "Gustavin",
+      "email": "Gustavin@gmail.com",
+      "senha": "bandida"
+    },
+    {
+      "id": "9",
+      "login": "Jorge",
+      "email": "Jorgin123@gmail.com",
+      "senha": "Batata"
+    }
+  ]
+}
