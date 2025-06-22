@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: Please cite this software using these metadata.
+title: Procrastinação 
+authors:
+  - family-names: Rossini
+    given-names: Lara
+  - family-names: Muniz
+    given-names: Vinicius 
+  - family-names: Vinicius 
+    given-names: Marcus
+  - family-names: Vitor
+    given-names: João 
+  - family-names: Rodrigues 
+    given-names: Daniel  
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vasconcelos 
+    given-names: Amália 
+  - name-suffix: Professora
+    affiliation: PUC Minas    
+keywords:
+    - Procrastinação 
+    - Atraso
+    - Distrações 
+repository-code: coloque o link do seu repositório
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-06-01
