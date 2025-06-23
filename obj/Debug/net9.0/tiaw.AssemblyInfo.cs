@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tiaw")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20200f8b51a9e6dce794302e234d4784e27829cd")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed5096c5af6ec6ca2aea542f7ca0e5d4320ac92f")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("tiaw")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tiaw")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
