@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <img src="img\preguica.png" alt="Logo" class="logo">
+    <div class="titulo-centro">
+      <h1>FeedBacks</h1>
+    </div>
+    <div class="perfil-area">
+      <span class="pontos">🔥 120</span>
+      <a href="#"><img src="img/usuario.png" alt="Foto de Perfil" id="fotoPerfilHeader" /></a></li>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#"><img src="img/casa.png" alt="Home"></a></li>
+        <li><a href="#"><img src="img\meta.png" alt="Estatísticas"></a></li>
+        <li><a href="#"><img src="img/alvo.png" alt="Calendário"></a></li>
+        <li><a href="#"><img src="img/perfil.png" alt="Metas"></a></li>
+        <li><a href="#"><img src="img/adicionar.png" alt="Configurações"></a></li>
+        <li><a href="#"><img src="img/sair.png" alt="Sair"></a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+    <div class="conteudo-horizontal">
+      <div class="grafico">
+        <canvas id="graficoNotas" width="100" height="100"></canvas>
+        <h2>Notas do Site</h2>
+      </div>
+
+      <div class="comentarios">
+        <h2>Comentários</h2>
+        <table id="comentarios-lista"></table>
+      </div>
+    </div>
+  </main>
+  <script src="feedback2.js"></script>
+</body>
+
+</html>
