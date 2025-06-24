@@ -41,28 +41,28 @@ const informacoes = {
     {
       "id": 1,
       "pagina": "Missões",
-      "imagem": "images/missoes.png",
+      "imagem": "/assetsimages/missoes.png",
       "detalhes": "Aqui você acessa suas missões diárias sendo necessário conclui-las para receber pontos",
       "link": "missoes.html"
     },
     {
       "id": 2,
       "pagina": "Calendario",
-      "imagem": "images/calendario.png",
+      "imagem": "/assets/images/calendario.png",
       "detalhes": "Aqui no calendário você poderá acompanhar quais dias você interagiu e completou as tarefas do site, além de marcar datas, compromissos, ou relatar algo que ocorreu no dia, dentre outros...",
       "link": "metas.html"
     },
     {
       "id": 3,
       "pagina": "Progresso",
-      "imagem": "images/progresso.png",
+      "imagem": "/assets/images/progresso.png",
       "detalhes": "Aqui você pode avaliar como tem percorrido os dias dentro do desafio e as estátisticas acerca desse progresso.",
       "link": "retrospecto.html"
     },
     {
       "id": 4,
       "pagina": "Configurações",
-      "imagem": "images/configuracoes.jpg",
+      "imagem": "/assets/images/configuracoes.jpg",
       "detalhes": "Aqui você acessa as configurações do site, para deixar sua experiência a melhor possível.",
       "link": "muda_perfil.html"
     },
