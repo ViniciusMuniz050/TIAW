@@ -41,7 +41,7 @@ const informacoes = {
     {
       "id": 1,
       "pagina": "Missões",
-      "imagem": "/assetsimages/missoes.png",
+      "imagem": "/assets/images/missoes.png",
       "detalhes": "Aqui você acessa suas missões diárias sendo necessário conclui-las para receber pontos",
       "link": "missoes.html"
     },
@@ -69,7 +69,7 @@ const informacoes = {
     {
       "id": 5,
       "pagina": "Saiba mais",
-      "imagem": "images/SaibaMais.png",
+      "imagem": "/assets/images/SaibaMais.png",
       "detalhes": "Aqui você fica informado sobre como funciona a procastinação e como ela afeta diretamente a sua vida",
       "link": "about.html"
     }

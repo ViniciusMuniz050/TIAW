@@ -37,13 +37,32 @@
       "nome": "Rommel",
       "email": "rommel@gmail.com",
       "foto": "img/perfil.png"
-      
     }
   ],
-  "dados": [],
-
-      
-
+  "dados": [
+    {
+      "DataListada": "2025-06-20",
+      "itens": [
+        {
+          "TarefasListada": "dormir",
+          "nivelImportancia": "Alta",
+          "concluida": false
+        }
+      ],
+      "id": 1
+    },
+    {
+      "DataListada": "2025-06-12",
+      "itens": [
+        {
+          "TarefasListada": "Sentar pros cria",
+          "nivelImportancia": "Media",
+          "concluida": false
+        }
+      ],
+      "id": 2
+    }
+  ],
   "avaliacoes": [
     {
       "id": "1",
