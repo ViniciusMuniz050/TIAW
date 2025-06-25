@@ -47,7 +47,7 @@ const informacoes = {
     },
     {
       "id": 2,
-      "pagina": "Calendario",
+      "pagina": "calendário",
       "imagem": "/assets/images/calendario.png",
       "detalhes": "Aqui no calendário você poderá acompanhar quais dias você interagiu e completou as tarefas do site, além de marcar datas, compromissos, ou relatar algo que ocorreu no dia, dentre outros...",
       "link": "metas.html"

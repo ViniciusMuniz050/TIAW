@@ -58,7 +58,7 @@ document.querySelector('.btn').addEventListener('click', async () => {
                     const usuarioCriado = await resposta.json();
                     sessionStorage.setItem('usuario', JSON.stringify(usuarioCriado));
                     alert('Conta criada com sucesso!');
-                    window.location.href = 'index.html';
+                    window.location.href = 'index2.html';
                 } else {
                     alert('Erro ao criar a conta. Tente novamente.');
                 }
@@ -69,5 +69,5 @@ document.querySelector('.btn').addEventListener('click', async () => {
         });
 
         document.getElementById('btn3').addEventListener('click', () => {
-            window.location.href = 'index2.html';
+            window.location.href = 'login.html';
         });

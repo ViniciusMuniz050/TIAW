@@ -82,3 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("proximo-mes").addEventListener("click", irParaProximoMes);
   document.getElementById("voltar-mes").addEventListener("click", voltarAoMesAtual);
 });
+
+document.getElementById('btn3').addEventListener('click', () => {
+  window.location.href = 'login.html';
+});
