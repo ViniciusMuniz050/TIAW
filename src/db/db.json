@@ -37,6 +37,12 @@
       "nome": "Rommel",
       "email": "rommel@gmail.com",
       "foto": "img/perfil.png"
+    },
+    {
+      "id": "6",
+      "login": "eu",
+      "email": "Jorgin123@gmail.com",
+      "senha": "arroz12"
     }
   ],
   "dados": [

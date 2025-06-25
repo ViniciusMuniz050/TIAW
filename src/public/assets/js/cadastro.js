@@ -69,5 +69,5 @@ document.querySelector('.btn').addEventListener('click', async () => {
         });
 
         document.getElementById('btn3').addEventListener('click', () => {
-            window.location.href = 'login.html';
+            window.location.href = 'index2.html';
         });
