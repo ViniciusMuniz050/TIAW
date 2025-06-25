@@ -56,7 +56,7 @@ const informacoes = {
       "id": 3,
       "pagina": "Progresso",
       "imagem": "/assets/images/progresso.png",
-      "detalhes": "Aqui você pode avaliar como tem percorrido os dias dentro do desafio e as estátisticas acerca desse progresso.",
+      "detalhes": "Aqui você pode avaliar como tem percorrido os dias dentro do desafio e as estatísticas acerca desse progresso.",
       "link": "retrospecto.html"
     },
     {
