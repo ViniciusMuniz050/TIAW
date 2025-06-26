@@ -97,21 +97,14 @@
     padding: 20px;
   }
 
-  .Insere-tarefa a{
-    background-color: #388e3c;
-    padding: 10px 20px;
-    height: 45px;
-    border-radius: 10px;
+.Insere-tarefa {
+  width: 50px;
+  padding: 0%;
+  margin: 5px;
+}
 
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    line-height: 25px;
-  }
-
-  .Insere-tarefa {
-    margin-bottom: 20px; 
-    text-align: center; 
+.btn-data{
+  display: flex;
 }
 
   #semana-tarefas {
