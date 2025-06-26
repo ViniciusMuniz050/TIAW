@@ -46,12 +46,13 @@
                     return Promise.resolve(); 
                 })
                 .then(() => {
-                    exibirTarefas(); 
+                    const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+                    exibirTarefas(usuarioId);
                     alert('Tarefa deletada com sucesso!');
                 })
         }
 
-        function exibirTarefas() {
+        function exibirTarefas(usuarioId) {
             const container = document.getElementById('criaCard');
             container.innerHTML = ''; 
             
@@ -127,7 +128,7 @@
                 return;
             }
 
-            exibirTarefas(); 
+            exibirTarefas(usuarioId); 
             
             const inputsContainer = document.querySelector('.inputs-importancia');
             if (inputsContainer) {
@@ -176,7 +177,9 @@
                         this.reset(); 
                         nivelImportancia = null; 
                         document.querySelectorAll('.inputs-importancia input[type="radio"]').forEach(radio => radio.checked = false);
-                        exibirTarefas(); 
+
+                        const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+                        exibirTarefas(usuarioId);
                     })
                 });
             }

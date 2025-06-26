@@ -9,7 +9,7 @@ async function loginUser(login, password) {
         const usuarioEncontrado = usuarios.find(u => u.login === login && u.senha === password);
 
         if (usuarioEncontrado) {
-          sessionStorage.setItem('usuario', JSON.stringify(usuarioEncontrado));
+          sessionStorage.setItem('usuarioLogadoId', usuarioEncontrado.id);
           return true;
         }
 

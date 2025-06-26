@@ -20,12 +20,21 @@
     ];
 
     async function fetchTarefas() {
-        try {
-            const response = await fetch('http://localhost:3000/dados');
-            dadosServidorCache = await response.json();
-        } catch (error) {
-            dadosServidorCache = [];
-        }
+      const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+      
+      if (!usuarioId) {
+        alert('Sessão expirada. Faça login novamente.');
+        window.location.href = "/modulos/login/login.html";
+        return;
+      }
+      
+      try {
+          const response = await fetch(`http://localhost:3000/tarefas?usuarioId=${usuarioId}`);
+          dadosServidorCache = await response.json();
+      } catch (error) {
+          console.error("Erro ao buscar tarefas do usuário:", error);
+          dadosServidorCache = [];
+      }
     }
 
     function formatarDataParaChave(date) {
@@ -165,21 +174,14 @@
         renderizarCaminhoDeMissoes(currentDisplayDate);
 
         const hojeChave = formatarDataParaChave(new Date());
-        const tarefasHoje = dadosServidorCache.find(d => d.DataListada === hojeChave);
-        if (tarefasHoje) {
-          const circuloHoje = missaoCaminho.querySelector(`[data-full-date="${hojeChave}"] .circulo-dia`);
-          if (circuloHoje) {
-              circuloHoje.classList.add('selecionado'); 
-              ultimoCirculoClicado = circuloHoje;
-              exibirTarefasDoDia(hojeChave, tarefasHoje.itens || [], circuloHoje);
-          } else {
-             exibirTarefasDoDia(hojeChave, []); 
-          }
-        } 
-        else {
-          exibirTarefasDoDia(hojeChave, []); 
+        const circuloHoje = missaoCaminho.querySelector(`.circulo-dia[data-full-date="${hojeChave}"]`);
+
+        if (circuloHoje) {
+            circuloHoje.click();
+        } else {
+            detalhesTarefasDia.style.display = 'none';
         }
-  });
+      });
 });
 
 
