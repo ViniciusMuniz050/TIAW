@@ -34,7 +34,7 @@ async function loginUser(login, password) {
         const sucesso = await loginUser(login, password);
         if (sucesso) {
           alert('Login bem-sucedido!');
-          window.location.href = 'index.html';
+          window.location.href = '/index.html';
         } else {
           alert('Senha incorreta!');
         }

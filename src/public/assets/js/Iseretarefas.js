@@ -54,16 +54,7 @@
         function exibirTarefas() {
             const container = document.getElementById('criaCard');
             container.innerHTML = ''; 
-
-            const usuarioId = sessionStorage.getItem('usuarioLogadoId');
-
-            if (!usuarioId) {
-                alert('Você precisa fazer login para ver suas tarefas.');
-                window.location.href = "../../modulos/login/login.html"; //teste se vai pro login
-                return;
-            }
             
-
             fetch(`http://localhost:3000/tarefas?usuarioId=${usuarioId}`) 
             .then(res => res.json())
             .then(dadosDoServidor => {
@@ -132,6 +123,7 @@
 
             if (!usuarioId) {
                 alert('Sessão expirada. Faça login novamente.');
+                window.location.href = "/modulos/login/login.html";
                 return;
             }
 

@@ -48,9 +48,9 @@
     },
     {
       "id": "7",
-      "login": "aaaaaaa",
+      "login": "admin",
       "email": "alexandre.bleme2@gmail.com",
-      "senha": "123456"
+      "senha": "123"
     }
   ],
   "tarefas": [],
