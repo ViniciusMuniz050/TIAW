@@ -41,35 +41,35 @@ const informacoes = {
     {
       "id": 1,
       "pagina": "Missões",
-      "imagem": "/assets/images/missoes.png",
+      "imagem": "assets/images/missoes.png",
       "detalhes": "Aqui você acessa suas missões diárias sendo necessário conclui-las para receber pontos",
       "link": "missoes.html"
     },
     {
       "id": 2,
       "pagina": "calendário",
-      "imagem": "/assets/images/calendario.png",
+      "imagem": "assets/images/calendario.png",
       "detalhes": "Aqui no calendário você poderá acompanhar quais dias você interagiu e completou as tarefas do site, além de marcar datas, compromissos, ou relatar algo que ocorreu no dia, dentre outros...",
       "link": "metas.html"
     },
     {
       "id": 3,
       "pagina": "Progresso",
-      "imagem": "/assets/images/progresso.png",
+      "imagem": "assets/images/progresso.png",
       "detalhes": "Aqui você pode avaliar como tem percorrido os dias dentro do desafio e as estatísticas acerca desse progresso.",
       "link": "retrospecto.html"
     },
     {
       "id": 4,
       "pagina": "Configurações",
-      "imagem": "/assets/images/configuracoes.jpg",
+      "imagem": "assets/images/configuracoes.jpg",
       "detalhes": "Aqui você acessa as configurações do site, para deixar sua experiência a melhor possível.",
       "link": "muda_perfil.html"
     },
     {
       "id": 5,
       "pagina": "Saiba mais",
-      "imagem": "/assets/images/SaibaMais.png",
+      "imagem": "assets/images/SaibaMais.png",
       "detalhes": "Aqui você fica informado sobre como funciona a procastinação e como ela afeta diretamente a sua vida",
       "link": "about.html"
     }
