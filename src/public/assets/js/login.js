@@ -18,6 +18,7 @@ async function loginUser(login, password) {
         console.error('Erro durante o login:', error);
         return false;
       }
+      
     }
 
     document.getElementById('formlogin').addEventListener('submit', async (event) => {
