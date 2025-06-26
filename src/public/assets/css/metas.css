@@ -117,6 +117,11 @@ button {
   transition: all 0.3s;
 }
 
+#inserir-meta{
+  text-decoration: none;
+  color: white;
+}
+
 button:hover {
   background-color: #4caf50;
   transform: scale(1.05);
