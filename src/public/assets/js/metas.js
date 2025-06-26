@@ -86,3 +86,11 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById('btn3').addEventListener('click', () => {
   window.location.href = 'login.html';
 });
+
+document.getElementById('btn-sair').addEventListener('click', function (event) {
+  event.preventDefault();
+  sessionStorage.clear(); // limpa a sessão
+  window.location.href = 'login.html'; // ou qualquer outra página inicial
+});
+
+
