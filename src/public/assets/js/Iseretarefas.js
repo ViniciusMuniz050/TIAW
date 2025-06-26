@@ -23,7 +23,7 @@
                 return; 
             }
 
-            fetch(`http://localhost:3000/dados/${idData}`) 
+            fetch(`http://localhost:3000/tarefas/${idData}`) 
                 .then(res => {
                     return res.json();
                 })
@@ -32,9 +32,9 @@
                         diaParaAtualizar.itens.splice(indexTarefa, 1); 
                         
                         if (diaParaAtualizar.itens.length === 0) {
-                            return fetch(`http://localhost:3000/dados/${idData}`, { method: 'DELETE' });
+                            return fetch(`http://localhost:3000/tarefas/${idData}`, { method: 'DELETE' });
                         } else {
-                            return fetch(`http://localhost:3000/dados/${idData}`, {
+                            return fetch(`http://localhost:3000/tarefas/${idData}`, {
                                 method: 'PUT', 
                                 headers: {
                                     'Content-Type': 'application/json'
@@ -55,12 +55,20 @@
             const container = document.getElementById('criaCard');
             container.innerHTML = ''; 
 
-            fetch("http://localhost:3000/dados") 
-                .then(res => {
-                    return res.json();
-                })
-                .then(dadosDoServidor => {
-                    dadosDoServidor.sort((a, b) => new Date(a.DataListada) - new Date(b.DataListada));
+            const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+
+            if (!usuarioId) {
+                alert('Você precisa fazer login para ver suas tarefas.');
+                window.location.href = "../../modulos/login/login.html"; //teste se vai pro login
+                return;
+            }
+            
+
+            fetch(`http://localhost:3000/tarefas?usuarioId=${usuarioId}`) 
+            .then(res => res.json())
+            .then(dadosDoServidor => {
+                dadosDoServidor.sort((a, b) => new Date(a.DataListada) - new Date(b.DataListada));
+
 
                     dadosDoServidor.forEach(dia => { 
                         let itens = dia.itens;
@@ -116,7 +124,17 @@
                 });
         }
 
+
+
         document.addEventListener('DOMContentLoaded', () => {
+
+            const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+
+            if (!usuarioId) {
+                alert('Sessão expirada. Faça login novamente.');
+                return;
+            }
+
             exibirTarefas(); 
             
             const inputsContainer = document.querySelector('.inputs-importancia');
@@ -129,8 +147,8 @@
             }
 
             const addTarefasForm = document.getElementById('AddTarefas');
-            if (addTarefasForm) {
-                addTarefasForm.addEventListener('submit', function(event) {
+                if (addTarefasForm) {
+                    addTarefasForm.addEventListener('submit', function(event) {
                     event.preventDefault(); 
 
                     const tarefa = document.getElementById("Entrada").value;
@@ -141,25 +159,26 @@
                         return; 
                     }
 
+
                     const dadosParaEnviar = {
                         DataListada: data,
-                        itens:[{
+                        itens: [{
                             TarefasListada: tarefa,
                             nivelImportancia: nivelImportancia, 
                             concluida: false
-                        }]
+                        }],
+                        //usuarioId: parseInt(usuarioTarefa)
+                        usuarioId: parseInt(usuarioId) 
                     };
 
-                    fetch('http://localhost:3000/dados', {
+                    fetch('http://localhost:3000/tarefas', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify(dadosParaEnviar)
                     })
-                    .then(response => {
-                        return response.json();
-                    })
+                    .then(response => response.json())
                     .then(data => {
                         alert('Tarefa adicionada com sucesso!');
                         this.reset(); 
