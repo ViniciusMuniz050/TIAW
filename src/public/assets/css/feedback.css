@@ -1,221 +1,237 @@
-/* Reset */
+/* Reset e base */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #e8f5e9;
-    display: flex;
-    height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  line-height: 1.6;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 100px;
-    background-color: #2e7d32;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    color: white;
-    gap: 20px;
+main {
+  margin-top: 100px;
+  padding: 20px;
 }
 
-.sidebar .user-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-.sidebar nav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.sidebar nav a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 12px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.sidebar nav a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: scale(1.1);
-}
-
-.sidebar nav img {
-    width: 26px;
-    height: 26px;
-    filter: brightness(0) invert(1);
-}
-
-/* Main */
-.main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-/* Topbar */
+/* Barra superior (topbar) */
 .topbar {
-    background-color: #2e7d32;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    width: 100%;
+  background-color: #026F35;
+  color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.topbar .logo {
-    height: 42px;
+.logo {
+  height: 80px;
 }
 
-.topbar .defensiva {
-    background-color: #ffecb3;
-    color: #e65100;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+.titulo-centro {
+  flex-grow: 1;
+  text-align: center;
 }
 
-/* Container Feedback */
-.container {
-    background-color: #ffffff;
-    margin: 80px auto;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 400px;
-    animation: fadeIn 0.6s ease-in-out;
+.titulo-centro h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
+.perfil-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-h1 {
-    color: #2e7d32;
-    margin-bottom: 20px;
+.perfil-area img {
+  width: 50px;
 }
 
+/* Barra lateral (sidebar) */
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 80px;
+  height: calc(100vh - 70px);
+  background-color: #026F35;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li img {
+  width: 30px;
+  transition: transform 0.2s;
+}
+
+.sidebar nav ul li a img:hover {
+  transform: scale(1.1);
+}
+
+/* Conteúdo principal */
+.conteudo-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.grafico, .comentarios, .formulario {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+}
+
+.grafico {
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+/* Comentários */
+.comentarios table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comentarios td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.comentarios td.data {
+  text-align: right;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Estrelas */
 .stars {
-    margin-bottom: 20px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .star {
-    font-size: 42px;
-    color: #c8e6c9;
-    cursor: pointer;
-    transition: transform 0.2s, color 0.2s;
+  font-size: 42px;
+  color: #c8e6c9;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
 }
 
 .star.selecionada {
-    color: #2e7d32;
+  color: #2e7d32;
 }
 
 .star:hover {
-    transform: scale(1.2);
-    color: #66bb6a;
+  transform: scale(1.2);
+  color: #66bb6a;
 }
 
+/* Formulário */
 textarea {
-    width: 100%;
-    height: 100px;
-    padding: 12px;
-    border: 2px solid #a5d6a7;
-    border-radius: 10px;
-    resize: none;
-    font-size: 16px;
-    margin-bottom: 20px;
-    background-color: #fff;
-}
-
-textarea::placeholder {
-    color: #999;
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 2px solid #a5d6a7;
+  border-radius: 10px;
+  resize: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: #fff;
 }
 
 textarea:focus {
-    outline: none;
-    border-color: #2e7d32;
+  outline: none;
+  border-color: #2e7d32;
 }
 
-/* Botão */
+textarea::placeholder {
+  color: #999;
+}
+
 button {
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #1b5e20;
-    transform: scale(1.05);
+  background-color: #1b5e20;
+  transform: scale(1.05);
 }
 
 #mensagem {
-    margin-top: 15px;
-    color: #2e7d32;
-    font-weight: bold;
+  margin-top: 10px;
+  color: #2e7d32;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        height: 60px;
-        padding: 10px;
-    }
-
-    .sidebar nav {
-        flex-direction: row;
-        gap: 12px;
-    }
-
-    .sidebar .user-icon {
-        display: none;
-    }
-
-    .topbar {
-        flex-direction: column;
-        height: auto;
-        gap: 5px;
-        padding: 10px;
-    }
-
-    .container {
-        width: 90%;
-        margin: 20px auto;
-    }
+  .conteudo-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 60px;
+    padding: 10px;
+  }
+  .sidebar nav ul {
+    display: flex;
+    gap: 12px;
+  }
+  .topbar {
+    flex-direction: column;
+    gap: 5px;
+    height: auto;
+    padding: 10px;
+  }
+  .grafico {
+    position: static;
+    margin-left: 0;
+  }
 }
-
-/* Fonte externa */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');

@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
-    <link rel="stylesheet" href="assets/css/feedback.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Unificado</title>
+    <link rel="stylesheet" href="assets/css/feedback.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
+    <header class="topbar">
+        <a href="index.html"><img src="assets/images/Imagem preguiça 2.png" alt="Logo" class="logo"></a>
+        <div class="titulo-centro">
+            <h1>Edição de Perfil</h1>
+        </div>
+        <div class="perfil-area">
+            <span class="pontos">🔥 120</span>
+            <a href="#"><img src="assets/images/usuario.png" alt="Foto de Perfil" id="fotoPerfilHeader" /></a></li>
+        </div>
+    </header>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <img src="../img/usuario.png" alt="Usuário" class="user-icon">
+    <aside class="sidebar">
         <nav>
-            <a href="#"><img src="assets/img/casa.png" alt="Início"><span></span></a>
-            <a href="#"><img src="assets/img/alvo.png" alt="Alvo"><span></span></a>
-            <a href="#"><img src="assets/img/meta.png" alt="Meta"><span></span></a>
-            <a href="#"><img src="assets/img/perfil.png" alt="Perfil"><span></span></a>
-            <a href="#"><img src="assets/img/sair.png" alt="Sair"><span></span></a>
+            <ul>
+                <li><a href="/metas.html"><img src="assets/images/calendar.png" alt="Calendário"></a></li>
+                <li><a href="/retrospecto.html"><img src="assets/images/meta.png" alt="Progresso"></a></li>
+                <li><a href="/missoes.html"><img src="assets/images/alvo.png" alt="Tarefas"></a></li>
+                <li><a href="/muda_perfil.html"><img src="assets/images/perfil.png" alt="Configurações"></a></li>
+                <li><a href="/sobre.html"><img src="assets/images/adicionar.png" alt="Sobre"></a></li>
+                <li><a href="#"><img src="assets/images/sair.png" alt="Sair"></a></li>
+            </ul>
         </nav>
-    </div>
+    </aside>
 
-    <!-- Main -->
-    <div class="main">
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="conteudo-horizontal">
+            <div class="grafico">
+                <canvas id="graficoNotas"></canvas>
+                <h2>Notas do Site</h2>
+            </div>
 
-        <!-- Topbar -->
-        <div class="topbar">
-            <img src="assets/images/preguica.png" alt="Logo" class="logo">
-            <div class="defensiva">
-                <img src="assets/images/fogo.png" alt="Fogo" width="18px">
-                5 dias de defensiva
+            <div class="comentarios">
+                <h2>Comentários</h2>
+                <table id="comentarios-lista"></table>
             </div>
         </div>
 
-        <!-- Feedback Container -->
+        <!-- Área de Avaliação -->
         <div class="container">
             <h1>Deixe seu Feedback</h1>
-
             <div class="stars">
                 <span class="star" data-value="1">&#9733;</span>
                 <span class="star" data-value="2">&#9733;</span>
@@ -43,15 +58,13 @@
                 <span class="star" data-value="4">&#9733;</span>
                 <span class="star" data-value="5">&#9733;</span>
             </div>
-
             <textarea id="comentario" placeholder="Deixe seu comentário..."></textarea>
-
             <button id="enviar">Enviar Feedback</button>
-
             <div id="mensagem"></div>
         </div>
-    </div>
-
+    </main>
     <script src="assets/js/feedback.js"></script>
+
 </body>
+
 </html>

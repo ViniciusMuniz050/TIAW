@@ -42,11 +42,8 @@
       "login": "eu",
       "email": "Jorgin123@gmail.com",
       "senha": "arroz12",
-<<<<<<< HEAD
       "foto" : "img/perfil.png"
-=======
-       "foto": "img/perfil.png"
->>>>>>> a6493303a623787fe5326bea49f2625dc5bb40af
+
     },
     {
       "id": "7",
