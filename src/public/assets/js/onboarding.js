@@ -80,5 +80,5 @@ function carrega() {
 // Função para redirecionar à edição dos dados — disponível globalmente
 function editarDados() {
     alert("Você escolheu editar as informações...");
-    window.location.href = 'index2.html';
+    window.location.href = 'questionario.html';
 }

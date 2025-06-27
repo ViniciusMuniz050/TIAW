@@ -9,7 +9,7 @@ async function loginUser(login, password) {
         const usuarioEncontrado = usuarios.find(u => u.login === login && u.senha === password);
 
         if (usuarioEncontrado) {
-          sessionStorage.setItem('usuario', JSON.stringify(usuarioEncontrado));
+          sessionStorage.setItem('usuarioLogadoId', usuarioEncontrado.id);
           return true;
         }
 
@@ -34,7 +34,7 @@ async function loginUser(login, password) {
         const sucesso = await loginUser(login, password);
         if (sucesso) {
           alert('Login bem-sucedido!');
-          window.location.href = 'index.html';
+          window.location.href = '/index.html';
         } else {
           alert('Senha incorreta!');
         }

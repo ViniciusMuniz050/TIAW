@@ -35,7 +35,7 @@
       "senha": "Ana456"
     },
     {
-      "id": 3,
+      "id": "3",
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
@@ -50,33 +50,23 @@
     },
     {
       "id": "7",
-      "login": "aaaaaaa",
+      "login": "admin",
       "email": "alexandre.bleme2@gmail.com",
-      "senha": "123456"
+      "senha": "123"
     }
   ],
-  "dados": [
+  "tarefas": [
     {
-      "DataListada": "2025-06-20",
+      "id": "b9b0",
+      "DataListada": "2025-06-26",
       "itens": [
         {
-          "TarefasListada": "dormir",
+          "TarefasListada": "gggg",
           "nivelImportancia": "Alta",
           "concluida": false
         }
       ],
-      "id": 1
-    },
-    {
-      "DataListada": "2025-06-12",
-      "itens": [
-        {
-          "TarefasListada": "Sentar pros cria",
-          "nivelImportancia": "Media",
-          "concluida": false
-        }
-      ],
-      "id": 2
+      "usuarioId": 7
     }
   ],
   "avaliacoes": [

@@ -11,7 +11,7 @@
 <body>
 
   <header class="topbar">
-    <img src="assets/images/Imagem preguiça 2.png" alt="Logo" class="logo">
+    <a href="index.html"><img src="assets/images/Imagem preguiça 2.png" alt="Logo" class="logo"></a>
     <div class="titulo-centro">
       <h1>Missões</h1>
     </div>
@@ -24,39 +24,46 @@
   <aside class="sidebar">
     <nav>
       <ul>
+<<<<<<< HEAD
         <li><a href="/metas.html"><img src="assets/images/calendar.png" alt="Calendário"></a></li>
         <li><a href="/retrospecto.html"><img src="assets/images/meta.png" alt="Progresso"></a></li>
         <li><a href="/missoes.html"><img src="assets/images/alvo.png" alt="Tarefas"></a></li>
         <li><a href="/muda_perfil.html"><img src="assets/images/perfil.png" alt="Configurações"></a></li>
         <li><a href="/sobre.html"><img src="assets/images/adicionar.png" alt="Sobre"></a></li>
+=======
+        <li><a href="index.html"><img src="assets/images/casa.png" alt="Home"></a></li>
+        <li><a href="retrospecto.html"><img src="assets/images/meta.png" alt="Progresso"></a></li>
+        <li><a href="missoes.html"><img src="assets/images/alvo.png" alt="Calendário"></a></li>
+        <li><a href="#"><img src="assets/images/perfil.png" alt="Metas"></a></li>
+        <li><a href="muda_perfil.html"><img src="assets/images/adicionar.png" alt="Configurações"></a></li>
+>>>>>>> d9e995dbd29a72770434c9fe8a06c444d2fd4a85
         <li><a href="#"><img src="assets/images/sair.png" alt="Sair"></a></li>
       </ul>
     </nav>
   </aside>
-  
-<div id="conteudos">
-  <div class="Insere-tarefa">
-    <a href="modulos/Inseretarefas/InsereTarefas.html">Futuro botão para levar a aba MESES(parte da Lara), por enquanto apenas entrada de tarefas</a>
-  </div>
 
-  <div class="calendario-header">
-    <button id="prevMonth">Mês Anterior</button>
-    <h2 id="currentMonthYear"></h2>
-    <button id="nextMonth">Próximo Mês</button>
-  </div>
+  <div id="conteudos">
 
-  <div id="missao-caminho-container">
-    <div id="missao-caminho">
+    <div class="calendario-header">
+      <div class="btn-data">
+      <button id="prevMonth">🢤</button>
+      <a href="metas.html"><img class="Insere-tarefa" src="assets/images/data-limite.png" alt=""></a>
       </div>
-
-    <div id="detalhes-tarefas-dia" style="display: none;">
-      <h3>Tarefas para <span id="data-selecionada"></span>:</h3>
-      <ul id="lista-tarefas-dia">
-        </ul>
+      <h2 id="currentMonthYear"></h2>
+      <button id="nextMonth">🢥</button>
     </div>
-  </div>
 
-</div>
+    <div id="missao-caminho-container">
+      <div id="missao-caminho">
+        </div>
+        <div id="detalhes-tarefas-dia" style="display: none;">
+        <h3>Tarefas para <span id="data-selecionada"></span>:</h3>
+        <ul id="lista-tarefas-dia">
+          </ul>
+      </div>
+    </div>
+
+  </div>
 
 <script src="assets/js/missoes.js"></script>
 
