@@ -1,5 +1,5 @@
 // Definir ID do usuário logado (pode ser dinâmico futuramente)
-const usuarioLogadoId = 3;
+const usuarioLogadoId = "3";
 const apiUrl = "http://localhost:3000/usuarios";
 
 // Carregar dados do usuário quando a página abrir

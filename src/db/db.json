@@ -3,32 +3,37 @@
     {
       "id": "1",
       "login": "Daniel",
-      "email": "danielzin007@gmail,com",
-      "senha": "123456"
+      "email": "danielzin007@gmail.com",
+      "senha": "123456",
+      "foto" : "img/perfil.png"
     },
     {
       "id": "2",
       "login": "Lucas",
-      "email": "lucas556@gmail,com",
-      "senha": "Lucas123"
+      "email": "lucas556@gmail.com",
+      "senha": "Lucas123",
+      "foto" : "img/perfil.png"
     },
     {
       "id": "3",
       "login": "Maria",
-      "email": "maria789@gmail,com",
-      "senha": "Maria@123"
+      "email": "maria789@gmail.com",
+      "senha": "Maria@123",
+      "foto" : "img/perfil.png"
     },
     {
       "id": "4",
       "login": "João",
-      "email": "joao321@gmail,com",
-      "senha": "Joao321"
+      "email": "joao321@gmail.com",
+      "senha": "Joao321",
+      "foto" : "img/perfil.png"
     },
     {
       "id": "5",
       "login": "Ana",
-      "email": "ana456@gmail,com",
-      "senha": "Ana456"
+      "email": "ana456@gmail.com",
+      "senha": "Ana456",
+      "foto" : "img/perfil.png"
     }
 
   ],
