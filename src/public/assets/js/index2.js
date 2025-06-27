@@ -1,24 +1,13 @@
 
 let usuarios = null;
 
-function CheckLoggerUser(){
-    const usuariostr = sessionStorage.getItem(`usuario`);
-    if(usuariostr){
-        location.href ='login.htm';
-    }
-
-    usuario = JSON.parse(usuariostr)
-    return true;
-
-}
-
 function loginUser (login, password){
     const usuarioObj = dados.usuarios.find(elem => (elem.login === login) && (elem.senha === password))
 
     if(!usuarioObj)
         return false;
     else{
-        sessionStorage.setItem(`usuario`, JSON.stringify(usuarioObj))
+        sessionStorage.setItem(`usuarioLogadoId`, JSON.stringify(usuarioObj))
         return true;
     }
 } 
@@ -29,11 +18,24 @@ function logoutUser(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const usuarioLogado = JSON.parse(sessionStorage.getItem('usuario'));
-    if (usuarioLogado) {
-    nomeUsuario.textContent = `Olá, ${usuarioLogado.login}`;
-  }
-    });
+    const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+    
+    if (!usuarioId) {
+      alert('Sessão expirada. Faça login novamente.');
+      window.location.href = "/modulos/login/login.html";
+      return;
+    }
+    //MUDANO LOGICA DE LOGIN, buscanco login pelo id salvo no sessionStorage
+   fetch(`http://localhost:3000/usuarios/${usuarioId}`)
+        .then(res => res.json())
+        .then(usuarioLogado => {
+            const nomeUsuarioSpan = document.getElementById('nomeUsuario');
+            if (nomeUsuarioSpan && usuarioLogado) {
+                nomeUsuarioSpan.textContent = `Olá, ${usuarioLogado.login}`;
+            }
+        })
+        .catch(error => console.error("Erro ao buscar dados do usuário:", error));
+  });
 
 
 const informacoes = {
@@ -71,7 +73,7 @@ const informacoes = {
       "pagina": "Saiba mais",
       "imagem": "assets/images/SaibaMais.png",
       "detalhes": "Aqui você fica informado sobre como funciona a procastinação e como ela afeta diretamente a sua vida",
-      "link": "about.html"
+      "link": "sobre.html"
     }
   ]
 };
