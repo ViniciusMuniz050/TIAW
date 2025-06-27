@@ -29,16 +29,8 @@
       "login": "Ana",
       "email": "ana456@gmail,com",
       "senha": "Ana456"
-    },
-    {
-      "id": 3,
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "foto": "img/perfil.png"
-      
     }
+
   ],
   "dados": [],
 
