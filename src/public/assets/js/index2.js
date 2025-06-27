@@ -73,7 +73,7 @@ const informacoes = {
       "pagina": "Saiba mais",
       "imagem": "assets/images/SaibaMais.png",
       "detalhes": "Aqui você fica informado sobre como funciona a procastinação e como ela afeta diretamente a sua vida",
-      "link": "about.html"
+      "link": "sobre.html"
     }
   ]
 };

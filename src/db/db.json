@@ -4,13 +4,15 @@
       "id": "1",
       "login": "Daniel",
       "email": "danielzin007@gmail,com",
-      "senha": "123456"
+      "senha": "123456",
+      "foto" : "assets/images/casa.png"
     },
     {
       "id": "2",
       "login": "Lucas",
       "email": "lucas556@gmail,com",
-      "senha": "Lucas123"
+      "senha": "Lucas123",
+      "foto" : "assets/images/casa.png"
     },
     {
       "id": "3",
@@ -18,19 +20,22 @@
       "email": "maria789@gmail,com",
       "senha": "Monkey_flip",
       "nome": "Macaco",
-      "foto": ""
+      "foto": "img/perfil.png"
     },
     {
       "id": "4",
       "login": "João",
-      "email": "joao321@gmail,com",
-      "senha": "Joao321"
+      "email": "joao321@gmail.com",
+      "senha": "Joao321",
+      "foto" : "img/perfil.png"
     },
     {
       "id": "5",
       "login": "Ana",
-      "email": "ana456@gmail,com",
-      "senha": "Ana456"
+      "email": "ana456@gmail.com",
+      "senha": "Ana456",
+      "foto" : "img/perfil.png"
+
     },
     {
       "id": "3",
@@ -44,19 +49,14 @@
       "id": "6",
       "login": "eu",
       "email": "Jorgin123@gmail.com",
-      "senha": "arroz12"
+      "senha": "arroz12",
+       "foto": "img/perfil.png"
     },
     {
       "id": "7",
       "login": "admin",
       "email": "alexandre.bleme2@gmail.com",
       "senha": "123"
-    },
-    {
-      "id": "8",
-      "login": "Gu",
-      "email": "gustavo@email.com",
-      "senha": "123456"
     }
   ],
   "tarefas": [
@@ -131,7 +131,9 @@
         }
       ],
       "usuarioId": 7
+
     }
+
   ],
   "avaliacoes": [
     {
