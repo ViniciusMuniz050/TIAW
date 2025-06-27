@@ -19,12 +19,6 @@ function logoutUser(){
 
 document.addEventListener('DOMContentLoaded', () => {
     const usuarioId = sessionStorage.getItem('usuarioLogadoId');
-    
-    if (!usuarioId) {
-      alert('Sessão expirada. Faça login novamente.');
-      window.location.href = "/modulos/login/login.html";
-      return;
-    }
     //MUDANO LOGICA DE LOGIN, buscanco login pelo id salvo no sessionStorage
    fetch(`http://localhost:3000/usuarios/${usuarioId}`)
         .then(res => res.json())
