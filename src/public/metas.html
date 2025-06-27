@@ -3,30 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Metas para o Ano</title>
-  <link rel="stylesheet" href="metas.css">
-  <script src="metas.js" defer></script>
+  <link rel="stylesheet" href="assets/css/metas.css">
+  <script src="assets/js/metas.js" defer></script>
 </head>
 <body>
+
   <header class="topbar">
-    <img src="img/preguica.png" alt="Logo" class="logo">
+    <a href="/index.html"><img src="assets/images/Imagem preguiça 2.png" alt="Logo" class="logo"></a>
     <div class="titulo-centro">
-      <h1>Metas para o Ano</h1>
+      <h1>Metas</h1>
     </div>
     <div class="perfil-area">
       <span class="pontos">🔥 120</span>
-      <img src="img/usuario.png" alt="Usuário" class="perfil-icon">
+      <img src="assets/images/usuario.png" alt="Usuário" class="perfil-icon">
     </div>
   </header>
 
   <aside class="sidebar">
     <nav>
       <ul>
-        <li><a href="#"><img src="img/casa.png" alt="Home"></a></li>
-        <li><a href="#"><img src="img/meta.png" alt="Estatísticas"></a></li>
-        <li><a href="#"><img src="img/alvo.png" alt="Calendário"></a></li>
-        <li><a href="#"><img src="img/perfil.png" alt="Metas"></a></li>
-        <li><a href="#"><img src="img/adicionar.png" alt="Configurações"></a></li>
-        <li><a href="#"><img src="img/sair.png" alt="Sair"></a></li>
+        <li><a href="index.html"><img src="assets/images/casa.png" alt="Home"></a></li>
+        <li><a href="retrospecto.html"><img src="assets/images/meta.png" alt="Progresso"></a></li>
+        <li><a href="missoes.html"><img src="assets/images/alvo.png" alt="Calendário"></a></li>
+        <li><a href="#"><img src="assets/images/perfil.png" alt="Metas"></a></li>
+        <li><a href="muda_perfil.html"><img src="assets/images/adicionar.png" alt="Configurações"></a></li>
+        <li><a href="#"><img src="assets/images/sair.png" alt="Sair"></a></li>
       </ul>
     </nav>
   </aside>
@@ -34,6 +35,7 @@
   <main class="conteudo">
     <div class="navegacao-mes">
       <button id="voltar-mes">Mês Atual</button>
+      <button><a id="inserir-meta" href="modulos/Inseretarefas/InsereTarefas.html">Inserir Tarefas</a></button>
       <button id="proximo-mes">Próximo Mês</button>
     </div>
     <h2>Calendário de Metas</h2>

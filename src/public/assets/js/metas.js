@@ -78,7 +78,19 @@ function voltarAoMesAtual() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+
+  if (!usuarioId) {
+    alert('Sessão expirada. Faça login novamente.');
+    window.location.href = "/modulos/login/login.html";
+    return;
+  }
+
   criarCalendario();
   document.getElementById("proximo-mes").addEventListener("click", irParaProximoMes);
   document.getElementById("voltar-mes").addEventListener("click", voltarAoMesAtual);
+});
+
+document.getElementById('btn3').addEventListener('click', () => {
+  window.location.href = 'login.html';
 });

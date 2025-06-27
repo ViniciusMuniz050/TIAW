@@ -34,13 +34,45 @@
       "email": "ana456@gmail.com",
       "senha": "Ana456",
       "foto" : "img/perfil.png"
+
+    },
+    {
+      "id": "3",
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com",
+      "foto": "img/perfil.png"
+    },
+    {
+      "id": "6",
+      "login": "eu",
+      "email": "Jorgin123@gmail.com",
+      "senha": "arroz12"
+    },
+    {
+      "id": "7",
+      "login": "admin",
+      "email": "alexandre.bleme2@gmail.com",
+      "senha": "123"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "b9b0",
+      "DataListada": "2025-06-26",
+      "itens": [
+        {
+          "TarefasListada": "gggg",
+          "nivelImportancia": "Alta",
+          "concluida": false
+        }
+      ],
+      "usuarioId": 7
+
     }
 
   ],
-  "dados": [],
-
-      
-
   "avaliacoes": [
     {
       "id": "1",
