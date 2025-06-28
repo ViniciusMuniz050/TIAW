@@ -55,12 +55,6 @@
       "login": "Cadastrado",
       "email": "vinicius.costa.1434010@sga.pucminas.br",
       "senha": "Filosofia"
-    },
-    {
-      "id": "9",
-      "login": "Batata",
-      "email": "batata@gmail.com",
-      "senha": "batata"
     }
   ],
   "tarefas": [
