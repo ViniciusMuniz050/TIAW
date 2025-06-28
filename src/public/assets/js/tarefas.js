@@ -57,7 +57,41 @@ window.onload = function () {
     const total = ultimo.tarefas[0].itens.length + ultimo.tarefas[1].itens.length;
     const percentual = (ultimo.tarefas[0].itens.length / total) * 100;
 
-    tela.innerHTML += `<p id="p-grafico">Porcentagem: ${percentual.toFixed(2)}% das tarefas concluídas</p>`;
+    tela.innerHTML += `
+    <p id="p-grafico">Porcentagem: ${percentual.toFixed(2)}% das tarefas concluídas</p>
+    <div id="grafico" style="max-width: 600px; height: 400px; margin: 40px auto;">
+        <canvas id="myChart"></canvas>
+    </div>
+`;
+
+const ctx = document.getElementById('myChart');
+
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'],
+    datasets: [{
+      label: 'MENU PRODUTIVIDADE',
+      data: [11, 38, percentual, 40, 59],
+      backgroundColor: ['#129745'],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: { color: 'white' }
+      },
+      x: {
+        ticks: { color: 'black' }
+      }
+    }
+  }
+});
 };
 
 
@@ -78,3 +112,5 @@ if (exibicao && exibicao1) {
 } else if (exibicao1) {
     exibicao1.innerHTML = "URL inválida. Tente novamente...";
 }
+
+
