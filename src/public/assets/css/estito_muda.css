@@ -14,7 +14,7 @@
  /* --Começo barra lateral e superior-- */  
 
   .topbar {
-    background-color: #026F35;
+    background-color: #388e3c;
     color: white;
     height: 80px;
     display: flex;
@@ -65,7 +65,7 @@
     left: 0;
     width: 80px;
     height: calc(100vh - 70px);
-    background-color: #026F35;
+    background-color: #388e3c;
     padding-top: 20px;
     display: flex;
     flex-direction: column;

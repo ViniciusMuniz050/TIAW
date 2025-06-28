@@ -1,55 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/retrospecto.css">
-    <title>Retrospecto</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progresso</title>
+  <meta name="description" content="Página de retrospecto com progresso e pontos do usuário no Action Mode." />
+  <link rel="stylesheet" href="assets/css/retrospecto.css" />
 </head>
 <body>
-    
-    
-    <header class="topbar">
-    <a href="index.html"><img src="assets/images/Imagem preguiça 2.png" alt="Logo" class="logo"></a>
+
+  <header class="topbar">
+    <button id="menuToggle" aria-label="Abrir menu" aria-expanded="false">Menu ☰</button>
+    <a href="index.html" aria-label="Página inicial">
+      <img src="assets/images/Imagem preguiça 2.png" alt="Logo" class="logo" />
+    </a>
     <div class="titulo-centro">
-      <h1>Retrospecto</h1>
+      <h1>Progresso</h1>
     </div>
     <div class="perfil-area">
       <span class="pontos">🔥 120</span>
-      <img src="assets/images/usuario.png" alt="Usuário" class="perfil-icon">
+      <img src="assets/images/usuario.png" alt="Usuário" class="perfil-icon" />
     </div>
   </header>
 
-  <aside class="sidebar">
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
     <nav>
       <ul>
-        <li><a href="index.html"><img src="assets/images/casa.png" alt="Home"></a></li>
-        <li><a href="retrospecto.html"><img src="assets/images/meta.png" alt="Progresso"></a></li>
-        <li><a href="missoes.html"><img src="assets/images/alvo.png" alt="Calendário"></a></li>
-        <li><a href="#"><img src="assets/images/perfil.png" alt="Metas"></a></li>
-        <li><a href="muda_perfil.html"><img src="assets/images/adicionar.png" alt="Configurações"></a></li>
-        <li><a href="#"><img src="assets/images/sair.png" alt="Sair"></a></li>
+        <li><a href="index.html" aria-label="Início"><img src="assets/images/casa.png" alt="Home" /></a></li>
+        <li><a href="retrospecto.html" aria-label="Retrospecto"><img src="assets/images/meta.png" alt="Progresso" /></a></li>
+        <li><a href="missoes.html" aria-label="Missões"><img src="assets/images/alvo.png" alt="Calendário" /></a></li>
+        <li><a href="#" aria-label="Perfil"><img src="assets/images/perfil.png" alt="Metas" /></a></li>
+        <li><a href="muda_perfil.html" aria-label="Alterar Perfil"><img src="assets/images/adicionar.png" alt="Configurações" /></a></li>
+        <li><a href="#" aria-label="Sair"><img src="assets/images/sair.png" alt="Sair" /></a></li>
       </ul>
     </nav>
   </aside>
 
-   
-    <br>
-    <br>
-    <br>
-    <main>
-            <div id="tela"></div>
-        
-    </main>
-    
-    
-    <br>
-    <br>
+  <main>
+    <div id="tela"></div>
+  </main>
 
-   
+  <script src="assets/js/tarefas.js"></script>
+  <script>
+    // Toggle do menu sidebar no mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
 
-    <script src="assets/js/tarefas.js"></script>
-    
-    
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      sidebar.classList.toggle('active');
+      sidebar.setAttribute('aria-hidden', expanded);
+    });
+
+    // Fecha sidebar ao clicar fora dela (no mobile)
+    document.addEventListener('click', (e) => {
+      if (
+        window.innerWidth <= 768 &&
+        sidebar.classList.contains('active') &&
+        !sidebar.contains(e.target) &&
+        e.target !== menuToggle
+      ) {
+        sidebar.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', false);
+        sidebar.setAttribute('aria-hidden', true);
+      }
+    });
+
+    // Ajusta sidebar e botão ao redimensionar janela
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        sidebar.classList.remove('active');
+        sidebar.setAttribute('aria-hidden', false);
+        menuToggle.setAttribute('aria-expanded', false);
+      } else {
+        sidebar.setAttribute('aria-hidden', true);
+      }
+    });
+  </script>
 </body>
 </html>

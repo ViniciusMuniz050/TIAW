@@ -1,94 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/public/assets/css/onboarding.css">
-    <title>Action Mode - Onboarding</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Action Mode - Onboarding</title>
+  <link rel="stylesheet" href="/assets/css/onboarding.css">
 </head>
 <body>
-
     <header>
-        <h1>Action Mode</h1>
-        <p class="introd">Seja bem vindo ao Action Mode!</p>
-        <p class="introd">A seguir, temos um pequeno questionário para conhecer você melhor.</p>
-    </header>
+    <h1>Action Mode</h1>
+    <p class="introd">Seja bem-vindo ao Action Mode!</p>
+    <p class="introd">A seguir, temos um pequeno questionário para conhecer você melhor.</p>
+  </header>
 
-    <form id="formulario">
-        <h2>Questão 01</h2>
-        <br>
-        <p>Digite sua idade: </p>
-        <input type="number" name="idade" placeholder="Idade" id="idade">
+  <form id="formulario">
+    <div class="bloco-questao">
+      <h2>Questão 01</h2>
+      <p>Digite sua idade:</p>
+      <input type="number" name="idade" id="idade" placeholder="Idade">
+    </div>
 
+    <div class="bloco-questao">
+      <h2>Questão 02</h2>
+      <p>Quantas tarefas você deseja realizar por dia?</p>
+      <input type="number" name="qnttarefas" id="qnttarefas" min="1" max="15" step="1" value="1">
+    </div>
 
-        <h2>Questão 02</h2>
-        <br>
-        <p>Quantas tarefas você deseja realizar por dia?</p>
-        <input type="number" min="1" max="15" step="1" value="1" name="qnttarefas" id="qnttarefas">
+    <div class="bloco-questao">
+      <h2>Questão 03</h2>
+      <p>Qual perfil você acha que mais se identifica?</p>
+      <label><input type="radio" name="perfil" value="Produtivo"> Produtivo</label>
+      <label><input type="radio" name="perfil" value="Procrastinador"> Procrastinador</label>
+      <label><input type="radio" name="perfil" value="Nao sei ao certo"> Não sei ao certo</label>
+    </div>
 
-        <h2>Questão 03</h2>
-        <br>
-        <p>Qual perfil você acha que mais se identifica?</p>
-            <label>
-                <input type="radio" name="perfil" value="Produtivo">
-                Produtivo
-            </label>
-            <br>
-            <label>
-                <input type="radio" name="perfil" value="Procrastinador">
-                Procrastinador
-            </label>
-            <br>
-            <label>
-                <input type="radio" name="perfil" value="Nao sei ao certo">
-                Não sei ao certo
-            </label>
+    <div class="bloco-questao">
+      <h2>Questão 04</h2>
+      <p>Ao usar o Action Mode, você pretende, principalmente...</p>
+      <label><input type="radio" name="objetivo" value="Vencer a procrastinacao"> Vencer a procrastinação</label>
+      <label><input type="radio" name="objetivo" value="Me tornar mais produtivo"> Me tornar mais produtivo</label>
+      <label><input type="radio" name="objetivo" value="organizar melhor a rotina"> Organizar melhor minha rotina</label>
+    </div>
 
-        <h2>Questão 04</h2>
-        <br>
-        <p>Ao usar o Action Mode, você pretende, principalmente...</p>
-            <label>
-                <input type="radio" name="objetivo" value="Vencer a procrastinacao">
-                Vencer a procrastinação 
-            </label>
-            <br>
-            <label>
-                <input type="radio" name="objetivo" value="Me tornar mais produtivo">
-                Me tornar mais produtivo
-            </label>
-            <br>
-            <label>
-                <input type="radio" name="objetivo" value="organizar melhor a rotina">
-                Organizar melhor minha rotina 
-            </label>
+    <div class="bloco-questao">
+      <h2>Questão 05</h2>
+      <p>Você se distrai facilmente na realização de suas tarefas?</p>
+      <label><input type="radio" name="distracao" value="Sim"> Sim</label>
+      <label><input type="radio" name="distracao" value="Nao"> Não</label>
+      <label><input type="radio" name="distracao" value="Um pouco"> Um pouco</label>
+    </div>
 
-        <h2>Questão 05</h2>
-        <br>
-        <p>Você se distraí facilmente na realização de suas tarefas?</p>
-            <label>
-                <input type="radio" name="distracao" value="Sim">
-                Sim
-            </label>
-            <br>
-
-            <label>
-                <input type="radio" name="distracao" value="Nao">
-                Não
-            </label>
-            <br>
-
-            <label>
-                <input type="radio" name="distracao" value="Um pouco">
-                Um pouco
-            </label>
-
-            <br>
-            <br>
-    
     <button id="btnsalvar" type="submit">Salvar e enviar</button>
-    </form>
+  </form>
 
-
-    <script src="assets/js/onboarding.js"></script>
+  <script src="/assets/js/onboarding.js"></script>
 </body>
 </html>

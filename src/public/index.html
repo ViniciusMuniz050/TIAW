@@ -1,48 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página inicial</title>
-    <link rel="stylesheet" href="assets/css/inicial.css">
-     
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Action Mode - Página Inicial</title>
+  <link rel="stylesheet" href="/assets/css/inicial.css"/>
 </head>
 <body>
-   <header>
-    <div class="login">
-      <span id="nomeUsuario" style="color: white;"></span>
+  <header class="top-header">
+    <!-- Seção de Login/Cadastro -->
+    <div class="login" id="loginSection">
       <a href="modulos/login/login.html">Login</a>
       <a href="modulos/login/cadastro.html">Cadastre-se</a>
     </div>
+
+    <!-- Seção de Logout -->
+    <div class="login" id="logoutSection" style="display: none;">
+      <span id="nomeUsuario" class="username"></span>
+      <button id="logoutBtn">Logout</button>
+    </div>
   </header>
 
-  <div class="titulo">
-    <h1>Bem-Vindo ao <br>Action Mode!</h1>
-    <img src="assets/images/Imagem preguiça.png" alt="Logo" />
-    <h3>
-      Aqui nessa página você poderá utilizar meios interativos
-      para ser mais proativo e deixar a preguiça de lado.
-    </h3>
-  </div>
-
-  <div class="carrossel-container">
-    <button id="prevBtn" class="btn-nav">◀</button>
-    <div class="carrossel" id="carrossel">
-     
+  <main>
+    <div class="titulo">
+      <h1>Bem-vindo ao <br><span class="highlight">Action Mode!</span></h1>
+      <img src="assets/images/Imagem preguiça.png" alt="Logo" class="main-img"/>
+      <h3>
+        Aqui você encontrará meios interativos para ser mais proativo e deixar a preguiça de lado.
+      </h3>
     </div>
-    <button id="nextBtn" class="btn-nav">▶</button>
-  </div>
 
-  <div class="mensagem-final">
-    <p><strong>OBRIGADO POR USAR ACTION MODE!</strong></p>
-    <p>“A PROCRASTINAÇÃO É O LADRÃO DO TEMPO E DAS OPORTUNIDADES”</p>
-  </div>
- 
-    <footer>
-        <p>&copy; 2025 Action Mode. Todos os direitos reservados.</p>
-  
+    <!--Carrossel da Página-->
+    <div class="carrossel-container">
+      <button id="prevBtn" class="btn-nav">◀</button>
+      <div class="carrossel" id="carrossel"></div>
+      <button id="nextBtn" class="btn-nav">▶</button>
+    </div>
 
-  <script src="assets/js/index2.js"></script>
-        
+    <div class="mensagem-final">
+      <p><strong>OBRIGADO POR UTILIZAR ACTION MODE!</strong></p>
+      <p>“A procrastinação rouba seu tempo... e suas conquistas.”</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Action Mode. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="/assets/js/index2.js"></script>
 </body>
 </html>
