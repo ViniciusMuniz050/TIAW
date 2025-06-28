@@ -94,6 +94,21 @@
       transform: scale(1.03);
     }
 
+    #salvarFinal{
+        background-color: #026F35;
+        color: #ffffff;
+        border: none;
+        padding: 14px 28px;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        display: block;
+        margin: 20px auto 0;
+
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;

@@ -1,9 +1,9 @@
 // Obter ID do usuário logado dinamicamente
-const usuarioLogadoId = localStorage.getItem("usuarioLogadoId");
+const usuarioLogadoId = localStorage.getItem("usuarios.Id");
 const apiUrl = "http://localhost:3000/usuarios";
 
 // Verifica se há usuário logado
-if (!usuarioLogadoId) {
+if (!usuarios.Id) {
   alert("Você precisa estar logado para acessar esta página.");
   window.location.href = "login.html";
 }

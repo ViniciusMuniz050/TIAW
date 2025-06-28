@@ -114,7 +114,7 @@ function carrega() {
                     <p><strong>Você se distrai facilmente?</strong> ${onboarding.distracao}</p>
                 </div>
 
-                <button id="salvarFinal" onclick="finalizarOnboarding()">Ir para página inicial</button>
+                <button id="salvarFinal" onclick="finalizarOnboarding()">Salvar</button>
             `;
         })
         .catch(error => {

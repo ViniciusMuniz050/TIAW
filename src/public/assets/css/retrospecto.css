@@ -20,7 +20,7 @@ body {
 
 /* Topbar */
 .topbar {
-  background-color: #026F35;
+  background-color: #388e3c;
   color: white;
   height: 80px;
   display: flex;
@@ -55,7 +55,7 @@ body {
 
 #menuToggle:hover,
 #menuToggle:focus {
-  background-color: #035825;
+  background-color: #388e3c;
   outline: none;
 }
 
@@ -115,7 +115,7 @@ body {
   left: 0;
   width: 80px;
   height: calc(100vh - 80px);
-  background-color: #026F35;
+  background-color: #388e3c;
   padding-top: 25px;
   display: flex;
   flex-direction: column;

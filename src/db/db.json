@@ -69,6 +69,19 @@
         "objetivo": "organizar melhor a rotina",
         "distracao": "Sim"
       }
+    },
+    {
+      "id": "6",
+      "login": "sapo",
+      "email": "messi@gmail.com",
+      "senha": "99pop0",
+      "onboarding": {
+        "idade": "17",
+        "qnttarefas": "1",
+        "perfil": "Produtivo",
+        "objetivo": "Vencer a procrastinacao",
+        "distracao": "Sim"
+      }
     }
   ],
   "tarefas": [
