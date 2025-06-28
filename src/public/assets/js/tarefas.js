@@ -1,6 +1,6 @@
 const informacoes = [
     {
-        pontos: 500,
+        pontos: 120,
         semanas: 3,
 
         tarefas: [
