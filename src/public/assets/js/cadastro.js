@@ -40,7 +40,8 @@ document.querySelector('.btn').addEventListener('click', async () => {
                     id: String(novoId),
                     login: nome,
                     email: email,
-                    senha: senha
+                    senha: senha,
+                    pontuacao: 0
                 };
 
                 if (senha.length < 6) {
