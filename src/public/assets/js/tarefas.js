@@ -72,7 +72,7 @@ new Chart(ctx, {
   data: {
     labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'],
     datasets: [{
-      label: 'MENU PRODUTIVIDADE',
+      label: 'MENU PRODUTIVIDADE - TAREFAS CONCLUÍDAS',
       data: [11, 38, percentual, 40, 59],
       backgroundColor: ['#129745'],
       borderWidth: 1
@@ -84,7 +84,7 @@ new Chart(ctx, {
     scales: {
       y: {
         beginAtZero: true,
-        ticks: { color: 'white' }
+        ticks: { color: 'black' }
       },
       x: {
         ticks: { color: 'black' }
