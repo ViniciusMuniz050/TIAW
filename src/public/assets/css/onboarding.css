@@ -77,6 +77,30 @@ p {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+#btnIndex {
+    background-color: #026F35; /* verde escuro */
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+
+#btnIndex:hover {
+    background-color: #039f4a; /* verde mais claro */
+    transform: scale(1.03);
+}
+
+#btnIndex:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 @media (max-width: 600px) {
     body {
