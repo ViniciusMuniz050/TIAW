@@ -240,3 +240,41 @@ a:hover {
   text-decoration: underline;
   transition: color 0.3s ease;
 }
+
+/* BOTÕES*/
+
+.btn-tarefa {
+  background-color: #026F35;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(2, 111, 53, 0.3);
+}
+
+.btn-tarefa:hover,
+.btn-tarefa:focus {
+  background-color: #035825;
+  box-shadow: 0 6px 12px rgba(3, 88, 37, 0.5);
+  outline: none;
+}
+
+#dados {
+  margin-bottom: 40px;
+}
+
+#p-grafico {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #026F35;
+  margin-top: 20px;
+}
