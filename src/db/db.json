@@ -37,14 +37,6 @@
       "foto": "img/perfil.png"
     },
     {
-      "id": "3",
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "foto": "img/perfil.png"
-    },
-    {
       "id": "6",
       "login": "eu",
       "email": "Jorgin123@gmail.com",
@@ -73,11 +65,71 @@
   ],
   "tarefas": [
     {
-      "id": "b9b0",
-      "DataListada": "2025-06-26",
+      "id": "cb66",
+      "DataListada": "2025-06-29",
       "itens": [
         {
-          "TarefasListada": "gggg",
+          "TarefasListada": "Fazer atividade POO",
+          "nivelImportancia": "Baixa",
+          "concluida": false
+        }
+      ],
+      "usuarioId": 7
+    },
+    {
+      "id": "34ca",
+      "DataListada": "2025-06-28",
+      "itens": [
+        {
+          "TarefasListada": "Colocarpiercing ",
+          "nivelImportancia": "Alta",
+          "concluida": false
+        }
+      ],
+      "usuarioId": 7
+    },
+    {
+      "id": "97a1",
+      "DataListada": "2025-06-27",
+      "itens": [
+        {
+          "TarefasListada": "mata aula",
+          "nivelImportancia": "Alta",
+          "concluida": false
+        }
+      ],
+      "usuarioId": 7
+    },
+    {
+      "id": "fc37",
+      "DataListada": "2025-06-29",
+      "itens": [
+        {
+          "TarefasListada": "trabalho ATP",
+          "nivelImportancia": "Alta",
+          "concluida": false
+        }
+      ],
+      "usuarioId": 7
+    },
+    {
+      "id": "50ea",
+      "DataListada": "2025-06-27",
+      "itens": [
+        {
+          "TarefasListada": "Reolar pros crias",
+          "nivelImportancia": "Alta",
+          "concluida": false
+        }
+      ],
+      "usuarioId": 8
+    },
+    {
+      "id": "ecdd",
+      "DataListada": "2025-06-27",
+      "itens": [
+        {
+          "TarefasListada": "Gol",
           "nivelImportancia": "Alta",
           "concluida": false
         }
