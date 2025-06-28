@@ -1,106 +1,280 @@
- .topbar {
-    background-color: #026F35;
-    color: white;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
-    height: 80px;
-  }
-  
-  .titulo-centro {
-    flex-grow: 1;
-    text-align: center;
-  }
-  
-  .titulo-centro h1 {
-    font-size: 1.8rem;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-  }
-  
-  .perfil-area {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(180, 231, 200);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 100px;
+  color: #2c3e50;
+  transition: padding-left 0.3s ease;
+}
+
+/* Topbar */
+.topbar {
+  background-color: #026F35;
+  color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  font-weight: 600;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+/* Botão menu para mobile */
+#menuToggle {
+  display: none; /* aparece só no mobile */
+  background-color: #026F35;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  margin-right: 15px;
+}
+
+#menuToggle:hover,
+#menuToggle:focus {
+  background-color: #035825;
+  outline: none;
+}
+
+.logo {
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.titulo-centro {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #fff;
+}
+
+/* Perfil */
+.perfil-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.perfil-area img {
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.perfil-area img:hover {
+  box-shadow: 0 0 12px #7ed57e;
+  cursor: pointer;
+}
+
+.pontos {
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: #026F35;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: inset 0 0 8px rgba(2, 111, 53, 0.2);
+  user-select: none;
+}
+
+/* Sidebar - desktop padrão */
+.sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 80px;
+  height: calc(100vh - 80px);
+  background-color: #026F35;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+/* No desktop, sidebar visível sempre */
+.sidebar[aria-hidden="true"] {
+  transform: translateX(0);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* No mobile, sidebar escondida inicialmente */
+@media (max-width: 768px) {
+  .sidebar {
+    top: 70px;
+    height: calc(100vh - 70px);
+    width: 200px;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+    pointer-events: none;
+    opacity: 0;
   }
 
-  .perfil-area img{
-    width: 50px;
+  /* Ativa sidebar no mobile ao clicar no botão */
+  .sidebar.active {
+    transform: translateX(0);
+    pointer-events: auto;
+    opacity: 1;
   }
-  
-  .perfil-icon {
-    height: 35px;
-    border-radius: 50%;
+
+  /* Botão menu aparece só no mobile */
+  #menuToggle {
+    display: inline-block;
   }
-  
+}
+
+/* Navegação sidebar */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 25px 0;
+}
+
+.sidebar nav ul li a img {
+  width: 30px;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sidebar nav ul li a img:hover {
+  transform: scale(1.1);
+  filter: brightness(1);
+  cursor: pointer;
+}
+
+/* Conteúdo principal - deslocado no desktop, cheio no mobile */
+main {
+  background-color: #f0f5eb;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  padding: 35px 45px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  color: #34495e;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, margin-left 0.3s ease;
+  margin-left: 80px;
+}
+
+main:hover {
+  box-shadow: 0 9px 20px rgba(0,0,0,0.15);
+}
+
+/* No mobile, remove deslocamento */
+@media (max-width: 768px) {
+  main {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 25px 20px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+  main {
+    padding: 20px 15px;
+    font-size: 1rem;
+  }
+
   .sidebar {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 80px;
-    height: calc(100vh - 70px);
-    background-color: #026F35;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 180px;
   }
-  
-  .sidebar nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
+
   .sidebar nav ul li {
     margin: 20px 0;
   }
-  
-  .sidebar nav ul li a img:hover {
-    transform: scale(1.10);
-  }
-  
-  .sidebar nav ul li img {
-    width: 30px;
-  }
 
-* {
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: greenyellow;
+  .logo {
+    height: 60px;
+  }
 }
 
-main {
-    background-color: greenyellow;
-    padding: 20px;
-    font-size: 1.8rem;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
+/* Links */
 a:visited {
-    color: black;
+  color: #2c3e50;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #026F35;
+  color: #026F35;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
+/* BOTÕES*/
 
+.btn-tarefa {
+  background-color: #026F35;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(2, 111, 53, 0.3);
+}
 
+.btn-tarefa:hover,
+.btn-tarefa:focus {
+  background-color: #035825;
+  box-shadow: 0 6px 12px rgba(3, 88, 37, 0.5);
+  outline: none;
+}
 
+#dados {
+  margin-bottom: 40px;
+}
 
-
-
+#p-grafico {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #026F35;
+  margin-top: 20px;
+}
