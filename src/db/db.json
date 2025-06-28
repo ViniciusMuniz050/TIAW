@@ -6,6 +6,7 @@
       "email": "danielzin007@gmail,com",
       "senha": "123456",
       "foto": "assets/images/casa.png",
+      "pontuacao": 0,
       "onboarding": {
         "idade": 20,
         "qnttarefas": 3,
@@ -20,6 +21,7 @@
       "email": "lucas556@gmail,com",
       "senha": "Lucas123",
       "foto": "assets/images/casa.png",
+      "pontuacao": 0,
       "onboarding": {
         "idade": 12,
         "qnttarefas": 1,
@@ -35,6 +37,7 @@
       "senha": "Monkey_flip",
       "nome": "Macaco",
       "foto": "img/perfil.png",
+      "pontuacao": 0,
       "onboarding": {
         "idade": 25,
         "qnttarefas": 5,
@@ -49,6 +52,7 @@
       "email": "joao321@gmail.com",
       "senha": "Joao321",
       "foto": "img/perfil.png",
+      "pontuacao": 0,
       "onboarding": {
         "idade": 30,
         "qnttarefas": 2,
