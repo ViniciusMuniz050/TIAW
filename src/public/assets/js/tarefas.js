@@ -107,7 +107,7 @@ const exibicao = tarefas.find(t => t.id == id);
 if (exibicao && exibicao1) {
     exibicao1.innerHTML += `<header class="cabecalho"><h1>Tarefas ${exibicao.tipo}</h1></header>`;
     exibicao.itens.forEach(item => {
-        exibicao1.innerHTML += `<div id="tarefas-exibidas"><li>${item.tarefa}</li></div><br>`;
+        exibicao1.innerHTML += `<br><br><div id="tarefas-exibidas"><li>${item.tarefa}<br></li></div><br>`;
     });
 } else if (exibicao1) {
     exibicao1.innerHTML = "URL inválida. Tente novamente...";
