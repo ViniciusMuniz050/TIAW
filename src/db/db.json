@@ -5,14 +5,14 @@
       "login": "Daniel",
       "email": "danielzin007@gmail,com",
       "senha": "123456",
-      "foto" : "assets/images/casa.png"
+      "foto": "assets/images/casa.png"
     },
     {
       "id": "2",
       "login": "Lucas",
       "email": "lucas556@gmail,com",
       "senha": "Lucas123",
-      "foto" : "assets/images/casa.png"
+      "foto": "assets/images/casa.png"
     },
     {
       "id": "3",
@@ -27,15 +27,14 @@
       "login": "João",
       "email": "joao321@gmail.com",
       "senha": "Joao321",
-      "foto" : "img/perfil.png"
+      "foto": "img/perfil.png"
     },
     {
       "id": "5",
       "login": "Ana",
       "email": "ana456@gmail.com",
       "senha": "Ana456",
-      "foto" : "img/perfil.png"
-
+      "foto": "img/perfil.png"
     },
     {
       "id": "3",
@@ -50,14 +49,26 @@
       "login": "eu",
       "email": "Jorgin123@gmail.com",
       "senha": "arroz12",
-       "foto": "img/perfil.png"
+      "foto": "img/perfil.png"
     },
     {
       "id": "7",
       "login": "admin",
       "email": "alexandre.bleme2@gmail.com",
       "senha": "123",
-       "foto": "img/perfil.png"
+      "foto": "img/perfil.png"
+    },
+    {
+      "id": "8",
+      "login": "Cadastrado",
+      "email": "vinicius.costa.1434010@sga.pucminas.br",
+      "senha": "Filosofia"
+    },
+    {
+      "id": "9",
+      "login": "Batata",
+      "email": "batata@gmail.com",
+      "senha": "batata"
     }
   ],
   "tarefas": [
@@ -72,9 +83,7 @@
         }
       ],
       "usuarioId": 7
-
     }
-
   ],
   "avaliacoes": [
     {

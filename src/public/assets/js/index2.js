@@ -1,41 +1,3 @@
-
-let usuarios = null;
-
-function CheckLoggerUser(){
-    const usuariostr = sessionStorage.getItem(`usuario`);
-    if(usuariostr){
-        location.href ='login.htm';
-    }
-
-    usuario = JSON.parse(usuariostr)
-    return true;
-
-}
-
-function loginUser (login, password){
-    const usuarioObj = dados.usuarios.find(elem => (elem.login === login) && (elem.senha === password))
-
-    if(!usuarioObj)
-        return false;
-    else{
-        sessionStorage.setItem(`usuarioLogadoId`, JSON.stringify(usuarioObj))
-        return true;
-    }
-} 
-
-function logoutUser(){
-    sessionStorage.clear()
-    location.href = "login.html"
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const usuarioLogado = JSON.parse(sessionStorage.getItem('usuario'));
-    if (usuarioLogado) {
-    nomeUsuario.textContent = `Olá, ${usuarioLogado.login}`;
-  }
-    });
-
-
 const informacoes = {
   "Carrossel": [
     {
@@ -47,30 +9,30 @@ const informacoes = {
     },
     {
       "id": 2,
-      "pagina": "calendário",
+      "pagina": "Calendário",
       "imagem": "assets/images/calendario.png",
-      "detalhes": "Aqui no calendário você poderá acompanhar quais dias você interagiu e completou as tarefas do site, além de marcar datas, compromissos, ou relatar algo que ocorreu no dia, dentre outros...",
+      "detalhes": "Acompanhe quais dias você interagiu e completou tarefas, marque datas e compromissos.",
       "link": "metas.html"
     },
     {
       "id": 3,
       "pagina": "Progresso",
       "imagem": "assets/images/progresso.png",
-      "detalhes": "Aqui você pode avaliar como tem percorrido os dias dentro do desafio e as estatísticas acerca desse progresso.",
+      "detalhes": "Veja suas estatísticas e acompanhe sua evolução ao longo dos dias.",
       "link": "retrospecto.html"
     },
     {
       "id": 4,
       "pagina": "Configurações",
       "imagem": "assets/images/configuracoes.jpg",
-      "detalhes": "Aqui você acessa as configurações do site, para deixar sua experiência a melhor possível.",
+      "detalhes": "Personalize sua experiência ajustando preferências e dados de perfil.",
       "link": "muda_perfil.html"
     },
     {
       "id": 5,
       "pagina": "Saiba mais",
       "imagem": "assets/images/SaibaMais.png",
-      "detalhes": "Aqui você fica informado sobre como funciona a procastinação e como ela afeta diretamente a sua vida",
+      "detalhes": "Entenda como a procrastinação afeta sua produtividade e como combatê-la.",
       "link": "sobre.html"
     }
   ]
@@ -110,10 +72,30 @@ document.getElementById("prevBtn").addEventListener("click", () => {
   }
 });
 
-
 setInterval(() => {
   index = (index + 1) % informacoes.Carrossel.length;
   updateCarousel();
-}, 5000); 
+}, 5000);
 
+// Login/Logout controle
+document.addEventListener('DOMContentLoaded', () => {
+  const usuarioLogado = JSON.parse(sessionStorage.getItem('usuario'));
+  const loginSection = document.getElementById('loginSection');
+  const logoutSection = document.getElementById('logoutSection');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const nomeUsuario = document.getElementById('nomeUsuario');
 
+  if (usuarioLogado) {
+    loginSection.style.display = 'none';
+    logoutSection.style.display = 'flex';
+    nomeUsuario.textContent = `Olá, ${usuarioLogado.login || usuarioLogado.nome || 'usuário'}`;
+  } else {
+    loginSection.style.display = 'flex';
+    logoutSection.style.display = 'none';
+  }
+
+  logoutBtn.addEventListener('click', () => {
+    sessionStorage.removeItem('usuario');
+    window.location.reload();
+  });
+});
