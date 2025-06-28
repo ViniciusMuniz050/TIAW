@@ -59,9 +59,24 @@
     },
     {
       "id": "5",
-      "login": "Messi",
+      "login": "Ana",
+      "email": "ana456@gmail.com",
+      "senha": "Ana456",
+      "foto" : "img/perfil.png"
+
+    },
+    {
+      "id": "6",
+      "login": "eu",
+      "email": "Jorgin123@gmail.com",
+      "senha": "arroz12",
+      "foto" : "img/perfil.png"
+    },
+    {
+      "id": "7",
+      "login": "admin",
       "email": "messi@gmail.com",
-      "senha": "boladeouro",
+      "senha": "123",
       "onboarding": {
         "idade": "18",
         "qnttarefas": "8",

@@ -78,7 +78,7 @@ function voltarAoMesAtual() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+  const usuarioId = sessionStorage.getItem('usuario');
 
   if (!usuarioId) {
     alert('Sessão expirada. Faça login novamente.');
