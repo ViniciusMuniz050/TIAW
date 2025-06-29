@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Edição de Perfil</title>
   <link rel="stylesheet" href="/assets/css/estito_muda.css">
-  <script src="/assets/js/muda_perfil.js" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -14,7 +13,7 @@
     </div>
     <div class="perfil-area">
       <span class="pontos">🔥 120</span>
-      <a href="#"><img src="/assets/images/usuario.png" alt="Foto de Perfil" id="fotoPerfilHeader"></a></li>
+      <a href="#"><img src="/assets/images/usuario.png" alt="Foto de Perfil" id="fotoPerfilHeader"></a>
     </div>
   </header>
 
@@ -32,27 +31,26 @@
   </aside>
 
   <main class="conteudo">
+    <div class="imagemMain">
+      <img src="/assets/images/usuario.png" alt="Foto de Perfil" id="fotoPerfilMain" />
+      <br />
+      <button onclick="editarFoto()">Edite sua foto</button>
+      <input type="file" id="inputFoto" accept="image/*" style="display: none;" />
+    </div>
 
-  <div class= "imagemMain" style="text-align: center;">
-    <img src="/assets/images/usuario.png" alt="Foto de Perfil" id="fotoPerfilMain" />
-    <br />
-    <button onclick="editarFoto()">Edite sua foto</button>
-    <input type="file" id="inputFoto" accept="image/*" style="display: none;" />
-  </div>
-
-  <div class="blockEntrada">
-   <form id="formPerfil">
-      <label>Nome:</label>
-      <input type="text" id="login" />
-      <label>Email:</label>
-     <input type="email" id="email" />
-      <label>Senha:</label>
-      <input type="password" id="senha" />
-      <button type="button" onclick="salvarPerfil()">Salvar</button>
-    </form>
-  </div>
-    
+    <div class="blockEntrada">
+      <form id="formPerfil">
+        <label>Nome:</label>
+        <input type="text" id="login" />
+        <label>Email:</label>
+        <input type="email" id="email" />
+        <label>Senha:</label>
+        <input type="password" id="senha" />
+        <button type="button" onclick="salvarPerfil()">Salvar</button>
+      </form>
+    </div>
   </main>
+
   <script src="/assets/js/muda_perfil.js"></script>
 </body>
 </html>

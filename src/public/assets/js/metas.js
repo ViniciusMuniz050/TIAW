@@ -101,4 +101,34 @@ document.getElementById('btn-sair').addEventListener('click', function (event) {
   window.location.href = 'login.html'; // ou qualquer outra página inicial
 });
 
+const usuarioLogadoId = sessionStorage.getItem("usuarioLogadoId");
+  const apiUrl = "http://localhost:3000/usuarios";
 
+  // Verifica se o usuário está logado
+  if (!usuarioLogadoId) {
+    alert("Você precisa estar logado para acessar esta página.");
+    window.location.href = "/login.html";
+  }
+
+  // Ao carregar a página, buscar e exibir a foto de perfil
+  window.addEventListener("DOMContentLoaded", () => {
+    fetch(`${apiUrl}/${usuarioLogadoId}`)
+      .then(res => {
+        if (!res.ok) throw new Error("Falha ao buscar usuário");
+        return res.json();
+      })
+      .then(usuario => {
+        const foto = usuario.foto || "/assets/images/usuario.png";
+        const fotoHeader = document.getElementById("fotoPerfilHeader");
+        if (fotoHeader) {
+          fotoHeader.src = foto;
+        }
+      })
+      .catch(err => {
+        console.error("Erro ao carregar foto do usuário:", err);
+        const fallback = document.getElementById("fotoPerfilHeader");
+        if (fallback) {
+          fallback.src = "/assets/images/usuario.png";
+        }
+      });
+  });

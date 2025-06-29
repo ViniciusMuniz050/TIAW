@@ -1,4 +1,3 @@
-
 async function loginUser(login, password) {
   try {
     const response = await fetch('http://localhost:3000/usuarios');
@@ -10,6 +9,7 @@ async function loginUser(login, password) {
 
     if (usuarioEncontrado) {
       sessionStorage.setItem('usuario', JSON.stringify(usuarioEncontrado));
+      sessionStorage.setItem('usuarioLogadoId', usuarioEncontrado.id); 
       return true;
     }
 
@@ -19,7 +19,6 @@ async function loginUser(login, password) {
     return false;
   }
 }
-
 
 document.getElementById('formlogin').addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -44,7 +43,6 @@ document.getElementById('formlogin').addEventListener('submit', async (event) =>
     window.location.href = 'cadastro.html';
   }
 });
-
 
 document.getElementById('btn2').addEventListener('click', () => {
   window.location.href = 'cadastro.html';

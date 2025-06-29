@@ -150,7 +150,102 @@
     background-color: #4caf50;
     transform: scale(1.05);
   }
-  
+  main.conteudo {
+      margin-left: 80px;
+      margin-top: 100px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .imagemMain img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #388e3c;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+    }
+
+    .imagemMain button {
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .imagemMain button:hover {
+      background-color: #2e7d32;
+    }
+
+    .blockEntrada {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      margin-top: 30px;
+    }
+
+    .blockEntrada form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blockEntrada label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .blockEntrada input {
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .blockEntrada input:focus {
+      outline: none;
+      border-color: #388e3c;
+    }
+
+    .blockEntrada button {
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .blockEntrada button:hover {
+      background-color: #2e7d32;
+    }
+
+    @media (max-width: 600px) {
+      .blockEntrada {
+        padding: 20px;
+      }
+
+      .imagemMain img {
+        width: 120px;
+        height: 120px;
+      }
+    }
  /* --Fim Main da página-- */
 
   @media (max-width: 768px) {
