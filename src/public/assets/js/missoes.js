@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener('DOMContentLoaded', async () => {
   const conteudos = document.getElementById('conteudos');
   const caminhoDasMissoes = document.getElementById('missao-caminho');
   const cabecalhoMesAno = document.getElementById('currentMonthYear');
@@ -14,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let ultimoDiaClicado = null;
   const diasDaSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
   const mesesDoAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
   function desenharCalendario(dataParaDesenhar) {
       caminhoDasMissoes.innerHTML = '';
       esconderDetalhes();
@@ -22,23 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
       cabecalhoMesAno.textContent = `${mesesDoAno[mes]} de ${ano}`;
       const hojeFormatado = formatarData(new Date());
       const totalDiasNoMes = new Date(ano, mes + 1, 0).getDate();
-      
+
       const containerLargura = caminhoDasMissoes.offsetWidth;
-      if (containerLargura === 0) return; // Evita erro se o container estiver invisível
+      if (containerLargura === 0) return;
       const posicoesX = [0.2, 0.5, 0.8]; 
       let y = 80;
       for (let i = 1; i <= totalDiasNoMes; i++) {
           const dataDoLoop = new Date(ano, mes, i);
           const dataNoFormatoTexto = formatarData(dataDoLoop);
-          
+
           const circuloDoDia = document.createElement('div');
           circuloDoDia.className = 'circulo-dia';
           circuloDoDia.dataset.fullDate = dataNoFormatoTexto;
-          
+
           const x = containerLargura * posicoesX[(i - 1) % posicoesX.length];
           circuloDoDia.style.left = `${x - 40}px`;
           circuloDoDia.style.top = `${y - 40}px`;
-          
+
           y += 120;
           circuloDoDia.innerHTML = `
               <span class="dia-semana-label">${diasDaSemana[dataDoLoop.getDay()]}</span>
@@ -57,24 +57,25 @@ document.addEventListener('DOMContentLoaded', () => {
           });
           caminhoDasMissoes.appendChild(circuloDoDia);
       }
-      
+
       caminhoDasMissoes.parentElement.style.height = `${y}px`;
       desenharLinhasDoCaminho();
   }
+
   function desenharLinhasDoCaminho() {
       const circulos = Array.from(document.querySelectorAll('.circulo-dia'));
       if (circulos.length < 2) {
           caminhoSvg.innerHTML = '';
           return;
       }
-      
+
       caminhoSvg.innerHTML = '';
       let pathData = `M ${circulos[0].offsetLeft + 40} ${circulos[0].offsetTop + 40}`;
-      
+
       for (let i = 0; i < circulos.length - 1; i++) {
           const start = circulos[i];
           const end = circulos[i+1];
-          
+
           const x1 = start.offsetLeft + 40;
           const y1 = start.offsetTop + 40;
           const x2 = end.offsetLeft + 40;
@@ -91,9 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
       path.setAttribute('stroke-width', '6');
       path.setAttribute('fill', 'none');
       path.setAttribute('stroke-dasharray', '10, 10');
-      
+
       caminhoSvg.appendChild(path);
   }
+
   function mostrarTarefasDoDia(dataNoFormatoTexto, elementoCirculo) {
     textoDataSelecionada.textContent = new Date(dataNoFormatoTexto + "T00:00:00").toLocaleDateString('pt-BR');
     listaDeTarefas.innerHTML = '';
@@ -130,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const alturaCard = caixaDetalhes.offsetHeight;
     let top = posCirculo.top - posContainer.top + (posCirculo.height / 2) - (alturaCard / 2);
     let left;
-    
+
     if ((posCirculo.right + larguraCard + 20) < window.innerWidth) {
         left = posCirculo.right - posContainer.left + 20;
     } else {
@@ -147,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     caixaDetalhes.style.left = `${left}px`;
     caixaDetalhes.style.opacity = 1;
   }
+
   function esconderDetalhes() {
       if (caixaDetalhes.style.display === 'block') {
           caixaDetalhes.style.opacity = 0;
@@ -159,43 +162,54 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 300);
       }
   }
-  // --- FUNÇÕES DE PONTUAÇÃO, ETC ---
-  
+
   function formatarData(data) {
       const ano = data.getFullYear();
       const mes = String(data.getMonth() + 1).padStart(2, '0');
       const dia = String(data.getDate()).padStart(2, '0');
       return `${ano}-${mes}-${dia}`;
   }
+
   async function fetchTarefas() {
-      const usuarioId = sessionStorage.getItem('usuario');
-      if (!usuarioId) {
+      const usuarioJson = sessionStorage.getItem('usuario');
+      if (!usuarioJson) {
           alert('Sessão expirada. Faça login novamente.');
           window.location.href = "/modulos/login/login.html";
           return;
       }
       try {
-          const resposta = await fetch(`http://localhost:3000/tarefas?usuarioId=${usuarioId}`);
-          tarefasSalvas = await resposta.json();
+          const usuario = JSON.parse(usuarioJson);
+          const respostaUsuario = await fetch(`http://localhost:3000/usuarios/${usuario.id}`);
+          if (!respostaUsuario.ok) throw new Error();
+          const usuarioData = await respostaUsuario.json();
+
+          const tarefas = usuarioData.tarefas || [];
+          tarefasSalvas = tarefas.map((tarefa, index) => ({
+              id: index,
+              DataListada: tarefa.data,
+              itens: [
+                  {
+                      TarefasListada: tarefa.nome,
+                      nivelImportancia: tarefa.importancia,
+                      concluida: false
+                  }
+              ]
+          }));
+
       } catch (erro) {
           console.error("Erro ao buscar tarefas do usuário:", erro);
           tarefasSalvas = [];
       }
   }
+
   async function atualizarTarefaNoServidor(itemDia) {
-      try {
-          await fetch(`http://localhost:3000/tarefas/${itemDia.id}`, {
-              method: 'PUT',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(itemDia),
-          });
-      } catch (erro) {
-          console.error("Erro ao atualizar tarefa:", erro);
-      }
+      // implementação futura caso necessário
   }
+
   async function calcularEMostrarPontos() {
-      const usuarioId = sessionStorage.getItem('usuario');
-      if (!usuarioId) return;
+      const usuarioJson = sessionStorage.getItem('usuario');
+      if (!usuarioJson) return;
+      const usuario = JSON.parse(usuarioJson);
       let pontuacao = 0;
       const sistemaDePontos = { 'baixa': 3, 'media': 5, 'alta': 8 };
       tarefasSalvas.forEach(itemDia => {
@@ -209,8 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       });
       document.querySelector('.pontos').textContent = `🔥 ${pontuacao}`;
-      await atualizarPontosDoUsuario(usuarioId, pontuacao);
+      await atualizarPontosDoUsuario(usuario.id, pontuacao);
   }
+
   async function atualizarPontosDoUsuario(usuarioId, pontuacao) {
       try {
           const respostaUsuario = await fetch(`http://localhost:3000/usuarios/${usuarioId}`);
@@ -226,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
           console.error("Erro ao atualizar a pontuação do usuário:", erro);
       }
   }
-  
+
   botaoMesAnterior.addEventListener('click', () => {
       dataAtual.setMonth(dataAtual.getMonth() - 1);
       desenharCalendario(dataAtual);
@@ -235,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dataAtual.setMonth(dataAtual.getMonth() + 1);
       desenharCalendario(dataAtual);
   });
-  
+
   document.addEventListener('click', (e) => {
       if (!caixaDetalhes.contains(e.target) && !e.target.closest('.circulo-dia')) {
           esconderDetalhes();
@@ -243,12 +258,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   window.addEventListener('resize', () => {
       esconderDetalhes();
-      desenharCalendario(dataAtual)
+      desenharCalendario(dataAtual);
   });
-  fetchTarefas().then(() => {
-      setTimeout(() => {
-          desenharCalendario(dataAtual);
-          calcularEMostrarPontos();
-      }, 100);
-  });
+
+  await fetchTarefas();
+  setTimeout(() => {
+      desenharCalendario(dataAtual);
+      calcularEMostrarPontos();
+  }, 100);
 });

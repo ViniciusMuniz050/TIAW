@@ -85,6 +85,234 @@
         "objetivo": "Vencer a procrastinacao",
         "distracao": "Sim"
       }
+    },
+    {
+      "id": "7",
+      "login": "manel",
+      "email": "manel@gmail.com",
+      "senha": "moto12",
+      "pontuacao": 0,
+      "onboarding": {
+        "idade": "21",
+        "qnttarefas": "2",
+        "perfil": "Produtivo",
+        "objetivo": "Me tornar mais produtivo",
+        "distracao": "Nao"
+      },
+      "tarefas": [
+        {
+          "titulo": "Organizar sua mesa de trabalho",
+          "concluida": false
+        },
+        {
+          "titulo": "Praticar exercício físico pela manhã",
+          "concluida": false
+        },
+        {
+          "titulo": "Dormir 8 horas por noite",
+          "concluida": false
+        },
+        {
+          "titulo": "Fazer um curso online",
+          "concluida": false
+        },
+        {
+          "titulo": "Fazer revisão semanal das tarefas concluídas",
+          "concluida": false
+        },
+        {
+          "titulo": "Fazer 30 minutos de leitura por dia",
+          "concluida": false
+        },
+        {
+          "titulo": "Criar um quadro de metas visível",
+          "concluida": false
+        },
+        {
+          "titulo": "Meditar por 10 minutos",
+          "concluida": false
+        },
+        {
+          "titulo": "Limitar redes sociais a 30 minutos por dia",
+          "concluida": false
+        },
+        {
+          "titulo": "Responder e-mails apenas duas vezes ao dia",
+          "concluida": false
+        },
+        {
+          "titulo": "Definir 3 metas diárias",
+          "concluida": false
+        },
+        {
+          "titulo": "Evitar multitarefa",
+          "concluida": false
+        },
+        {
+          "titulo": "Estudar um novo tema por 1 hora",
+          "concluida": false
+        },
+        {
+          "titulo": "Fazer uma pausa a cada 90 minutos de trabalho",
+          "concluida": false
+        },
+        {
+          "titulo": "Planejar a semana no domingo",
+          "concluida": false
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "login": "pastel",
+      "email": "batata@gmail.com",
+      "senha": "pamonha",
+      "pontuacao": 0,
+      "onboarding": {
+        "idade": "22",
+        "qnttarefas": "1",
+        "perfil": "Procrastinador",
+        "objetivo": "organizar melhor a rotina",
+        "distracao": "Sim"
+      },
+      "tarefas": [
+        {
+          "titulo": "Evitar redes sociais pela manhã",
+          "concluida": false
+        },
+        {
+          "titulo": "Colocar o celular em modo avião por 1 hora",
+          "concluida": false
+        },
+        {
+          "titulo": "Recompensar-se ao concluir uma tarefa",
+          "concluida": false
+        },
+        {
+          "titulo": "Colocar música ambiente de foco",
+          "concluida": false
+        },
+        {
+          "titulo": "Eliminar distrações por 1 hora",
+          "concluida": false
+        },
+        {
+          "titulo": "Trabalhar por blocos de 25 minutos",
+          "concluida": false
+        },
+        {
+          "titulo": "Escrever suas metas do dia em um post-it",
+          "concluida": false
+        },
+        {
+          "titulo": "Usar técnica Pomodoro por 2 horas",
+          "concluida": false
+        },
+        {
+          "titulo": "Fazer check-in diário com um amigo sobre tarefas",
+          "concluida": false
+        },
+        {
+          "titulo": "Fazer uma lista de tarefas curtas",
+          "concluida": false
+        },
+        {
+          "titulo": "Organizar o ambiente de trabalho",
+          "concluida": false
+        },
+        {
+          "titulo": "Dividir tarefas grandes em partes pequenas",
+          "concluida": false
+        },
+        {
+          "titulo": "Definir um tempo limite para cada tarefa",
+          "concluida": false
+        },
+        {
+          "titulo": "Assistir a um vídeo sobre produtividade",
+          "concluida": false
+        },
+        {
+          "titulo": "Começar o dia com a tarefa mais difícil",
+          "concluida": false
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "login": "Macaco",
+      "email": "Juniormacacaco@gmail.com",
+      "senha": "macaco",
+      "pontuacao": 0,
+      "onboarding": {
+        "idade": "12",
+        "qnttarefas": "1",
+        "perfil": "Produtivo",
+        "objetivo": "Me tornar mais produtivo",
+        "distracao": "Sim"
+      },
+      "tarefas": [
+        {
+          "titulo": "Fazer um curso online",
+          "concluida": false
+        },
+        {
+          "titulo": "Meditar por 10 minutos",
+          "concluida": false
+        },
+        {
+          "titulo": "Limitar redes sociais a 30 minutos por dia",
+          "concluida": false
+        },
+        {
+          "titulo": "Definir 3 metas diárias",
+          "concluida": false
+        },
+        {
+          "titulo": "Fazer uma pausa a cada 90 minutos de trabalho",
+          "concluida": false
+        },
+        {
+          "titulo": "Fazer 30 minutos de leitura por dia",
+          "concluida": false
+        },
+        {
+          "titulo": "Dormir 8 horas por noite",
+          "concluida": false
+        },
+        {
+          "titulo": "Criar um quadro de metas visível",
+          "concluida": false
+        },
+        {
+          "titulo": "Planejar a semana no domingo",
+          "concluida": false
+        },
+        {
+          "titulo": "Evitar multitarefa",
+          "concluida": false
+        },
+        {
+          "titulo": "Responder e-mails apenas duas vezes ao dia",
+          "concluida": false
+        },
+        {
+          "titulo": "Organizar sua mesa de trabalho",
+          "concluida": false
+        },
+        {
+          "titulo": "Fazer revisão semanal das tarefas concluídas",
+          "concluida": false
+        },
+        {
+          "titulo": "Praticar exercício físico pela manhã",
+          "concluida": false
+        },
+        {
+          "titulo": "Estudar um novo tema por 1 hora",
+          "concluida": false
+        }
+      ]
     }
   ],
   "tarefas": [
@@ -195,6 +423,18 @@
         }
       ],
       "usuarioId": null
+    },
+    {
+      "DataListada": "2025-02-12",
+      "itens": [
+        {
+          "TarefasListada": "dormir",
+          "nivelImportancia": "Baixa",
+          "concluida": false
+        }
+      ],
+      "usuarioId": null,
+      "id": "Yz3g9jt"
     }
   ],
   "avaliacoes": [
