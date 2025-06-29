@@ -8,6 +8,7 @@
 
 
 > Matriz CSD e Mapa de Stakeholders
+
 > Etapas em que realizamos a organização de nossas certezas, suposições e dúvidas a respeito do nosso tema, bem como o levantamento do público e das pessoas que possam se interessar, seja de forma positiva ou negativa, sobre nosso projeto.
 > 
 > ![Matriz CSD](https://github.com/user-attachments/assets/cbd7fcc3-d104-46fa-9cbc-a0ee1a3c3afd)
