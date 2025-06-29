@@ -1,0 +1,264 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topbar fixa no topo */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #388e3c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.topbar .logo {
+  height: 40px;
+}
+
+.topbar .titulo-centro h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.topbar .perfil-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.topbar .perfil-area .pontos {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.topbar .perfil-area .perfil-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Sidebar fixa à esquerda */
+.sidebar {
+  position: fixed;
+  top: 60px; /* abaixo da topbar */
+  left: 0;
+  width: 80px;
+  height: calc(100vh - 60px);
+  background-color: #2e7d32;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  z-index: 900;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar nav ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar nav ul li a img {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.sidebar nav ul li a:hover img,
+.sidebar nav ul li a.active img {
+  filter: brightness(0.7) invert(1);
+}
+
+/* Conteúdo principal com margem para sidebar e topbar */
+.conteudo {
+  margin-left: 80px; /* largura da sidebar */
+  margin-top: 60px;  /* altura da topbar */
+  padding: 40px 30px;
+  max-width: 960px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  min-height: calc(100vh - 60px);
+}
+
+/* Títulos */
+h1, h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+/* Cards equipe */
+.equipe .cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 220px;
+  background-color: #e8f5e9;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: #1b5e20;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+.card small {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #388e3c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+.rodape nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.rodape nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .conteudo {
+    max-width: 100%;
+    margin-left: 80px;
+    margin-top: 60px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Sidebar vira barra inferior */
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    padding: 0 10px;
+    justify-content: space-around;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  }
+
+  .sidebar nav ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .sidebar nav ul li a img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .conteudo {
+    margin: 60px 20px 80px; /* espaço topbar + sidebar inferior */
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .topbar {
+    height: 50px;
+    padding: 0 15px;
+  }
+
+  .topbar .logo {
+    height: 32px;
+  }
+
+  .topbar .titulo-centro h1 {
+    font-size: 1.2rem;
+  }
+
+  .topbar .perfil-area .perfil-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p, .card small {
+    font-size: 0.95rem;
+  }
+}

@@ -1,44 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Página institucional com informações sobre o site e sua equipe.">
-  <meta name="author" content="Equipe Desenvolvedora">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conheça a equipe por trás do projeto e nossa missão com este site." />
+  <meta name="author" content="Equipe de Desenvolvimento - ADS PUC Minas" />
+  <meta property="og:title" content="Sobre Nós - Organizador de Metas" />
+  <meta property="og:description" content="Nossa equipe, visão e objetivo com o projeto." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/images/banner_ti.png" />
   <title>Sobre Nós</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Estilo e fonte -->
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/images/favicon.ico" />
+
+  <!-- Scripts -->
   <script src="/assets/js/login.js" defer></script>
 </head>
-<body>
-  <header>
-    <div class="banner">
-      <img src="/assets/images/banner_ti.png" alt="Banner ilustrativo do site com tema de tecnologia">
-    </div>
 
-    <div class="barra-info">
-      <nav class="menu" aria-label="Menu principal">
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="about.html" aria-current="page">Sobre Nós</a></li>
-        </ul>
-      </nav>
-      <div class="dados-usuario">
-        <span id="userInfo" aria-label="Informações do usuário logado"></span>
-      </div>
+<body>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <a href="/index.html"><img src="assets/images/Imagem preguiça 2.png" alt="Logo" class="logo"></a>
+    <div class="titulo-centro">
+      <h1>Sobre Nós</h1>
+    </div>
+    <div class="perfil-area">
+      <span class="pontos">🔥 120</span>
+      <img src="assets/images/usuario.png" alt="Usuário" class="perfil-icon" id="fotoPerfilHeader">
     </div>
   </header>
 
-  <main>
-    <h1>Sobre Nós</h1>
-    <p>
-      Este site foi desenvolvido com o objetivo de facilitar a organização de tarefas e metas pessoais.
-      Nossa equipe é composta por estudantes apaixonados por tecnologia e inovação, comprometidos em
-      oferecer uma ferramenta intuitiva e eficiente para o seu dia a dia.
-    </p>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="/metas.html"><img src="assets/images/calendar.png" alt="Calendário"></a></li>
+        <li><a href="/retrospecto.html"><img src="assets/images/meta.png" alt="Progresso"></a></li>
+        <li><a href="/missoes.html"><img src="assets/images/alvo.png" alt="Tarefas"></a></li>
+        <li><a href="/muda_perfil.html"><img src="assets/images/perfil.png" alt="Configurações"></a></li>
+        <li><a href="/sobre.html"><img src="assets/images/adicionar.png" alt="Sobre"></a></li>
+        <li><a href="#" id="btn-sair"><img src="assets/images/sair.png" alt="Sair"></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo Principal -->
+  <main class="conteudo">
+    <section class="sobre">
+      <h2>Sobre o Projeto</h2>
+      <p>Este site foi criado como parte do projeto acadêmico da disciplina de Desenvolvimento Web, com o objetivo
+        de ajudar usuários a organizarem suas metas pessoais de forma prática e visual.</p>
+      <p>Somos estudantes da <strong>PUC Minas - Campus Contagem</strong> dos cursos de <em>Análise e Desenvolvimento de Sistemas</em>
+        e <em>Sistemas de Informação</em>. Buscamos unir tecnologia e produtividade em uma interface leve, moderna e acessível.</p>
+      <p>Esperamos que você aproveite esta plataforma para alcançar seus objetivos!</p>
+    </section>
+
+    <section class="equipe">
+      <h2>Nossa Equipe</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Lara Rossini Rhis</h3>
+          <p>Desenvolvedora Front-End e Designer de Interface</p>
+          <small>Conecta lógica técnica com criatividade visual.</small>
+        </div>
+        <div class="card">
+          <h3>Vinicius Muniz Costa</h3>
+          <p>Responsável pela Arquitetura de Navegação</p>
+          <small>Cria experiências intuitivas com foco no usuário.</small>
+        </div>
+        <div class="card">
+          <h3>Daniel Rodrigues Bleme</h3>
+          <p>Modelador de Dados e Relacionamentos</p>
+          <small>Movido por desafios e pela inovação no design digital.</small>
+        </div>
+        <div class="card">
+          <h3>João Vitor Matias Gonçalves</h3>
+          <p>Desenvolvedor com foco em automação e scripts</p>
+          <small>Foco em performance, segurança e arquitetura de dados.</small>
+        </div>
+        <div class="card">
+          <h3>Marcus Vinicius Lima Pereira</h3>
+          <p>Desenvolvedor orientado a dados e desempenho</p>
+          <small>Inovador no uso de tecnologias para otimizar o tempo do usuário.</small>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Equipe de Desenvolvimento. Todos os direitos reservados.</p>
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p>&copy; 2025 Equipe Action Mode - PUC Minas. Todos os direitos reservados.</p>
+    <nav>
+      <a href="mailto:contato@organizadordemetas.com">Contato</a> |
+      <a href="https://github.com/seu-repo" target="_blank">GitHub</a>
+    </nav>
   </footer>
+
 </body>
 </html>
