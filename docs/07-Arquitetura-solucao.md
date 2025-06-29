@@ -2,7 +2,6 @@
 
 ## Funcionalidades
 
-Esta seção apresenta as funcionalidades da solução.
 
 ##### Funcionalidade 1 - Cadastro de Tarefas
 
