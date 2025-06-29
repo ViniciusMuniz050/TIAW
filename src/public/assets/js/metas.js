@@ -21,7 +21,7 @@ const nomesMeses = [
 
 const diasSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 
-// Cria o calendário dinamicamente
+// Cria o calendário dinamicamente com base no mês e ano atual
 function criarCalendario() {
   const container = document.getElementById("calendario");
   container.innerHTML = "";
@@ -30,10 +30,12 @@ function criarCalendario() {
   const ultimoDia = new Date(anoAtual, mesAtual + 1, 0).getDate();
   const primeiroDiaSemana = data.getDay();
 
+  // Cabeçalho com nome do mês e ano
   const mesDiv = document.createElement("div");
   mesDiv.className = "calendario-mes";
   mesDiv.innerHTML = `<h3>${nomesMeses[mesAtual]} de ${anoAtual}</h3>`;
 
+  // Grade dos dias da semana
   const gridSemana = document.createElement("div");
   gridSemana.className = "grid-semana";
   diasSemana.forEach(dia => {
@@ -42,23 +44,23 @@ function criarCalendario() {
     gridSemana.appendChild(cell);
   });
 
+  // Grade dos dias do mês
   const gridDias = document.createElement("div");
   gridDias.className = "grid-dias";
 
-  // Preenche dias em branco até o início do mês
+  // Espaços vazios antes do 1º dia do mês
   for (let i = 0; i < primeiroDiaSemana; i++) {
     const vazio = document.createElement("div");
     gridDias.appendChild(vazio);
   }
 
-  // Preenche os dias do mês
+  // Dias preenchidos
   for (let dia = 1; dia <= ultimoDia; dia++) {
     const diaDiv = document.createElement("div");
     diaDiv.className = "dia";
 
     const dataStr = `${anoAtual}-${String(mesAtual + 1).padStart(2, '0')}-${String(dia).padStart(2, '0')}`;
 
-    // Marca se tem meta
     if (metasPorData[dataStr]) {
       diaDiv.classList.add("meta-dia");
       diaDiv.innerHTML = "✔";
@@ -67,7 +69,7 @@ function criarCalendario() {
       diaDiv.textContent = dia;
     }
 
-    // Destaca o dia de hoje
+    // Destaca o dia atual
     const hoje = new Date();
     if (
       dia === hoje.getDate() &&
@@ -83,9 +85,36 @@ function criarCalendario() {
   mesDiv.appendChild(gridSemana);
   mesDiv.appendChild(gridDias);
   container.appendChild(mesDiv);
+
+  // Também atualiza a lista de metas abaixo do calendário
+  renderizarListaDeMetas();
 }
 
-// Navega para o próximo mês
+// Exibe a lista das metas cadastradas no mês selecionado
+function renderizarListaDeMetas() {
+  const lista = document.getElementById("lista-de-atividades");
+  lista.innerHTML = "";
+
+  const metasFiltradas = Object.entries(metasPorData)
+    .filter(([dataStr]) => {
+      const [ano, mes] = dataStr.split("-").map(Number);
+      return ano === anoAtual && mes === (mesAtual + 1);
+    })
+    .sort(([dataA], [dataB]) => new Date(dataA) - new Date(dataB));
+
+  if (metasFiltradas.length === 0) {
+    lista.innerHTML = "<li>Nenhuma atividade cadastrada neste mês.</li>";
+    return;
+  }
+
+  metasFiltradas.forEach(([data, descricao]) => {
+    const item = document.createElement("li");
+    item.innerHTML = `<strong>${data}</strong><span>${descricao}</span>`;
+    lista.appendChild(item);
+  });
+}
+
+// Avança para o próximo mês
 function irParaProximoMes() {
   if (mesAtual === 11) {
     mesAtual = 0;
@@ -96,7 +125,7 @@ function irParaProximoMes() {
   criarCalendario();
 }
 
-// Navega para o mês anterior
+// Volta para o mês anterior
 function irParaMesAnterior() {
   if (mesAtual === 0) {
     mesAtual = 11;
@@ -107,9 +136,10 @@ function irParaMesAnterior() {
   criarCalendario();
 }
 
-// Inicializa o calendário quando a página é carregada
+// Quando a página carrega, renderiza o calendário
 document.addEventListener("DOMContentLoaded", () => {
   const usuarioId = sessionStorage.getItem('usuario');
+
   if (!usuarioId) {
     alert('Sessão expirada. Faça login novamente.');
     window.location.href = "/modulos/login/login.html";
@@ -123,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("btn-sair").addEventListener("click", function (event) {
     event.preventDefault();
-    sessionStorage.clear();
+    sessionStorage.clear(); // Limpa a sessão do usuário
     window.location.href = 'login.html';
   });
 });
