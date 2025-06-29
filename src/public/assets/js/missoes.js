@@ -1,166 +1,254 @@
+document.addEventListener('DOMContentLoaded', () => {
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const missaoCaminhoContainer = document.getElementById('missao-caminho-container');
-    const missaoCaminho = document.getElementById('missao-caminho');
-    const currentMonthYearHeader = document.getElementById('currentMonthYear');
-    const prevMonthBtn = document.getElementById('prevMonth');
-    const nextMonthBtn = document.getElementById('nextMonth');
-    const detalhesTarefasDia = document.getElementById('detalhes-tarefas-dia');
-    const dataSelecionadaSpan = document.getElementById('data-selecionada');
-    const listaTarefasDia = document.getElementById('lista-tarefas-dia');
+  const conteudos = document.getElementById('conteudos');
+  const caminhoDasMissoes = document.getElementById('missao-caminho');
+  const cabecalhoMesAno = document.getElementById('currentMonthYear');
+  const botaoMesAnterior = document.getElementById('prevMonth');
+  const botaoProximoMes = document.getElementById('nextMonth');
+  const caixaDetalhes = document.getElementById('detalhes-tarefas-dia');
+  const textoDataSelecionada = document.getElementById('data-selecionada');
+  const listaDeTarefas = document.getElementById('lista-tarefas-dia');
+  const caminhoSvg = document.getElementById('caminho-svg');
+  let tarefasSalvas = [];
+  let dataAtual = new Date();
+  let ultimoDiaClicado = null;
+  const diasDaSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+  const mesesDoAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+  function desenharCalendario(dataParaDesenhar) {
+      caminhoDasMissoes.innerHTML = '';
+      esconderDetalhes();
+      const ano = dataParaDesenhar.getFullYear();
+      const mes = dataParaDesenhar.getMonth();
+      cabecalhoMesAno.textContent = `${mesesDoAno[mes]} de ${ano}`;
+      const hojeFormatado = formatarData(new Date());
+      const totalDiasNoMes = new Date(ano, mes + 1, 0).getDate();
+      
+      const containerLargura = caminhoDasMissoes.offsetWidth;
+      if (containerLargura === 0) return; // Evita erro se o container estiver invisível
+      const posicoesX = [0.2, 0.5, 0.8]; 
+      let y = 80;
+      for (let i = 1; i <= totalDiasNoMes; i++) {
+          const dataDoLoop = new Date(ano, mes, i);
+          const dataNoFormatoTexto = formatarData(dataDoLoop);
+          
+          const circuloDoDia = document.createElement('div');
+          circuloDoDia.className = 'circulo-dia';
+          circuloDoDia.dataset.fullDate = dataNoFormatoTexto;
+          
+          const x = containerLargura * posicoesX[(i - 1) % posicoesX.length];
+          circuloDoDia.style.left = `${x - 40}px`;
+          circuloDoDia.style.top = `${y - 40}px`;
+          
+          y += 120;
+          circuloDoDia.innerHTML = `
+              <span class="dia-semana-label">${diasDaSemana[dataDoLoop.getDay()]}</span>
+              <span class="dia-numero-label">${i}</span>
+          `;
+          if (tarefasSalvas.some(t => t.DataListada === dataNoFormatoTexto && t.itens && t.itens.length > 0)) {
+              circuloDoDia.classList.add('com-tarefas');
+          }
+          if (dataNoFormatoTexto === hojeFormatado) circuloDoDia.classList.add('dia-atual');
+          circuloDoDia.addEventListener('click', (evento) => {
+              evento.stopPropagation();
+              if (ultimoDiaClicado) ultimoDiaClicado.classList.remove('selecionado');
+              circuloDoDia.classList.add('selecionado');
+              ultimoDiaClicado = circuloDoDia;
+              mostrarTarefasDoDia(dataNoFormatoTexto, circuloDoDia);
+          });
+          caminhoDasMissoes.appendChild(circuloDoDia);
+      }
+      
+      caminhoDasMissoes.parentElement.style.height = `${y}px`;
+      desenharLinhasDoCaminho();
+  }
+  function desenharLinhasDoCaminho() {
+      const circulos = Array.from(document.querySelectorAll('.circulo-dia'));
+      if (circulos.length < 2) {
+          caminhoSvg.innerHTML = '';
+          return;
+      }
+      
+      caminhoSvg.innerHTML = '';
+      let pathData = `M ${circulos[0].offsetLeft + 40} ${circulos[0].offsetTop + 40}`;
+      
+      for (let i = 0; i < circulos.length - 1; i++) {
+          const start = circulos[i];
+          const end = circulos[i+1];
+          
+          const x1 = start.offsetLeft + 40;
+          const y1 = start.offsetTop + 40;
+          const x2 = end.offsetLeft + 40;
+          const y2 = end.offsetTop + 40;
+          const cx1 = x1;
+          const cy1 = y1 + 60;
+          const cx2 = x2;
+          const cy2 = y2 - 60;
+          pathData += ` C ${cx1} ${cy1}, ${cx2} ${cy2}, ${x2} ${y2}`;
+      }
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', pathData);
+      path.setAttribute('stroke', 'rgba(255, 255, 255, 0.5)');
+      path.setAttribute('stroke-width', '6');
+      path.setAttribute('fill', 'none');
+      path.setAttribute('stroke-dasharray', '10, 10');
+      
+      caminhoSvg.appendChild(path);
+  }
+  function mostrarTarefasDoDia(dataNoFormatoTexto, elementoCirculo) {
+    textoDataSelecionada.textContent = new Date(dataNoFormatoTexto + "T00:00:00").toLocaleDateString('pt-BR');
+    listaDeTarefas.innerHTML = '';
+    const tarefasDoDia = tarefasSalvas.filter(t => t.DataListada === dataNoFormatoTexto);
+    if (tarefasDoDia.length === 0 || tarefasDoDia.every(t => !t.itens || t.itens.length === 0)) {
+        listaDeTarefas.innerHTML = '<li>Dia de descansar! ( ˶ˆ ᗜ ˆ˵ )</li>';
+    } else {
+         tarefasDoDia.forEach(itemDia => {
+            if(itemDia.itens) {
+                itemDia.itens.forEach((tarefa, index) => {
+                    const li = document.createElement('li');
+                    if (tarefa.nivelImportancia) {
+                        li.className = `imp-${tarefa.nivelImportancia.toLowerCase()}`;
+                    }
+                    li.innerHTML = `
+                        <input type="checkbox" id="task-${itemDia.id}-${index}" ${tarefa.concluida ? 'checked' : ''}>
+                        <label for="task-${itemDia.id}-${index}">${tarefa.TarefasListada}</label>
+                    `;
+                    li.querySelector('input').addEventListener('change', async function() {
+                        tarefa.concluida = this.checked;
+                        await atualizarTarefaNoServidor(itemDia);
+                        await calcularEMostrarPontos();
+                    });
+                    listaDeTarefas.appendChild(li);
+                });
+            }
+        });
+    }
+    caixaDetalhes.style.display = 'block';
+    const containerDoCaminho = document.getElementById('missao-caminho-container');
+    const posCirculo = elementoCirculo.getBoundingClientRect();
+    const posContainer = containerDoCaminho.getBoundingClientRect(); 
+    const larguraCard = caixaDetalhes.offsetWidth;
+    const alturaCard = caixaDetalhes.offsetHeight;
+    let top = posCirculo.top - posContainer.top + (posCirculo.height / 2) - (alturaCard / 2);
+    let left;
+    
+    if ((posCirculo.right + larguraCard + 20) < window.innerWidth) {
+        left = posCirculo.right - posContainer.left + 20;
+    } else {
+        left = posCirculo.left - posContainer.left - larguraCard - 20;
+    }
 
-    let dadosServidorCache = [];
-    let currentDisplayDate = new Date(); 
-    let ultimoCirculoClicado = null; 
-
-    const nomesDiasSemanaCurto = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
-    const nomesMeses = [
-        'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
-        'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
-    ];
-
-    async function fetchTarefas() {
+    if (top < 10) {
+        top = 10; 
+    }
+    if (top + alturaCard > containerDoCaminho.scrollHeight - 10) {
+        top = containerDoCaminho.scrollHeight - alturaCard - 10; 
+    }
+    caixaDetalhes.style.top = `${top}px`;
+    caixaDetalhes.style.left = `${left}px`;
+    caixaDetalhes.style.opacity = 1;
+  }
+  function esconderDetalhes() {
+      if (caixaDetalhes.style.display === 'block') {
+          caixaDetalhes.style.opacity = 0;
+          setTimeout(() => {
+              caixaDetalhes.style.display = 'none';
+              if (ultimoDiaClicado) {
+                  ultimoDiaClicado.classList.remove('selecionado');
+                  ultimoDiaClicado = null;
+              }
+          }, 300);
+      }
+  }
+  // --- FUNÇÕES DE PONTUAÇÃO, ETC ---
+  
+  function formatarData(data) {
+      const ano = data.getFullYear();
+      const mes = String(data.getMonth() + 1).padStart(2, '0');
+      const dia = String(data.getDate()).padStart(2, '0');
+      return `${ano}-${mes}-${dia}`;
+  }
+  async function fetchTarefas() {
       const usuarioId = sessionStorage.getItem('usuario');
-      
       if (!usuarioId) {
-        alert('Sessão expirada. Faça login novamente.');
-        window.location.href = "/modulos/login/login.html";
-        return;
+          alert('Sessão expirada. Faça login novamente.');
+          window.location.href = "/modulos/login/login.html";
+          return;
       }
-      
       try {
-          const response = await fetch(`http://localhost:3000/tarefas?usuarioId=${usuarioId}`);
-          dadosServidorCache = await response.json();
-      } catch (error) {
-          console.error("Erro ao buscar tarefas do usuário:", error);
-          dadosServidorCache = [];
+          const resposta = await fetch(`http://localhost:3000/tarefas?usuarioId=${usuarioId}`);
+          tarefasSalvas = await resposta.json();
+      } catch (erro) {
+          console.error("Erro ao buscar tarefas do usuário:", erro);
+          tarefasSalvas = [];
       }
-    }
-
-    function formatarDataParaChave(date) {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
-    }
-
-    function renderizarCaminhoDeMissoes(dateToRender) {
-      missaoCaminho.innerHTML = ''; 
-      detalhesTarefasDia.style.display = 'none'; 
-      const ano = dateToRender.getFullYear();
-      const mes = dateToRender.getMonth();
-      currentMonthYearHeader.textContent = `${nomesMeses[mes]} de ${ano}`;
-      const tarefasPorData = {};
-      dadosServidorCache.forEach(itemDia => {
-          // const dataChave = itemDia.DataListada;
-          // if (itemDia.itens && itemDia.itens.length > 0) {
-          //     tarefasPorData[dataChave] = itemDia.itens;
-          // }
-          const dataChave = itemDia.DataListada;
-          if (itemDia.itens && itemDia.itens.length > 0) {
-              if(tarefasPorData[dataChave] == null)
-                tarefasPorData[dataChave] = itemDia.itens;
-              else
-                tarefasPorData[dataChave].push(...itemDia.itens); //concatenar listas
+  }
+  async function atualizarTarefaNoServidor(itemDia) {
+      try {
+          await fetch(`http://localhost:3000/tarefas/${itemDia.id}`, {
+              method: 'PUT',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(itemDia),
+          });
+      } catch (erro) {
+          console.error("Erro ao atualizar tarefa:", erro);
+      }
+  }
+  async function calcularEMostrarPontos() {
+      const usuarioId = sessionStorage.getItem('usuario');
+      if (!usuarioId) return;
+      let pontuacao = 0;
+      const sistemaDePontos = { 'baixa': 3, 'media': 5, 'alta': 8 };
+      tarefasSalvas.forEach(itemDia => {
+          if (itemDia.itens) {
+              itemDia.itens.forEach(tarefa => {
+                  if (tarefa.concluida) {
+                      const importancia = tarefa.nivelImportancia ? tarefa.nivelImportancia.toLowerCase() : '';
+                      pontuacao += sistemaDePontos[importancia] || 0;
+                  }
+              });
           }
       });
-      const hoje = new Date();
-      const hojeChave = formatarDataParaChave(hoje);
-      const numDiasMes = new Date(ano, mes + 1, 0).getDate();
-      let targetElementParaScroll = null; 
-
-      for (let i = 1; i <= numDiasMes; i++) {
-        const diaAtualLoop = new Date(ano, mes, i);
-        const diaChave = formatarDataParaChave(diaAtualLoop);
-        const hasTarefas = tarefasPorData.hasOwnProperty(diaChave) && tarefasPorData[diaChave].length > 0;
-        const circuloWrapper = document.createElement('div');
-        circuloWrapper.classList.add('circulo-dia-wrapper');
-        const circuloDia = document.createElement('div');
-        circuloDia.classList.add('circulo-dia');
-        circuloDia.dataset.fullDate = diaChave;
-        const labelDiaSemana = document.createElement('span');
-        labelDiaSemana.classList.add('dia-semana-label');
-        labelDiaSemana.textContent = nomesDiasSemanaCurto[diaAtualLoop.getDay()];
-        circuloDia.appendChild(labelDiaSemana);
-        const labelDiaNumero = document.createElement('span');
-        labelDiaNumero.classList.add('dia-numero-label');
-        labelDiaNumero.textContent = i;
-        circuloDia.appendChild(labelDiaNumero);
-        if (hasTarefas) {
-            circuloDia.classList.add('com-tarefas');
-        }
-        if (diaChave === hojeChave) {
-            circuloDia.classList.add('dia-atual');
-        }
-        
-        if (hasTarefas && diaAtualLoop >= new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate()) && !targetElementParaScroll) {
-            targetElementParaScroll = circuloDia;
-        } else if (diaChave === hojeChave && !targetElementParaScroll) { 
-            targetElementParaScroll = circuloDia;
-        }
-        circuloDia.addEventListener('click', () => {
-            if (ultimoCirculoClicado) {
-                ultimoCirculoClicado.classList.remove('selecionado');
-            }
-            circuloDia.classList.add('selecionado');
-            ultimoCirculoClicado = circuloDia;
-            exibirTarefasDoDia(diaChave, tarefasPorData[diaChave] || [], circuloDia);
-        });
-        circuloWrapper.appendChild(circuloDia);
-        missaoCaminho.appendChild(circuloWrapper);
-      }
-
-      setTimeout(() => {
-        if (targetElementParaScroll) {
-          targetElementParaScroll.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else {
-          missaoCaminhoContainer.scrollTop = 0;
-        }
-      }, 300); 
-    }
-
-    function exibirTarefasDoDia(dataChave, tarefas, circuloElement) {
-      dataSelecionadaSpan.textContent = new Date(dataChave + "T00:00:00").toLocaleDateString('pt-BR');
-      listaTarefasDia.innerHTML = '';
-      if (tarefas.length === 0) {
-          const li = document.createElement('li');
-          li.textContent = 'Dia de descansar, aproveite para adiantar futuras tarefas ou curtir o dia!\n( ˶ˆ ᗜ ˆ˵ )';
-          listaTarefasDia.appendChild(li);
-      } else {
-          tarefas.forEach(tarefa => {
-              const li = document.createElement('li');
-              li.textContent = tarefa.TarefasListada;
-              if (tarefa.nivelImportancia) {
-                  li.classList.add(`imp-${tarefa.nivelImportancia.toLowerCase()}`);
-              }
-              listaTarefasDia.appendChild(li);
+      document.querySelector('.pontos').textContent = `🔥 ${pontuacao}`;
+      await atualizarPontosDoUsuario(usuarioId, pontuacao);
+  }
+  async function atualizarPontosDoUsuario(usuarioId, pontuacao) {
+      try {
+          const respostaUsuario = await fetch(`http://localhost:3000/usuarios/${usuarioId}`);
+          if(!respostaUsuario.ok) return;
+          const usuario = await respostaUsuario.json();
+          usuario.pontuacao = pontuacao;
+          await fetch(`http://localhost:3000/usuarios/${usuarioId}`, {
+              method: 'PUT',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(usuario),
           });
+      } catch (erro) {
+          console.error("Erro ao atualizar a pontuação do usuário:", erro);
       }
-      detalhesTarefasDia.style.display = 'block';
+  }
+  
+  botaoMesAnterior.addEventListener('click', () => {
+      dataAtual.setMonth(dataAtual.getMonth() - 1);
+      desenharCalendario(dataAtual);
+  });
+  botaoProximoMes.addEventListener('click', () => {
+      dataAtual.setMonth(dataAtual.getMonth() + 1);
+      desenharCalendario(dataAtual);
+  });
+  
+  document.addEventListener('click', (e) => {
+      if (!caixaDetalhes.contains(e.target) && !e.target.closest('.circulo-dia')) {
+          esconderDetalhes();
       }
-
-      prevMonthBtn.addEventListener('click', () => {
-        currentDisplayDate.setMonth(currentDisplayDate.getMonth() - 1);
-        renderizarCaminhoDeMissoes(currentDisplayDate);
-      });
-  
-      nextMonthBtn.addEventListener('click', () => {
-        currentDisplayDate.setMonth(currentDisplayDate.getMonth() + 1);
-        renderizarCaminhoDeMissoes(currentDisplayDate);
-      });
-  
-      fetchTarefas().then(() => {
-        renderizarCaminhoDeMissoes(currentDisplayDate);
-
-        const hojeChave = formatarDataParaChave(new Date());
-        const circuloHoje = missaoCaminho.querySelector(`.circulo-dia[data-full-date="${hojeChave}"]`);
-
-        if (circuloHoje) {
-            circuloHoje.click();
-        } else {
-            detalhesTarefasDia.style.display = 'none';
-        }
-      });
+  });
+  window.addEventListener('resize', () => {
+      esconderDetalhes();
+      desenharCalendario(dataAtual)
+  });
+  fetchTarefas().then(() => {
+      setTimeout(() => {
+          desenharCalendario(dataAtual);
+          calcularEMostrarPontos();
+      }, 100);
+  });
 });
-
-

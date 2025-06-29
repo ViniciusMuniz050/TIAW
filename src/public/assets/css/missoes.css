@@ -1,348 +1,223 @@
-*{
-  margin: 0;
-  padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+body {
+    line-height: 1.6;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
 }
 
-.topbar {
-  background-color: #388e3c;
-  color: white;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 110;
-  font-weight: 600;
-  letter-spacing: 1px;
-  user-select: none;
+.topbar { 
+  background-color: #388e3c; 
+  color: white; 
+  height: 80px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 0 30px; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 110; 
 }
 
-.logo {
-  height: 80px;
+.logo { 
+  height: 80px; 
 }
 
-.titulo-centro {
-  flex-grow: 1;
-  text-align: center;
+.titulo-centro { 
+  flex-grow: 1; 
+  text-align: center; 
+}
+.perfil-area { 
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
 }
 
-.titulo-centro h1 {
-  font-size: 1.8rem;
-  font-weight: 900;
-  letter-spacing: 1.5px;
+.pontos { font-size: 1.2em; 
 }
 
-.perfil-area {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.perfil-icon { 
+  height: 35px; 
+  border-radius: 50%; 
 }
 
-.pontos {
-  font-size: 1.2em;
+.sidebar { 
+  position: fixed; 
+  top: 80px; 
+  left: 0; 
+  width: 80px; 
+  height: calc(100vh - 80px); 
+  background-color: #388e3c; 
+  padding-top: 25px; 
+  z-index: 100; 
 }
 
-.perfil-icon {
-  height: 35px;
-  border-radius: 50%;
+.sidebar nav ul { 
+  list-style: none; 
+  padding: 0; 
+  text-align: center; 
 }
 
-.sidebar {
-  position: fixed;
-  top: 80px;
-  left: 0;
-  width: 80px;
-  height: calc(100vh - 80px);
-  background-color: #388e3c;
-  padding-top: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
-  z-index: 100;
-  transition: transform 0.3s ease;
+.sidebar nav ul li { 
+  margin: 20px 0; 
 }
 
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
+.sidebar nav ul li img { 
+  width: 30px; 
 }
 
-.sidebar nav ul li {
-  margin: 20px 0;
+#conteudos {
+    margin-top: 80px;
+    margin-left: 80px;
+    flex-grow: 1;
+    padding: 20px;
+    background-image: url("../../assets/images/florest1.jpg"); 
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative; 
 }
-
-.sidebar nav ul li img {
-  width: 30px;
-}
-#conteudos{
-  background-image: url("../../assets/images/florest1.jpg");
-  margin-top: 80px;
-  margin-left: 80px;
-  opacity: 1;
-  box-sizing: border-box;
-  padding: 20px;
-}
-
-.Insere-tarefa {
-  width: 50px;
-  padding: 0%;
-  margin: 5px;
-}
-
-.btn-data{
-  display: flex;
-}
-
-#semana-tarefas {
-  display: flex;
-  justify-content: space-around; 
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
-}
-
-.circulo-tarefa {
-  width: 60px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  border: 2px solid #ccc;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.circulo-tarefa.com-tarefas {
-  background-color: #e6ffe6; 
-  border-color: #8fbc8f;
-  color: #006400;
-}
-
-.circulo-tarefa:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
-}
-
-.circulo-dia-wrapper::after {
-  content: ''; 
-  position: absolute; 
-  left: 50%;
-  transform: translateX(-50%);
-  top: 70px; 
-  width: 6px;
-  background-color: #8fbc8f;
-  height: 50px; 
-  z-index: 1; 
-}
-
-#missao-caminho .circulo-dia-wrapper:last-child::after {
-    display: none; /* Esconde a linha do último elemento */
-}
-
 
 .calendario-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  margin-bottom: 20px; 
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.calendario-header h2 {
-    color: #333;
+.calendario-header button { 
+  background-color: #388e3c; 
+  color: white; 
+  border: none; 
+  padding: 8px 15px; 
+  border-radius: 5px; 
+  cursor: pointer; 
 }
 
-.calendario-header button {
-  background-color: #388e3c;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.9em;
-  transition: background-color 0.2s ease;
+.Insere-tarefa { 
+  width: 50px; 
+  margin: 0 10px; 
 }
-.calendario-header button:hover {
-    background-color: #2e7d32;
+
+.btn-data { 
+  display: flex; 
+  align-items: center; 
 }
 
 #missao-caminho-container {
-  display: flex; 
-  align-items: flex-start; 
-  justify-content: center;
-  gap: 30px; 
-  padding: 20px 0; 
+    position: relative;
+    width: 100%;
+    min-height: 80vh; 
+    padding: 40px 0;
+}
+
+#caminho-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    overflow: visible;
 }
 
 #missao-caminho {
-  position: relative; 
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 50px; 
-  padding: 20px 0; 
+    position: relative;
+    z-index: 2; 
+    height: 100%;
 }
-
-.linha-caminho {
-  position: absolute;
-  width: 6px; 
-  background-color: #8fbc8f; 
-  z-index: 1; 
-}
-
-.circulo-dia-wrapper {
-  position: relative;
-  z-index: 2; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; 
-  margin-bottom: 0; 
-}
-
 
 .circulo-dia {
-  min-width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9em;
-  font-weight: bold;
-  cursor: pointer;
-  border: 3px solid #ccc; 
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.circulo-dia .dia-semana-label {
-  font-size: 0.8em; 
-  opacity: 0.7;
-}
-
-.circulo-dia .dia-numero-label {
-  font-size: 1.5em; 
-}
-
-.circulo-dia.com-tarefas {
-  background-color: #d4edda;
-  border-color: #28a745;
-  color: #155724;
-  box-shadow: 2px 2px 10px rgba(40, 167, 69, 0.6);
-}
-
-.circulo-dia.dia-atual {
-  border-color: #007bff;
-  background-color: #e0f2ff;
-  color: #004085;
-  box-shadow: 2px 2px 10px rgba(0, 123, 255, 0.6);
-  transform: scale(1.1); 
-}
-
-.circulo-dia.dia-atual.com-tarefas {
-  background-color: #c3e6cb;
-  border-color: #218838;
-  color: #155724;
-  box-shadow: 2px 2px 10px rgba(33, 136, 56, 0.8);
+    position: absolute; 
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 4px solid #a9a9a9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .circulo-dia:hover {
-  transform: scale(1.15); 
-  opacity: 1;
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.15);
+}
+
+.circulo-dia.com-tarefas {
+    background-color: #d4edda;
+    border-color: #28a745;
+}
+
+.circulo-dia.dia-atual {
+    border-color: #007bff;
+    transform: scale(1.1);
+}
+
+.circulo-dia.selecionado {
+    border-color: #ffc107;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #ffc107;
 }
 
 #detalhes-tarefas-dia {
-  flex-grow: 1;
-  background-color: rgba(255, 255, 255, 0.95); 
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  display: none; 
-  min-width: 300px; 
-  max-width: 400px; 
-  position: sticky; 
-  top: 100px; 
-  align-self: flex-start; 
-  max-height: calc(100vh - 120px); 
-  overflow-y: auto; 
-}
-
-#detalhes-tarefas-dia h3 {
-  color: #333;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    position: absolute;
+    z-index: 200;
+    width: 320px;
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.4s ease, left 0.4s ease;
+    border-top: 5px solid #388e3c;
 }
 
 #lista-tarefas-dia {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 #lista-tarefas-dia li {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 12px 15px;
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 1.1em;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
-#lista-tarefas-dia li::before {
-  content: '•';
-  color: #388e3c; 
-  font-size: 1.5em;
-  line-height: 1;
+
+#lista-tarefas-dia li input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0; 
 }
 
 #lista-tarefas-dia li.imp-alta {
-  border-left: 6px solid #dc3545; 
+    border-left: 5px solid #dc3545; 
 }
+
 #lista-tarefas-dia li.imp-media {
-  border-left: 6px solid #ffc107; 
+    border-left: 5px solid #ffc107; 
 }
+
 #lista-tarefas-dia li.imp-baixa {
-  border-left: 6px solid #28a745; 
-}
-
-
-.imagem-tarefa-dia {
-  width: 100%; 
-  max-width: 100px; 
-  height: auto; 
-  margin-top: 15px; 
-  display: block;
-  border-radius: 8px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  align-items: center;
+    border-left: 5px solid #28a745; 
 }

@@ -46,7 +46,7 @@
                     return Promise.resolve(); 
                 })
                 .then(() => {
-                    const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+                    const usuarioId = sessionStorage.getItem('usuario');
                     exibirTarefas(usuarioId);
                     alert('Tarefa deletada com sucesso!');
                 })
@@ -120,7 +120,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
 
-            const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+            const usuarioId = sessionStorage.getItem('usuario');
 
             if (!usuarioId) {
                 alert('Sessão expirada. Faça login novamente.');
@@ -178,7 +178,7 @@
                         nivelImportancia = null; 
                         document.querySelectorAll('.inputs-importancia input[type="radio"]').forEach(radio => radio.checked = false);
 
-                        const usuarioId = sessionStorage.getItem('usuarioLogadoId');
+                        const usuarioId = sessionStorage.getItem('usuario');
                         exibirTarefas(usuarioId);
                     })
                 });
