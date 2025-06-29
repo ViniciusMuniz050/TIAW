@@ -73,6 +73,10 @@ A seção Editar Perfil é o seu centro de comando pessoal. Aqui, você pode ger
 ![Wireframes](images/editar%20perfi.jpeg)
 
 
+#### Wireframe aba de Progresso
+Aba que consta tanto as tarefas concluídas quanto as tarefas pendentes, além de um gráfico exibindo o aproveitamento (concluídas x pendentes) do usuário em um limite de tempo. 
+
+![Wireframes](https://github.com/user-attachments/assets/7f0f02fb-b5b7-4927-b47e-e89b03427c5c)
 
 
 
