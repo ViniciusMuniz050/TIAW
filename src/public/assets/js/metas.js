@@ -1,3 +1,8 @@
+// Define variáveis globais do mês e ano
+let mesAtual = new Date().getMonth();
+let anoAtual = new Date().getFullYear();
+
+// Simulação de dados do usuário logado
 const metasPorData = {
   "2025-01-03": "Ler 2 livros",
   "2025-01-10": "Exercício físico",
@@ -16,19 +21,18 @@ const nomesMeses = [
 
 const diasSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 
-let mesAtual = new Date().getMonth();
-
+// Cria o calendário dinamicamente
 function criarCalendario() {
   const container = document.getElementById("calendario");
   container.innerHTML = "";
 
-  const data = new Date(2025, mesAtual, 1);
-  const ultimoDia = new Date(2025, mesAtual + 1, 0).getDate();
+  const data = new Date(anoAtual, mesAtual, 1);
+  const ultimoDia = new Date(anoAtual, mesAtual + 1, 0).getDate();
   const primeiroDiaSemana = data.getDay();
 
   const mesDiv = document.createElement("div");
   mesDiv.className = "calendario-mes";
-  mesDiv.innerHTML = `<h3>${nomesMeses[mesAtual]}</h3>`;
+  mesDiv.innerHTML = `<h3>${nomesMeses[mesAtual]} de ${anoAtual}</h3>`;
 
   const gridSemana = document.createElement("div");
   gridSemana.className = "grid-semana";
@@ -41,22 +45,36 @@ function criarCalendario() {
   const gridDias = document.createElement("div");
   gridDias.className = "grid-dias";
 
+  // Preenche dias em branco até o início do mês
   for (let i = 0; i < primeiroDiaSemana; i++) {
     const vazio = document.createElement("div");
     gridDias.appendChild(vazio);
   }
 
+  // Preenche os dias do mês
   for (let dia = 1; dia <= ultimoDia; dia++) {
     const diaDiv = document.createElement("div");
     diaDiv.className = "dia";
 
-    const dataStr = `2025-${(mesAtual + 1).toString().padStart(2, '0')}-${dia.toString().padStart(2, '0')}`;
+    const dataStr = `${anoAtual}-${String(mesAtual + 1).padStart(2, '0')}-${String(dia).padStart(2, '0')}`;
+
+    // Marca se tem meta
     if (metasPorData[dataStr]) {
       diaDiv.classList.add("meta-dia");
       diaDiv.innerHTML = "✔";
       diaDiv.title = metasPorData[dataStr];
     } else {
       diaDiv.textContent = dia;
+    }
+
+    // Destaca o dia de hoje
+    const hoje = new Date();
+    if (
+      dia === hoje.getDate() &&
+      mesAtual === hoje.getMonth() &&
+      anoAtual === hoje.getFullYear()
+    ) {
+      diaDiv.style.border = "2px solid #2e7d32";
     }
 
     gridDias.appendChild(diaDiv);
@@ -67,19 +85,31 @@ function criarCalendario() {
   container.appendChild(mesDiv);
 }
 
+// Navega para o próximo mês
 function irParaProximoMes() {
-  mesAtual = (mesAtual + 1) % 12;
+  if (mesAtual === 11) {
+    mesAtual = 0;
+    anoAtual++;
+  } else {
+    mesAtual++;
+  }
   criarCalendario();
 }
 
-function voltarAoMesAtual() {
-  mesAtual = new Date().getMonth();
+// Navega para o mês anterior
+function irParaMesAnterior() {
+  if (mesAtual === 0) {
+    mesAtual = 11;
+    anoAtual--;
+  } else {
+    mesAtual--;
+  }
   criarCalendario();
 }
 
+// Inicializa o calendário quando a página é carregada
 document.addEventListener("DOMContentLoaded", () => {
   const usuarioId = sessionStorage.getItem('usuario');
-
   if (!usuarioId) {
     alert('Sessão expirada. Faça login novamente.');
     window.location.href = "/modulos/login/login.html";
@@ -87,48 +117,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   criarCalendario();
+
   document.getElementById("proximo-mes").addEventListener("click", irParaProximoMes);
-  document.getElementById("voltar-mes").addEventListener("click", voltarAoMesAtual);
-});
+  document.getElementById("voltar-mes").addEventListener("click", irParaMesAnterior);
 
-document.getElementById('btn3').addEventListener('click', () => {
-  window.location.href = 'login.html';
-});
-
-document.getElementById('btn-sair').addEventListener('click', function (event) {
-  event.preventDefault();
-  sessionStorage.clear(); // limpa a sessão
-  window.location.href = 'login.html'; // ou qualquer outra página inicial
-});
-
-const usuarioLogadoId = sessionStorage.getItem("usuarioLogadoId");
-  const apiUrl = "http://localhost:3000/usuarios";
-
-  // Verifica se o usuário está logado
-  if (!usuarioLogadoId) {
-    alert("Você precisa estar logado para acessar esta página.");
-    window.location.href = "/login.html";
-  }
-
-  // Ao carregar a página, buscar e exibir a foto de perfil
-  window.addEventListener("DOMContentLoaded", () => {
-    fetch(`${apiUrl}/${usuarioLogadoId}`)
-      .then(res => {
-        if (!res.ok) throw new Error("Falha ao buscar usuário");
-        return res.json();
-      })
-      .then(usuario => {
-        const foto = usuario.foto || "/assets/images/usuario.png";
-        const fotoHeader = document.getElementById("fotoPerfilHeader");
-        if (fotoHeader) {
-          fotoHeader.src = foto;
-        }
-      })
-      .catch(err => {
-        console.error("Erro ao carregar foto do usuário:", err);
-        const fallback = document.getElementById("fotoPerfilHeader");
-        if (fallback) {
-          fallback.src = "/assets/images/usuario.png";
-        }
-      });
+  document.getElementById("btn-sair").addEventListener("click", function (event) {
+    event.preventDefault();
+    sessionStorage.clear();
+    window.location.href = 'login.html';
   });
+});

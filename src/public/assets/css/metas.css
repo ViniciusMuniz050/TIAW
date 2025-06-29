@@ -1,3 +1,4 @@
+/* Reset e layout base */
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #f4f7f6;
   color: #2e7d32;
   line-height: 1.6;
@@ -59,7 +60,8 @@ body {
   border-radius: 50%;
 }
 
-  .sidebar {
+/* Sidebar */
+.sidebar {
   position: fixed;
   top: 80px;
   left: 0;
@@ -72,22 +74,22 @@ body {
   align-items: center;
   box-shadow: 2px 0 10px rgba(0,0,0,0.05);
   z-index: 100;
-  transition: transform 0.3s ease;
 }
-  
-  .sidebar nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar nav ul li {
-    margin: 20px 0;
-  }
-  
-  .sidebar nav ul li img {
-    width: 30px;
-  }
-  
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li img {
+  width: 30px;
+}
+
+/* Conteúdo principal */
 .conteudo {
   margin-left: 100px;
   margin-top: 90px;
@@ -121,16 +123,17 @@ button {
   transition: all 0.3s;
 }
 
-#inserir-meta{
-  text-decoration: none;
-  color: white;
-}
-
 button:hover {
   background-color: #4caf50;
   transform: scale(1.05);
 }
 
+#inserir-meta {
+  text-decoration: none;
+  color: white;
+}
+
+/* Calendário */
 #calendario {
   background-color: white;
   border-radius: 20px;
@@ -138,12 +141,6 @@ button:hover {
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
   max-width: 950px;
   width: 100%;
-  overflow: hidden;
-}
-
-.calendario-mes {
-  width: 100%;
-  margin-bottom: 40px;
 }
 
 .calendario-mes h3 {
@@ -161,7 +158,6 @@ button:hover {
   text-align: center;
   margin-bottom: 10px;
   color: #555;
-  font-size: 1rem;
 }
 
 .grid-dias {
@@ -178,43 +174,42 @@ button:hover {
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
+  position: relative;
 }
 
 .dia:hover {
   background-color: #c8e6c9;
+  transform: scale(1.05);
 }
 
 .meta-dia {
-  background-color: #81c784;
+  background: linear-gradient(135deg, #66bb6a, #388e3c);
   color: white;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
   .grid-dias {
     gap: 10px;
   }
-
   .dia {
     height: 70px;
     font-size: 1.1em;
   }
-
   button {
     font-size: 1em;
     padding: 10px 20px;
   }
-
   .titulo-centro h1 {
     font-size: 1.6rem;
   }
-
   h2 {
     font-size: 1.8rem;
   }
-
   .calendario-mes h3 {
     font-size: 2rem;
   }
@@ -224,25 +219,20 @@ button:hover {
   .grid-semana {
     font-size: 0.9em;
   }
-
   .dia {
     height: 60px;
     font-size: 1em;
   }
-
   .conteudo {
     margin-left: 0;
     padding: 15px;
   }
-
   .topbar {
     height: 60px;
   }
-
   .logo {
     height: 40px;
   }
-
   .perfil-icon {
     height: 30px;
   }
