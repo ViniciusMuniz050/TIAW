@@ -160,6 +160,42 @@
         }
       ],
       "usuarioId": 1
+    },
+    {
+      "id": "a8d1",
+      "DataListada": "2025-06-29",
+      "itens": [
+        {
+          "TarefasListada": "tarefas de TIAW",
+          "nivelImportancia": "Alta",
+          "concluida": false
+        }
+      ],
+      "usuarioId": null
+    },
+    {
+      "id": "6adc",
+      "DataListada": "2025-06-29",
+      "itens": [
+        {
+          "TarefasListada": "Fogo",
+          "nivelImportancia": "Media",
+          "concluida": false
+        }
+      ],
+      "usuarioId": null
+    },
+    {
+      "id": "0ec8",
+      "DataListada": "2025-06-29",
+      "itens": [
+        {
+          "TarefasListada": "Limpar calha",
+          "nivelImportancia": "Baixa",
+          "concluida": false
+        }
+      ],
+      "usuarioId": null
     }
   ],
   "avaliacoes": [
