@@ -125,5 +125,23 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     sessionStorage.clear();
     window.location.href = 'login.html';
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioLogado'));
+
+  if (usuarioLogado) {
+    // Atualiza a foto de perfil se houver
+    const fotoPerfil = document.getElementById('fotoPerfilHeader');
+    if (usuarioLogado.foto && fotoPerfil) {
+      fotoPerfil.src = usuarioLogado.foto;
+    }
+
+    // Atualiza os pontos, se houver
+    const pontosSpan = document.getElementById('pontosUsuario');
+    if (usuarioLogado.pontos && pontosSpan) {
+      pontosSpan.textContent = usuarioLogado.pontos;
+    }
+  }
+});  
   });
 });
