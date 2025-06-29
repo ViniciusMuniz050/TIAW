@@ -1,6 +1,6 @@
 const informacoes = [
     {
-        pontos: 500,
+        pontos: 120,
         semanas: 3,
 
         tarefas: [
@@ -72,7 +72,7 @@ new Chart(ctx, {
   data: {
     labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'],
     datasets: [{
-      label: 'MENU PRODUTIVIDADE',
+      label: 'MENU PRODUTIVIDADE - TAREFAS CONCLUÍDAS',
       data: [11, 38, percentual, 40, 59],
       backgroundColor: ['#129745'],
       borderWidth: 1
@@ -84,7 +84,7 @@ new Chart(ctx, {
     scales: {
       y: {
         beginAtZero: true,
-        ticks: { color: 'white' }
+        ticks: { color: 'black' }
       },
       x: {
         ticks: { color: 'black' }
@@ -107,7 +107,7 @@ const exibicao = tarefas.find(t => t.id == id);
 if (exibicao && exibicao1) {
     exibicao1.innerHTML += `<header class="cabecalho"><h1>Tarefas ${exibicao.tipo}</h1></header>`;
     exibicao.itens.forEach(item => {
-        exibicao1.innerHTML += `<div id="tarefas-exibidas"><li>${item.tarefa}</li></div><br>`;
+        exibicao1.innerHTML += `<br><br><div id="tarefas-exibidas"><li>${item.tarefa}<br></li></div><br>`;
     });
 } else if (exibicao1) {
     exibicao1.innerHTML = "URL inválida. Tente novamente...";

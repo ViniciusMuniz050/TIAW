@@ -18,10 +18,9 @@
     {
       "id": "2",
       "login": "Lucas",
-      "email": "lucas556@gmail,com",
-      "senha": "Lucas123",
-      "foto": "assets/images/casa.png",
-      "pontuacao": 0,
+      "email": "lucas@gmail.com",
+      "senha": "banana",
+      "foto": "http://localhost:3000/assets/images/usuario.png",
       "onboarding": {
         "idade": 12,
         "qnttarefas": 1,
